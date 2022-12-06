@@ -10,11 +10,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include <math.h>
 
 void banner(void);
-void registList(void);
+
 void mainMenu(void);
+
+//This is for Registration
+void registList(void);
 void listRegistered(void);
+
+//This is for Simple Calculator
+void simpleCal(void);
+void basicComp(void);
+
 
 
 int main()
@@ -73,7 +82,7 @@ void mainMenu(void)
     printf("       /___________________________  |   /___________________________  |         \n");
     printf("      |                            | |  |                            | |         \n");
     printf("      | [1] Registration Form      | |  | [6] Color Selector         | |         \n");
-    printf("      | [2] Area of Triangle       | |  | [7] Grade Range            | |         \n");
+    printf("      | [2] Simple Calculator      | |  | [7] Grade Range            | |         \n");
     printf("      | [3] Simple Calculator      | |  | [8] Intergers Comparison   | |         \n");
     printf("      | [4] Temperature Converter  | |  | [9] Integers Identifier    | |         \n");
     printf("      | [5] Qualification to Vote  | |  | [0] Bitwise                | |         \n");
@@ -90,19 +99,16 @@ void mainMenu(void)
             system("cls");
             printf("Registration Form\n");
             registList();
-            //regisForm();
             break;
 
         case 2:
             system("cls");
-            printf("Area of \n");
-            //areaOf();
+            printf("Simple Calculator \n");
+            simpleCal();
             break;
 
         case 3:
             system("cls");
-            printf("Simple Calculator \n");
-            //simpleCal();
             break;
 
         case 4:
@@ -148,15 +154,16 @@ void mainMenu(void)
     }
 }
 
+//This is for Registration or case 1
 void registList(void)
 {
     system("cls");
     int opt;
-    printf("==========Registration List==========\n\n");
+    printf("\t\t ==========Registration List==========\n\n");
 
-    printf("[1] - Registration Form                \n");
-    printf("[2] - List of Registered               \n");
-    printf("[3] - Back                           \n\n");
+    printf("\t\t [1] - Registration Form                \n");
+    printf("\t\t [2] - List of Registered               \n");
+    printf("\t\t [3] - Back                           \n\n");
 
     printf("Pick a Number : ");
     scanf("%i", &opt);
@@ -180,8 +187,6 @@ void registList(void)
     }
 
 }
-
-//This is for Registration
 
 void regisForm(void)
 {
@@ -379,4 +384,104 @@ void listRegistered(void)
     printf("\t\t 3RD CHOICE     : BSIT                         \n\n");
 
     printf("\t\t ----------------------------------------------\n\n");
+}
+
+//This is for Simple Calculator of or case 2
+void simpleCal(void)
+{
+    int opt;
+
+    printf("\t\t           Simple Calculator          \n\n");
+
+    printf("\t\t  [1] - Basic Computation               \n");
+    printf("\t\t  [2] - Area of Shape                   \n");
+    printf("\t\t  [3] - Grade Calculation               \n");
+    printf("\t\t  [4] - Population Growth Rate          \n");
+    printf("\t\t  [5] - Back                            \n");
+    printf("\t\t  ______________________________________\n");
+    printf("\t\t  Pick a Number : ");
+    scanf("%i", &opt);
+
+    switch(opt)
+    {
+        case 1:
+            system("cls");
+            basicComp();
+            break;
+
+        case 2:
+            system("cls");
+            //areaOFShape();
+            break;
+
+        case 3:
+            system("cls");
+            //gradeCal();
+            break;
+
+        case 4:
+            system("cls");
+            //growthRate();
+            break;
+
+        case 5:
+            system("cls");
+            mainMenu();
+            break;
+    }
+}
+
+void basicComp(void)
+{
+    //Prelim Examination.    This code is from MAXELL JANE CALPO
+
+    char select;
+
+    float add, sub, product, quote, num1, num2, num3, expo;
+
+    printf("\nFirst number : ");
+    scanf("%f", &num1);
+
+    printf("Second number : ");
+    scanf("%f", &num2);
+
+    printf("Third number : ");
+    scanf("%f", &num3);
+
+    add = num1 + num2 + num3;
+    sub = num3 - num2;
+    product = num1 * num3;
+    quote = num1 / num3;
+    expo = pow(num3, num2);
+
+    printf("\n%g + %g + %g = %g\n", num1, num2, num3, add);
+    printf("%g - %g = %g\n", num3, num2, sub);
+    printf("%g * %g = %g\n", num1, num3, product);
+    printf("%g / %g = %g\n", num1, num2, quote);
+    printf("%g ^ %g = %.2Lf\n\n", num3, num2, expo);
+
+    printf("Do you want to try again? [Y/N] : ");
+    select = getch();
+    //scanf("%c", &select);
+
+
+    switch(select)
+    {
+        case 'y': case 'Y':
+            system("cls");
+            basicComp();
+            break;
+
+        case 'n': case 'N':
+            system("cls");
+            simpleCal();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid Value! \n");
+            break;
+
+
+    }
 }
