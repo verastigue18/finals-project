@@ -14,6 +14,8 @@
 void banner(void);
 void registList(void);
 void mainMenu(void);
+void listRegistered(void);
+
 
 int main()
 {
@@ -166,12 +168,24 @@ void registList(void)
             regisForm();
             break;
 
+        case 2:
+            system("cls");
+            listRegistered();
+            break;
+
+        case 3:
+            system("cls");
+            mainMenu();
+
     }
 
 }
 
+//This is for Registration
+
 void regisForm(void)
 {
+    //Prelim Act2
 
     char name[50], birthday[50], add[50], contactNum[50], emailAdd[50], citizen[50], fatherName[50], motherName[50];
     char educPri[50], educSec[50], educTer[50], firstChoice[50], secondChoice[50], thirdChoice[50];
@@ -247,4 +261,122 @@ void regisForm(void)
     printf("1ST CHOICE     : %s\n", firstChoice);
     printf("2ND CHOICE     : %s\n", secondChoice);
     printf("3RD CHOICE     : %s\n", thirdChoice);
+}
+
+void listRegistered(void)
+{
+    //Prelim Act1
+    printf("\t\t            List of Registered People          \n\n");
+
+    printf("\t\t ==============================================  \n");
+    printf("\t\t               REGISTRATION FORM                 \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t NAME           : ARCE, JHON BRIAN V.            \n");
+    printf("\t\t AGE            : 19 YEARS OLD                   \n");
+    printf("\t\t BIRTHDAY       : APRIL 02, 2003                 \n");
+    printf("\t\t ADDRESS        : SAN ISIDRO                     \n");
+    printf("\t\t CONTACT NO.    : 09951779567                    \n");
+    printf("\t\t EMAIL ADD.     : arce.jhonbrian@gmail.com       \n");
+    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t FATHER'S NAME  : ARCE, REGAN                    \n");
+    printf("\t\t MOTHER'S NAME  : ARCE, LIEZEL                 \n\n");
+
+    printf("\t\t =============================================   \n");
+    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t PRIMARY        : SNES                           \n");
+    printf("\t\t SECONDARY      : OMNHS                          \n");
+    printf("\t\t TERTIARY       : CDM                          \n\n");
+
+    printf("\t\t 1ST CHOICE     : BSED                           \n");
+    printf("\t\t 2ND CHOICE     : BSCS                           \n");
+    printf("\t\t 3RD CHOICE     : BSIT                         \n\n");
+
+    printf("\t\t ----------------------------------------------\n\n");
+
+    printf("\t\t ==============================================  \n");
+    printf("\t\t            REGISTRATION FORM                    \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t NAME           : BETINOL, ARON JAMES L.         \n");
+    printf("\t\t AGE            : 18 YEARS OLD                   \n");
+    printf("\t\t BIRTHDAY       : MARCH 03, 2004                 \n");
+    printf("\t\t ADDRESS        : SAN JOSE                       \n");
+    printf("\t\t CONTACT NO.    : 09652635576                    \n");
+    printf("\t\t EMAIL ADD.     : betinolaronjames529@gmail.com  \n");
+    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t FATHER'S NAME  : BETINOL, PATERNO               \n");
+    printf("\t\t MOTHER'S NAME  : BETINOL, CIRILIA              \n\n");
+
+    printf("\t\t =============================================   \n");
+    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t PRIMARY        : KVES                           \n");
+    printf("\t\t SECONDARY      : KVNHS                          \n");
+    printf("\t\t TERTIARY       : AICS                         \n\n");
+
+    printf("\t\t 1ST CHOICE     : BSIT                           \n");
+    printf("\t\t 2ND CHOICE     : BSCS                           \n");
+    printf("\t\t 3RD CHOICE     : BScPE                        \n\n");
+
+    printf("\t\t ----------------------------------------------\n\n");
+
+    printf("\t\t ==============================================  \n");
+    printf("\t\t            REGISTRATION FORM                    \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t NAME           : MEREDORES, JOSHUA U.           \n");
+    printf("\t\t AGE            : 18 YEARS OLD                   \n");
+    printf("\t\t BIRTHDAY       : MARCH 03, 2004                 \n");
+    printf("\t\t ADDRESS        : SOUTHVILLE 8B ROD              \n");
+    printf("\t\t CONTACT NO.    : 09093575240                    \n");
+    printf("\t\t EMAIL ADD.     : joshuameredores@gmail.com      \n");
+    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t FATHER'S NAME  : MEREDORES, BONIFACIO           \n");
+    printf("\t\t MOTHER'S NAME  : MEREDORES, MARIBETH          \n\n");
+
+    printf("\t\t =============================================   \n");
+    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t PRIMARY        : SILES                          \n");
+    printf("\t\t SECONDARY      : SNHS                           \n");
+    printf("\t\t TERTIARY       : AICS                         \n\n");
+
+    printf("\t\t 1ST CHOICE     : BScPE                          \n");
+    printf("\t\t 2ND CHOICE     : BSHR                           \n");
+    printf("\t\t 3RD CHOICE     : BSIT                         \n\n");
+
+    printf("\t\t ----------------------------------------------\n\n");
+
+    printf("\t\t ==============================================  \n");
+    printf("\t\t            REGISTRATION FORM                    \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t NAME           : CALPO, MAXELL JANE             \n");
+    printf("\t\t AGE            : 34 YEARS OLD                   \n");
+    printf("\t\t BIRTHDAY       : DECEMBER 19, 1987              \n");
+    printf("\t\t ADDRESS        : QUEZON CITY                    \n");
+    printf("\t\t CONTACT NO.    : 09293023344                    \n");
+    printf("\t\t EMAIL ADD.     : calpomax@gmail.com             \n");
+    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t FATHER'S NAME  : CALPO, PROCESS                 \n");
+    printf("\t\t MOTHER'S NAME  : ASIS, ROSEMARIE              \n\n");
+
+    printf("\t\t =============================================   \n");
+    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t PRIMARY        : SVES                           \n");
+    printf("\t\t SECONDARY      : CHS                            \n");
+    printf("\t\t TERTIARY       : PNM                          \n\n");
+
+    printf("\t\t 1ST CHOICE     : BSIT                           \n");
+    printf("\t\t 2ND CHOICE     : BSIT                           \n");
+    printf("\t\t 3RD CHOICE     : BSIT                         \n\n");
+
+    printf("\t\t ----------------------------------------------\n\n");
 }
