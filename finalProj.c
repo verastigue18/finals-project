@@ -24,8 +24,8 @@ void listRegistered(void);
 void simpleCal(void);
 
 void basicComp(void);
- 
-void areaOFShape(void); 
+
+void areaOFShape(void);
 void areaTri(void);
 void areaSqr(void);
 void areaCirle(void);
@@ -607,7 +607,7 @@ void areaTri(void)
     // Answer/Equal/Total
     printf("\n\n\t\t Total Area = %.2f\n\n", area);
 
-     printf("\t\t BACK press [0]               EXIT press [1] : ");
+    printf("\t\t BACK press [0]               EXIT press [1] : ");
     select = getch();
 
     switch(select)
@@ -632,30 +632,124 @@ void areaTri(void)
 
 void areaSqr(void)
 {
-     printf("Under Process!\n");
+    //Code came From  JOSHUA MEREDORES
+    int area,side;
+
+    printf("\n\n\t\t Enter sides of square: ");
+    scanf("%d", &side);
+
+    area = side * side;
+
+    printf("\n\t\t Area of square = %d\n\n",area);
+
+    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    select = getch();
+
+    switch(select)
+    {
+        case '0':
+            system("cls");
+            areaOFShape();
+            break;
+
+        case '1':
+            system("cls");
+            greet();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
 }
 
 void areaCirle(void)
 {
-     printf("Under Process!\n");
+
+
+    //Code came From  JOSHUA MEREDORES
+    int radius;
+    float pi = 3.14, area;
+
+    printf("\n\n\t\t Enter the radius of circle: ");
+    scanf("%d",&radius);
+
+    area = pi * radius * radius;
+
+    printf("\n\t\t Area of circle= 1%f\n\n",area);
+
+    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    select = getch();
+
+    switch(select)
+    {
+        case '0':
+            system("cls");
+            areaOFShape();
+            break;
+
+        case '1':
+            system("cls");
+            greet();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
+
 }
 
 void areaPar(void)
 {
-    printf("Under Process!\n");
+    //Code came From  JOSHUA MEREDORES
+    float b, h, area;
+
+    printf("\n\n\t\t Enter the Base: ");
+    scanf("%f",&b);
+
+    printf("\n\t\t Enter the Vertical height: ");
+    scanf("%f",&h);
+
+    area = b * h;
+
+    printf("\n\t\t Area of Parallelogram = %f\n\n", area);
+
+    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    select = getch();
+
+    switch(select)
+    {
+        case '0':
+            system("cls");
+            areaOFShape();
+            break;
+
+        case '1':
+            system("cls");
+            greet();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
 }
 
 //This is for Grade Calculation
 void gradeCal(void)
 {
     printf("\n\n\t\t ========== GRADE CALCULATION ==========\n\n");
-    
+
     printf("\t\t [1] - Grade Range                            \n");
     printf("\t\t [2] - Passes/Failed Identifier               \n");
     printf("\t\t [3] - Grade Computation                      \n");
     printf("\t\t [4] - Grade Computation 1.1                  \n");
     printf("\t\t [5] - Back                                 \n\n");
-    
+
      printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
@@ -691,7 +785,58 @@ void gradeCal(void)
 
 void gradeRange(void)
 {
-    
+    //Midterm Exercises : Grade Range   This Line of code is came from  JHON BRIAN ARCE
+
+    float grade;
+
+    printf("\n\n\t\t Enter Your Grade : ");
+    scanf("%f", &grade);
+
+    if(grade >= 90 && grade <= 100)
+    {
+        printf("\n\t\t Grade : A\n\n");
+    }
+    else if(grade >= 80 && grade < 90)
+    {
+        printf("\n\t\t Grade : B\n\n");
+    }
+    else if(grade >= 70 && grade < 80)
+    {
+        printf("\n\t\t Grade : C\n\n");
+    }
+    else if(grade >=60 && grade < 70)
+    {
+        printf("\n\t\t Grade : D\n\n");
+    }
+    else if(grade >= 0 && grade < 60)
+    {
+        printf("\n\t\t Grade : E\n\n");
+    }
+    else
+    {
+        printf("\n\t\t OUT OF RANGE!\n\n");
+    }
+
+    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    select = getch();
+
+    switch(select)
+    {
+        case '0':
+            system("cls");
+            gradeCal();
+            break;
+
+        case '1':
+            system("cls");
+            greet();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
 }
 
 
