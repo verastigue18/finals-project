@@ -34,6 +34,8 @@ void areaPar(void);
 void gradeCal(void);
 void gradeRange(void);
 
+void growthRate(void);
+
 void greet(void);
 
 //global Variable
@@ -473,7 +475,7 @@ void simpleCal(void)
 
         case 4:
             system("cls");
-            //growthRate();
+            growthRate();
             break;
 
         case 5:
@@ -825,6 +827,202 @@ void gradeRange(void)
         case '0':
             system("cls");
             gradeCal();
+            break;
+
+        case '1':
+            system("cls");
+            greet();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
+}
+
+void growthRate(void)
+{
+
+    float ans, A, P, r, t;
+    const float e = 2.718;
+
+    //View
+    printf(" \n\n\t\t ____________________________________ \n");
+    printf("\t\t |####################################|\n");
+    printf("\t\t |#|                                |#|\n");
+    printf("\t\t |#|     Population Growth Rate     |#|\n");
+    printf("\t\t |#|________________________________|#|\n");
+    printf("\t\t |####################################|\n");
+    printf("\t\t |#|   What did you want to FIND?   |#|\n");
+    printf("\t\t |#|                                |#|\n");
+    printf("\t\t |#| [1] - Size of Population       |#|\n");
+    printf("\t\t |#|                                |#|\n");
+    printf("\t\t |#| [2] - Number of People         |#|\n");
+    printf("\t\t |#|                                |#|\n");
+    printf("\t\t |#| [3] - Rate of Growth           |#|\n");
+    printf("\t\t |#|                                |#|\n");
+    printf("\t\t |#| [4] - Time                     |#|\n");
+    printf("\t\t |#|________________________________|#|\n");
+    printf("\t\t |####################################|\n\n");
+
+    //Getting input to a User
+    printf("\t\t           Enter zero if no value      \n\n");
+
+    printf("\t\t Size of the Population after in grows : ");
+    scanf("%f", &A);
+
+    printf("\t\t Initial Number of People : ");
+    scanf("%f", &P);
+
+    printf("\t\t Enter the Rate of Growth : ");
+    scanf("%f", &r);
+
+    printf("\t\t Enter the Time in Month : ");
+    scanf("%f", &t);
+
+    printf("\t\t What did you want to find? ");
+    scanf("%i", &opt);
+
+    // processing or a computation to rate onto decimal
+    t /= 12;
+    r /= 100;
+
+    // the Decision of opt
+    if(opt <= 4 && opt > 0)
+    {
+        if(opt == 1)
+        {
+            //procesd
+            ans = P * pow(e,(r * t));
+
+            // To clear
+            system("cls");
+
+            //The outout
+            printf("\n\n\t\t =======================================================================================\n");
+            printf("\t\t                                 Population after in grows                              \n");
+            printf("\t\t =======================================================================================\n");
+            printf("\t\t             Given :                                                                    \n");
+            printf("\t\t                 P = %g                                                              \n", P);
+            printf("\t\t                 e = 2.718                                                              \n");
+            printf("\t\t                 r = %g                                                              \n", r);
+            printf("\t\t                 t = %g                                                              \n", t);
+            printf("\t\t                 A = ?                                                                  \n");
+            printf("\t\t             Answer :                                                                   \n");
+            printf("\t\t                 A = %.0f therefore, the City population would be about            \n", ans);
+            printf("\t\t                                 %.0f after %.1f Years.                           \n", ans, t);
+            printf("\t\t =======================================================================================\n");
+            printf("\t\t                                 © Group #2   2022-2022                                 \n");
+            printf("\t\t                                  Colegio De Montalban                                \n\n");
+            }
+
+        if(opt == 2)
+        {
+            //processing
+            ans = A / pow(e,(r * t));
+
+            //to Clear
+            system("cls");
+
+            //Output
+            printf("\n\n\t\t =======================================================================================\n");
+            printf("\t\t                                 Initial Number of People                               \n");
+            printf("\t\t =======================================================================================\n");
+            printf("\t\t             Given :                                                                    \n");
+            printf("\t\t                 A = %g                                                              \n", A);
+            printf("\t\t                e = 2.718                                                              \n");
+            printf("\t\t                r = %g                                                              \n", r);
+            printf("\t\t                t = %g                                                              \n", t);
+            printf("\t\t                P = ?                                                                  \n");
+            printf("\t\t            Answer :                                                                   \n");
+            printf("\t\t                P = %.0f therefore, the initial number of Population would be     \n", ans);
+            printf("\t\t                                   %.0f in %.1f Years.                         \n", ans, t);
+            printf("\t\t=======================================================================================\n");
+            printf("\t\t                                © Group #2   2022-2022                                 \n");
+            printf("\t\t                                 Colegio De Montalban                                \n\n");
+        }
+
+        if(opt == 3)
+        {
+            //process
+            ans = log10(A / P) / ( t * log10(e));
+
+            //to clear
+            system("cls");
+
+            //Output
+            printf("\n\n\t\t =======================================================================================\n");
+            printf("\t\t                                     Rate of Growth                                     \n");
+            printf("\t\t =======================================================================================\n");
+            printf("\t\t             Given :                                                                    \n");
+            printf("\t\t                 A = %g                                                              \n", A);
+            printf("\t\t                 P = %g                                                              \n", P);
+            printf("\t\t                 e = 2.718                                                              \n");
+            printf("\t\t                 t = %g                                                              \n", t);
+            printf("\t\t                 r = ?                                                                  \n");
+            printf("\t\t             Answer :                                                                   \n");
+            printf("\t\t                 r = %.3f therefore, the rate of growth of the Population would be \n", ans);
+            printf("\t\t                                        %.3f in the %.1f Years.                 \n", ans, t);
+            printf("\t\t =======================================================================================\n");
+            printf("\t\t                                 © Group #2   2022-2022                                 \n");
+            printf("\t\t                                  Colegio De Montalban                                \n\n");
+        }
+
+        if(opt == 4)
+        {
+            //processing
+            ans = log10(A / P) / (r * log10(e));
+
+            //To Clear
+            system("cls");
+
+            //Output
+            printf("\n\n\t\t =======================================================================================\n");
+            printf("\t\t                                        Time                                            \n");
+            printf("\t\t =======================================================================================\n");
+            printf("\t\t             Given :                                                                    \n");
+            printf("\t\t                 A = %g                                                              \n", A);
+            printf("\t\t                 p = %g                                                              \n", P);
+            printf("\t\t                 e = 2.718                                                              \n");
+            printf("\t\t                 r = %g                                                              \n", r);
+            printf("\t\t                 t = ?                                                                  \n");
+            printf("\t\t             Answer :                                                                   \n");
+            printf("\t\t                 t = %.0f therefore, in the %.1f Years the size of Population was %g \n", ans, ans, A);
+            printf("\t\t                                                                                        \n");
+            printf("\t\t =======================================================================================\n");
+            printf("\t\t                                 © Group #2   2022-2022                                 \n");
+            printf("\t\t                                  Colegio De Montalban                                \n\n");
+        }
+    }
+
+    //if the user input a Wrong Character
+    if(opt > 4 || opt < 0)
+    {
+        system("cls");
+
+        printf("\n\n\t\t =======================================================================================\n");
+        printf("\t\t                                       !! WARNING !!                                    \n");
+        printf("\t\t =======================================================================================\n");
+        printf("\t\t                                                                                        \n");
+        printf("\t\t                                                                                        \n");
+        printf("\t\t                         Sorry! this variable number was not EXIST.                     \n");
+        printf("\t\t                                        Please try Again.                               \n");
+        printf("\t\t                                                                                        \n");
+        printf("\t\t                                                                                        \n");
+        printf("\t\t =======================================================================================\n");
+        printf("\t\t                                 © Group #2   2022-2022                                 \n");
+        printf("\t\t                                  Colegio De Montalban                               \n\n");
+    }
+
+    printf("\t\t BACK press [0]                                                         EXIT press [1] : ");
+    select = getch();
+
+    switch(select)
+    {
+        case '0':
+            system("cls");
+            simpleCal();
             break;
 
         case '1':
