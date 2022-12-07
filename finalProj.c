@@ -21,10 +21,18 @@ void registList(void);
 void listRegistered(void);
 
 //This is for Simple Calculator
-void simpleCal(void); //menu
-void basicComp(void); //case 1
-void areaOFShape(void); //case2
+void simpleCal(void);
+
+void basicComp(void);
+ 
+void areaOFShape(void); 
 void areaTri(void);
+void areaSqr(void);
+void areaCirle(void);
+void areaPar(void);
+
+void gradeCal(void);
+void gradeRange(void);
 
 void greet(void);
 
@@ -460,7 +468,7 @@ void simpleCal(void)
 
         case 3:
             system("cls");
-            //gradeCal();
+            gradeCal();
             break;
 
         case 4:
@@ -533,6 +541,7 @@ void basicComp(void)
     }
 }
 
+//This is for Area of Shape
 void areaOFShape(void)
 {
     printf("\n\n\t\t ==========Area of Shape==========\n\n");
@@ -555,25 +564,23 @@ void areaOFShape(void)
 
         case 2:
             system("cls");
-            printf("Under Process!\n");
+            areaSqr();
             break;
 
         case 3:
             system("cls");
-            printf("Under Process!\n");
+            areaCirle();
             break;
 
         case 4:
             system("cls");
-            printf("Under Process!\n");
+            areaPar();
             break;
 
         case 5:
             system("cls");
             mainMenu();
             break;
-
-
     }
 }
 
@@ -622,6 +629,71 @@ void areaTri(void)
     }
 
 }
+
+void areaSqr(void)
+{
+     printf("Under Process!\n");
+}
+
+void areaCirle(void)
+{
+     printf("Under Process!\n");
+}
+
+void areaPar(void)
+{
+    printf("Under Process!\n");
+}
+
+//This is for Grade Calculation
+void gradeCal(void)
+{
+    printf("\n\n\t\t ========== GRADE CALCULATION ==========\n\n");
+    
+    printf("\t\t [1] - Grade Range                            \n");
+    printf("\t\t [2] - Passes/Failed Identifier               \n");
+    printf("\t\t [3] - Grade Computation                      \n");
+    printf("\t\t [4] - Grade Computation 1.1                  \n");
+    printf("\t\t [5] - Back                                 \n\n");
+    
+     printf("\t\t Pick a Number : ");
+    scanf("%i", &opt);
+
+    switch(opt)
+    {
+        case 1:
+            system("cls");
+            gradeRange();
+            break;
+
+        case 2:
+            system("cls");
+            //passIdent();
+            break;
+
+        case 3:
+            system("cls");
+            //gradeComp1();
+            break;
+
+        case 4:
+            system("cls");
+            //gradeComp2();
+            break;
+
+        case 5:
+            system("cls");
+            mainMenu();
+            break;
+
+    }
+}
+
+void gradeRange(void)
+{
+    
+}
+
 
 void greet(void)
 {
