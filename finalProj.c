@@ -36,6 +36,8 @@ void gradeRange(void);
 
 void growthRate(void);
 
+void bitwise(void);
+
 void greet(void);
 
 //global Variable
@@ -86,6 +88,7 @@ void banner(void)
     }
 }
 
+//Main Menu
 void mainMenu(void)
 {
     printf("\n\n\t\t                                     MENU                                      \n");
@@ -198,9 +201,9 @@ void registList(void)
 
 }
 
+//Prelim Act2
 void regisForm(void)
 {
-    //Prelim Act2
 
     char name[50], birthday[50], add[50], contactNum[50], emailAdd[50], citizen[50], fatherName[50], motherName[50];
     char educPri[50], educSec[50], educTer[50], firstChoice[50], secondChoice[50], thirdChoice[50];
@@ -301,9 +304,9 @@ void regisForm(void)
     }
 }
 
+//Prelim Act1
 void listRegistered(void)
 {
-    //Prelim Act1
     printf("\n\n\t\t            List of Registered People        \n\n");
 
     printf("\t\t ==============================================  \n");
@@ -440,7 +443,7 @@ void listRegistered(void)
     }
 }
 
-//This is for Simple Calculator of or case 2
+//MENU for Simple Calculator
 void simpleCal(void)
 {
 
@@ -480,7 +483,7 @@ void simpleCal(void)
 
         case 5:
             system("cls");
-            //bitwise();
+            bitwise();
             break;
 
         case 6:
@@ -490,9 +493,9 @@ void simpleCal(void)
     }
 }
 
+//Prelim Examination.    This code is from MAXELL JANE CALPO
 void basicComp(void)
 {
-    //Prelim Examination.    This code is from MAXELL JANE CALPO
 
     float add, sub, product, quote, num1, num2, num3, expo;
 
@@ -543,7 +546,7 @@ void basicComp(void)
     }
 }
 
-//This is for Area of Shape
+//MENU for Area of Shape
 void areaOFShape(void)
 {
     printf("\n\n\t\t ==========Area of Shape==========\n\n");
@@ -586,9 +589,9 @@ void areaOFShape(void)
     }
 }
 
+//Prelim Exercise Area of Triangle.    This line of Code came from ARON JAMES BETINOL
 void areaTri(void)
 {
-    //Prelim Exercise Area of Triangle.    This line of Code came from ARON JAMES BETINOL
 
     float b, h, area;
 
@@ -632,9 +635,9 @@ void areaTri(void)
 
 }
 
+//Code came From  JOSHUA MEREDORES
 void areaSqr(void)
 {
-    //Code came From  JOSHUA MEREDORES
     int area,side;
 
     printf("\n\n\t\t Enter sides of square: ");
@@ -666,16 +669,14 @@ void areaSqr(void)
     }
 }
 
+//Code came From  JOSHUA MEREDORES
 void areaCirle(void)
 {
-
-
-    //Code came From  JOSHUA MEREDORES
     int radius;
     float pi = 3.14, area;
 
     printf("\n\n\t\t Enter the radius of circle: ");
-    scanf("%d",&radius);
+    scanf("%d", &radius);
 
     area = pi * radius * radius;
 
@@ -704,9 +705,9 @@ void areaCirle(void)
 
 }
 
+//Code came From  JOSHUA MEREDORES
 void areaPar(void)
 {
-    //Code came From  JOSHUA MEREDORES
     float b, h, area;
 
     printf("\n\n\t\t Enter the Base: ");
@@ -741,7 +742,7 @@ void areaPar(void)
     }
 }
 
-//This is for Grade Calculation
+//MENU for Grade Calculation
 void gradeCal(void)
 {
     printf("\n\n\t\t ========== GRADE CALCULATION ==========\n\n");
@@ -785,10 +786,9 @@ void gradeCal(void)
     }
 }
 
+//Midterm Exercises : Grade Range   This Line of code is came from  JHON BRIAN ARCE
 void gradeRange(void)
 {
-    //Midterm Exercises : Grade Range   This Line of code is came from  JHON BRIAN ARCE
-
     float grade;
 
     printf("\n\n\t\t Enter Your Grade : ");
@@ -841,6 +841,7 @@ void gradeRange(void)
     }
 }
 
+//This code is Group Midter Project
 void growthRate(void)
 {
 
@@ -914,7 +915,7 @@ void growthRate(void)
             printf("\t\t                                 %.0f after %.1f Years.                           \n", ans, t);
             printf("\t\t =======================================================================================\n");
             printf("\t\t                                 © Group #2   2022-2022                                 \n");
-            printf("\t\t                                  Colegio De Montalban                                \n\n");
+            printf("\t\t                                  Colegio De Montalban                              \n\n\n");
             }
 
         if(opt == 2)
@@ -940,7 +941,7 @@ void growthRate(void)
             printf("\t\t                                   %.0f in %.1f Years.                         \n", ans, t);
             printf("\t\t=======================================================================================\n");
             printf("\t\t                                © Group #2   2022-2022                                 \n");
-            printf("\t\t                                 Colegio De Montalban                                \n\n");
+            printf("\t\t                                 Colegio De Montalban                              \n\n\n");
         }
 
         if(opt == 3)
@@ -966,7 +967,7 @@ void growthRate(void)
             printf("\t\t                                        %.3f in the %.1f Years.                 \n", ans, t);
             printf("\t\t =======================================================================================\n");
             printf("\t\t                                 © Group #2   2022-2022                                 \n");
-            printf("\t\t                                  Colegio De Montalban                                \n\n");
+            printf("\t\t                                  Colegio De Montalban                              \n\n\n");
         }
 
         if(opt == 4)
@@ -992,7 +993,7 @@ void growthRate(void)
             printf("\t\t                                                                                        \n");
             printf("\t\t =======================================================================================\n");
             printf("\t\t                                 © Group #2   2022-2022                                 \n");
-            printf("\t\t                                  Colegio De Montalban                                \n\n");
+            printf("\t\t                                  Colegio De Montalban                              \n\n\n");
         }
     }
 
@@ -1012,10 +1013,11 @@ void growthRate(void)
         printf("\t\t                                                                                        \n");
         printf("\t\t =======================================================================================\n");
         printf("\t\t                                 © Group #2   2022-2022                                 \n");
-        printf("\t\t                                  Colegio De Montalban                               \n\n");
+        printf("\t\t                                  Colegio De Montalban                             \n\n\n");
+
     }
 
-    printf("\t\t BACK press [0]                                                         EXIT press [1] : ");
+    printf("\t\t                 BACK press [0]                           EXIT press [1] : ");
     select = getch();
 
     switch(select)
@@ -1035,6 +1037,11 @@ void growthRate(void)
             printf("Invalid");
             break;
     }
+}
+
+void bitwise(void)
+{
+    
 }
 
 
