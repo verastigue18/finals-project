@@ -22,21 +22,21 @@ void listRegistered(void);
 
 //This is for Simple Calculator
 void simpleCal(void);
-
 void basicComp(void);
-
 void areaOFShape(void);
 void areaTri(void);
 void areaSqr(void);
 void areaCirle(void);
 void areaPar(void);
-
 void gradeCal(void);
 void gradeRange(void);
-
 void growthRate(void);
-
 void bitwise(void);
+
+//This is For Temperature Converter
+void tempConvert(void);
+void celCon(void);
+void fahCon(void);
 
 void greet(void);
 
@@ -98,8 +98,8 @@ void mainMenu(void)
     printf("\t\t        |                            | |  |                            | |         \n");
     printf("\t\t        | [1] Registration Form      | |  | [6] Color Selector         | |         \n");
     printf("\t\t        | [2] Simple Calculator      | |  | [7] Grade Range            | |         \n");
-    printf("\t\t        | [3] Integers Identifier    | |  | [8] Intergers Comparison   | |         \n");
-    printf("\t\t        | [4] Temperature Converter  | |  | [9] Back                   | |         \n");
+    printf("\t\t        | [3] Temperature Converter  | |  | [8] Intergers Comparison   | |         \n");
+    printf("\t\t        | [4] Integers Identifier    | |  | [9] Back                   | |         \n");
     printf("\t\t        | [5] Qualification to Vote  | |  |                            | |         \n");
     printf("\t\t        |____________________________|/   |____________________________|/        \n\n");
     printf("\t\t  ================================================================================ \n\n");
@@ -116,19 +116,17 @@ void mainMenu(void)
 
         case 2:
             system("cls");
-            printf("Simple Calculator \n");
             simpleCal();
             break;
 
         case 3:
             system("cls");
-            printf("UNDER PROCESS! \n");
+            tempConvert();
             break;
 
         case 4:
             system("cls");
             printf("UNDER PROCESS! \n");
-            //tempConvert();
             break;
 
         case 5:
@@ -421,6 +419,34 @@ void listRegistered(void)
 
     printf("\t\t ----------------------------------------------\n\n");
 
+    printf("\t\t ==============================================  \n");
+    printf("\t\t            REGISTRATION FORM                    \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t NAME           : SANTELICES, ALBERT             \n");
+    printf("\t\t AGE            : 21 YEARS OLD                   \n");
+    printf("\t\t BIRTHDAY       : APRIL 03, 2001                 \n");
+    printf("\t\t ADDRESS        : SAN JOSE                       \n");
+    printf("\t\t CONTACT NO.    : 09485618348                    \n");
+    printf("\t\t EMAIL ADD.     : santelicesalbert03@gmail.com   \n");
+    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t FATHER'S NAME  : SANTELICES, ARNOLD             \n");
+    printf("\t\t MOTHER'S NAME  : SANTELICES, MA. LILIBETH     \n\n");
+
+    printf("\t\t =============================================   \n");
+    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
+    printf("\t\t ==============================================\n\n");
+
+    printf("\t\t PRIMARY        : KVES                           \n");
+    printf("\t\t SECONDARY      : KVNHS                          \n");
+    printf("\t\t TERTIARY       : KVSHS                        \n\n");
+
+    printf("\t\t 1ST CHOICE     : BSIT                           \n");
+    printf("\t\t 2ND CHOICE     : BS CRIM                        \n");
+    printf("\t\t 3RD CHOICE     : HRM                          \n\n");
+
+    printf("\t\t ----------------------------------------------\n\n");
+
     printf("\t\t BACK press [0]               EXIT press [1] : ");
     select = getch();
 
@@ -585,6 +611,11 @@ void areaOFShape(void)
         case 5:
             system("cls");
             mainMenu();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
             break;
     }
 }
@@ -1039,10 +1070,158 @@ void growthRate(void)
     }
 }
 
+
+//Midterm Exercises BITWISE            This code is from MAXELL JANE CALPO
 void bitwise(void)
 {
-    
+    int x, y;
+
+    printf("\n\n\t\t First Number: ");
+    scanf("%d",&x);
+
+    printf("\t\t Second Number: ");
+    scanf("%d",&y);
+
+    if((x <= 255 && x > 0) && (y <= 255 && y > 0))
+    {
+        printf("\n\n\t\t Bitwise AND = %d\n", x & y);
+        printf("\t\t Bitwise OR = %d\n", x | y);
+        printf("\t\t Bitwise XOR = %d\n\n", x ^ y);
+    }
+    else
+    {
+       printf("\n\t\t Out of range!\n\n");
+    }
+
+    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    select = getch();
+
+    switch(select)
+    {
+        case '0':
+            system("cls");
+            gradeCal();
+            break;
+
+        case '1':
+            system("cls");
+            greet();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
 }
+
+//MENU for Temperature Converter
+void tempConvert(void)
+{
+    printf("\n\n\t\t ========== Temperature Converter ==========\n\n");
+    printf("\t\t [1] - Celsius to Fahrenheit                      \n");
+    printf("\t\t [2] - Fahrenheit to Celsius                      \n");
+    printf("\t\t [3] - Back                                     \n\n");
+
+    printf("\t\t Pick a Number : ");
+    scanf("%i", &opt);
+
+    switch(opt)
+    {
+        case 1:
+            system("cls");
+            celCon();
+            break;
+
+        case 2:
+            system("cls");
+            fahCon();
+            break;
+
+        case 3:
+            system("cls");
+            mainMenu();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
+}
+
+//Prelim Activity 3    This code came from ALBERT SANTELICES
+void celCon(void)
+{
+    float fahrenheit, celsius;
+
+    printf("\n\n\t\t Enter the celsius: ");
+    scanf("%f", &celsius);
+
+
+    fahrenheit = (celsius*9/5)+32;
+
+
+    printf("\n\t\t %.1f celsius = %.1f fahrenheit\n\n", celsius, fahrenheit);
+
+    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    select = getch();
+
+    switch(select)
+    {
+        case '0':
+            system("cls");
+            tempConvert();
+            break;
+
+        case '1':
+            system("cls");
+            greet();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
+}
+
+//Prelim Activity 3    This code came from ALBERT SANTELICES
+void fahCon(void)
+{
+    float celsius, fahrenheit;
+
+    printf("\n\n\t\t Enter the fahrenheit: ");
+    scanf("%f", &fahrenheit);
+
+
+    celsius = (fahrenheit - 32) * 5 / 9;
+
+
+    printf("\n\t\t %.1f fahrenheit = %.1f celsius\n\n", fahrenheit, celsius);
+
+    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    select = getch();
+
+    switch(select)
+    {
+        case '0':
+            system("cls");
+            tempConvert();
+            break;
+
+        case '1':
+            system("cls");
+            greet();
+            break;
+
+        default:
+            system("cls");
+            printf("Invalid");
+            break;
+    }
+}
+
 
 
 void greet(void)
