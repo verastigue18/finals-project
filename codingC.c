@@ -18,6 +18,7 @@ void mainMenu(void);
 
 //This is for Registration
 void registList(void);
+void regisForm(void);
 void listRegistered(void);
 
 //This is for Simple Calculator
@@ -31,6 +32,10 @@ void areaPar(void);
 void gradeCal(void);
 void gradeRange(void);
 void growthRate(void);
+void sizePopulation(void);
+void numPeople(void);
+void rateOfGrowth(void);
+void timeRate(void);
 void bitwise(void);
 
 //This is For Temperature Converter
@@ -41,12 +46,13 @@ void fahCon(void);
 void greet(void);
 
 //global Variable
-char select;
+char slt;
 int opt;
+float ans, A, P, r, t, e = 2.718;
 
 int main()
 {
-    //system("Color A");
+    system("Color A");
     banner();
     return 0;
 }
@@ -67,21 +73,23 @@ void banner(void)
     printf("\t\t--------------------------------------------------------------------------------\n\n");
 
     printf("\t\tDo You Want to Use this Program? press [Y/N] : ");
-    select = getch();
+    slt = getch();
+    //scanf("%c", &select);
 
-    switch(select)
+    switch(slt)
     {
         case 'Y': case 'y' :
-            system("cls");
+            system("clear");
             mainMenu();
             break;
 
         case 'N': case 'n':
-            system("cls");
+            system("clear");
             greet();
             break;
 
         default:
+            system("clear");
             printf("Invalid Value! \n");
             break;
     }
@@ -167,14 +175,15 @@ void mainMenu(void)
 //This is for Registration or case 1
 void registList(void)
 {
+    printf("\n\n\n\n\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                       REGISTRATION LIST                        \n");
+    printf("\t\t\t ==============================+==============================\n\n");
+    printf("\t\t\t\t [1] - Registration Form                                    \n\n");
+    printf("\t\t\t\t [2] - List of Registered                                   \n\n");
+    printf("\t\t\t\t [3] - Back                                                 \n\n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\n\n\t\t ==========Registration List==========\n\n");
-
-    printf("\t\t [1] - Registration Form                \n");
-    printf("\t\t [2] - List of Registered               \n");
-    printf("\t\t [3] - Back                           \n\n");
-
-    printf("\t\t Pick a Number : ");
+    printf("\t\t\t Pick a Number : ");
     scanf("%i", &opt);
 
     switch(opt)
@@ -193,6 +202,11 @@ void registList(void)
             system("clear");
             mainMenu();
             break;
+           
+        default:
+            system("clear");
+            printf("Invalid\n");
+            break;           
 
     }
 
@@ -280,9 +294,9 @@ void regisForm(void)
     printf("\t\t 3RD CHOICE     : %s\n\n", thirdChoice);
 
     printf("\t\t BACK press [0]           EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -447,9 +461,9 @@ void listRegistered(void)
     printf("\t\t ----------------------------------------------\n\n");
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -471,17 +485,18 @@ void listRegistered(void)
 //MENU for Simple Calculator
 void simpleCal(void)
 {
-
-    printf("\t\t           Simple Calculator          \n\n");
-
-    printf("\t\t  [1] - Basic Computation               \n");
-    printf("\t\t  [2] - Area of Shape                   \n");
-    printf("\t\t  [3] - Grade Calculation               \n");
-    printf("\t\t  [4] - Population Growth Rate          \n");
-    printf("\t\t  [5] - Bitwise                         \n");
-    printf("\t\t  [6] - Back                            \n");
-    printf("\t\t______________________________________\n\n");
-    printf("\t\t  Pick a Number : ");
+    printf("\n\n\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                       SIMPLE CALCULATOR                        \n");
+    printf("\t\t\t ==============================+==============================\n\n");
+    printf("\t\t\t\t [1] - Basic  Computaion                                    \n\n");
+    printf("\t\t\t\t [2] - Area of Shape                                        \n\n");
+    printf("\t\t\t\t [3] - Grade Calculation                                    \n\n");
+    printf("\t\t\t\t [4] - Population Growth Rate                               \n\n");
+    printf("\t\t\t\t [5] - Bitwise                                              \n\n");
+    printf("\t\t\t\t [6] - Back                                                 \n\n");
+    printf("\t\t\t ==============================+==============================\n\n");
+       
+    printf("\t\t\t  Pick a Number : ");
     scanf("%i", &opt);
 
     switch(opt)
@@ -515,6 +530,11 @@ void simpleCal(void)
             system("clear");
             mainMenu();
             break;
+            
+         default:
+            system("clear");
+            printf("Invalid\n");
+            break;
     }
 }
 
@@ -546,11 +566,9 @@ void basicComp(void)
     printf("%g ^ %g = %.2Lf\n\n", num3, num2, expo);
 
     printf("Do you want to try again? [Y/N] : ");
-    select = getch();
-    //scanf("%c", &select);
-
-
-    switch(select)
+    slt = getch();
+  
+    switch(slt)
     {
         case 'y': case 'Y':
             system("clear");
@@ -574,15 +592,17 @@ void basicComp(void)
 //MENU for Area of Shape
 void areaOFShape(void)
 {
-    printf("\n\n\t\t ==========Area of Shape==========\n\n");
+    printf("\n\n\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                         AREA OF SHAPE                         \n");
+    printf("\t\t\t ==============================+==============================\n\n");
+    printf("\t\t\t\t [1] - Area of Triangle                                     \n\n");
+    printf("\t\t\t\t [2] - Area of Square                                       \n\n");
+    printf("\t\t\t\t [3] - Area of Circle                                       \n\n");
+    printf("\t\t\t\t [4] - Area of Parallelogram                                \n\n");
+    printf("\t\t\t\t [5] - Back                                                 \n\n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t [1] - Area of Triangle                 \n");
-    printf("\t\t [2] - Area of Square                   \n");
-    printf("\t\t [3] - Area of Circle                   \n");
-    printf("\t\t [4] - Area of Parallelogram            \n");
-    printf("\t\t [5] - Back                           \n\n");
-
-    printf("\t\t Pick a Number : ");
+    printf("\t\t\t Pick a Number : ");
     scanf("%i", &opt);
 
     switch(opt)
@@ -643,9 +663,9 @@ void areaTri(void)
     printf("\n\n\t\t Total Area = %.2f\n\n", area);
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -678,9 +698,9 @@ void areaSqr(void)
     printf("\n\t\t Area of square = %d\n\n",area);
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -713,9 +733,9 @@ void areaCirle(void)
     printf("\n\t\t Area of circle= 1%f\n\n",area);
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -751,9 +771,9 @@ void areaPar(void)
     printf("\n\t\t Area of Parallelogram = %f\n\n", area);
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -775,15 +795,17 @@ void areaPar(void)
 //MENU for Grade Calculation
 void gradeCal(void)
 {
-    printf("\n\n\t\t ========== GRADE CALCULATION ==========\n\n");
+    printf("\n\n\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                        GRADE CALCULATION                       \n");
+    printf("\t\t\t ==============================+==============================\n\n");
+    printf("\t\t\t\t [1] - Grade Range                                          \n\n");
+    printf("\t\t\t\t [2] - Passes/Failed Identifier                             \n\n");
+    printf("\t\t\t\t [3] - Grade Computation                                    \n\n");
+    printf("\t\t\t\t [4] - Grade Computation 1.1                                \n\n");
+    printf("\t\t\t\t [5] - Back                                                 \n\n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t [1] - Grade Range                            \n");
-    printf("\t\t [2] - Passes/Failed Identifier               \n");
-    printf("\t\t [3] - Grade Computation                      \n");
-    printf("\t\t [4] - Grade Computation 1.1                  \n");
-    printf("\t\t [5] - Back                                 \n\n");
-
-     printf("\t\t Pick a Number : ");
+    printf("\t\t\t Pick a Number : ");
     scanf("%i", &opt);
 
     switch(opt)
@@ -812,7 +834,11 @@ void gradeCal(void)
             system("clear");
             mainMenu();
             break;
-
+            
+        default:
+            system("clear");
+            printf("Invalid\n");
+            break;
     }
 }
 
@@ -850,9 +876,9 @@ void gradeRange(void)
     }
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -873,36 +899,56 @@ void gradeRange(void)
 
 //This code is Group Midter Project
 void growthRate(void)
+{    
+    printf("\n\n\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                     Population Growth Rate                     \n");
+    printf("\t\t\t ==============================+==============================\n\n");
+    printf("\t\t\t\t [1] - Size of Population                                   \n\n");
+    printf("\t\t\t\t [2] - Number of People                                     \n\n");
+    printf("\t\t\t\t [3] - Rate of Growth                                       \n\n");
+    printf("\t\t\t\t [4] - Time                                                 \n\n");
+    printf("\t\t\t\t [5] - Back                                                 \n\n");
+    printf("\t\t\t ==============================+==============================\n\n");
+    
+    printf("\t\t\t What did you Want to find? pick a No. : ");
+    scanf("%i", opt);
+    
+    switch(opt)
+    {
+        case 1:
+            system("clear");
+            sizePopulation();
+            break;
+
+        case 2:
+            system("clear");
+            numPeople();
+            break;
+
+        case 3:
+            system("clear");
+            rateOfGrowth();
+            break;
+
+        case 4:
+            system("clear");
+            timeRate();
+            break;
+
+        case 5:
+            system("clear");
+            mainMenu();
+            break;
+            
+        default:
+            system("clear");
+            printf("Invalid\n");
+            break;
+    }
+}
+
+void sizePopulation(void)
 {
-
-    float ans, A, P, r, t;
-    const float e = 2.718;
-
-    //View
-    printf(" \n\n\t\t ____________________________________ \n");
-    printf("\t\t |####################################|\n");
-    printf("\t\t |#|                                |#|\n");
-    printf("\t\t |#|     Population Growth Rate     |#|\n");
-    printf("\t\t |#|________________________________|#|\n");
-    printf("\t\t |####################################|\n");
-    printf("\t\t |#|   What did you want to FIND?   |#|\n");
-    printf("\t\t |#|                                |#|\n");
-    printf("\t\t |#| [1] - Size of Population       |#|\n");
-    printf("\t\t |#|                                |#|\n");
-    printf("\t\t |#| [2] - Number of People         |#|\n");
-    printf("\t\t |#|                                |#|\n");
-    printf("\t\t |#| [3] - Rate of Growth           |#|\n");
-    printf("\t\t |#|                                |#|\n");
-    printf("\t\t |#| [4] - Time                     |#|\n");
-    printf("\t\t |#|________________________________|#|\n");
-    printf("\t\t |####################################|\n\n");
-
-    //Getting input to a User
-    printf("\t\t           Enter zero if no value      \n\n");
-
-    printf("\t\t Size of the Population after in grows : ");
-    scanf("%f", &A);
-
     printf("\t\t Initial Number of People : ");
     scanf("%f", &P);
 
@@ -911,150 +957,34 @@ void growthRate(void)
 
     printf("\t\t Enter the Time in Month : ");
     scanf("%f", &t);
+    
+    system("clear");
+    
+    ans = P * pow(e,(r * t));
+    
+    
+    printf("\n\n\t\t =======================================================================================\n");
+    printf("\t\t                                 Population after in grows                              \n");
+    printf("\t\t =======================================================================================\n");
+    printf("\t\t             Given :                                                                    \n");
+    printf("\t\t                 P = %g                                                              \n", P);
+    printf("\t\t                 e = 2.718                                                              \n");
+    printf("\t\t                 r = %g                                                              \n", r);
+    printf("\t\t                 t = %g                                                              \n", t);
+    printf("\t\t                 A = ?                                                                  \n");
+    printf("\t\t             Answer :                                                                   \n");
+    printf("\t\t                 A = %.0f therefore, the City population would be about            \n", ans);
+    printf("\t\t                                 %.0f after %.1f Years.                           \n", ans, t);
+    printf("\t\t =======================================================================================\n");
+    
+    printf("\n\t\t                    BACK press [0]               EXIT press [1] : ");
+    slt = getch();
 
-    printf("\t\t What did you want to find? ");
-    scanf("%i", &opt);
-
-    // processing or a computation to rate onto decimal
-    t /= 12;
-    r /= 100;
-
-    // the Decision of opt
-    if(opt <= 4 && opt > 0)
-    {
-        if(opt == 1)
-        {
-            //procesd
-            ans = P * pow(e,(r * t));
-
-            // To clear
-            system("clear");
-
-            //The outout
-            printf("\n\n\t\t =======================================================================================\n");
-            printf("\t\t                                 Population after in grows                              \n");
-            printf("\t\t =======================================================================================\n");
-            printf("\t\t             Given :                                                                    \n");
-            printf("\t\t                 P = %g                                                              \n", P);
-            printf("\t\t                 e = 2.718                                                              \n");
-            printf("\t\t                 r = %g                                                              \n", r);
-            printf("\t\t                 t = %g                                                              \n", t);
-            printf("\t\t                 A = ?                                                                  \n");
-            printf("\t\t             Answer :                                                                   \n");
-            printf("\t\t                 A = %.0f therefore, the City population would be about            \n", ans);
-            printf("\t\t                                 %.0f after %.1f Years.                           \n", ans, t);
-            printf("\t\t =======================================================================================\n");
-            printf("\t\t                                 © Group #2   2022-2022                                 \n");
-            printf("\t\t                                  Colegio De Montalban                              \n\n\n");
-            }
-
-        if(opt == 2)
-        {
-            //processing
-            ans = A / pow(e,(r * t));
-
-            //to Clear
-            system("clear");
-
-            //Output
-            printf("\n\n\t\t =======================================================================================\n");
-            printf("\t\t                                 Initial Number of People                               \n");
-            printf("\t\t =======================================================================================\n");
-            printf("\t\t             Given :                                                                    \n");
-            printf("\t\t                 A = %g                                                              \n", A);
-            printf("\t\t                e = 2.718                                                              \n");
-            printf("\t\t                r = %g                                                              \n", r);
-            printf("\t\t                t = %g                                                              \n", t);
-            printf("\t\t                P = ?                                                                  \n");
-            printf("\t\t            Answer :                                                                   \n");
-            printf("\t\t                P = %.0f therefore, the initial number of Population would be     \n", ans);
-            printf("\t\t                                   %.0f in %.1f Years.                         \n", ans, t);
-            printf("\t\t=======================================================================================\n");
-            printf("\t\t                                © Group #2   2022-2022                                 \n");
-            printf("\t\t                                 Colegio De Montalban                              \n\n\n");
-        }
-
-        if(opt == 3)
-        {
-            //process
-            ans = log10(A / P) / ( t * log10(e));
-
-            //to clear
-            system("clear");
-
-            //Output
-            printf("\n\n\t\t =======================================================================================\n");
-            printf("\t\t                                     Rate of Growth                                     \n");
-            printf("\t\t =======================================================================================\n");
-            printf("\t\t             Given :                                                                    \n");
-            printf("\t\t                 A = %g                                                              \n", A);
-            printf("\t\t                 P = %g                                                              \n", P);
-            printf("\t\t                 e = 2.718                                                              \n");
-            printf("\t\t                 t = %g                                                              \n", t);
-            printf("\t\t                 r = ?                                                                  \n");
-            printf("\t\t             Answer :                                                                   \n");
-            printf("\t\t                 r = %.3f therefore, the rate of growth of the Population would be \n", ans);
-            printf("\t\t                                        %.3f in the %.1f Years.                 \n", ans, t);
-            printf("\t\t =======================================================================================\n");
-            printf("\t\t                                 © Group #2   2022-2022                                 \n");
-            printf("\t\t                                  Colegio De Montalban                              \n\n\n");
-        }
-
-        if(opt == 4)
-        {
-            //processing
-            ans = log10(A / P) / (r * log10(e));
-
-            //To Clear
-            system("clear");
-
-            //Output
-            printf("\n\n\t\t =======================================================================================\n");
-            printf("\t\t                                        Time                                            \n");
-            printf("\t\t =======================================================================================\n");
-            printf("\t\t             Given :                                                                    \n");
-            printf("\t\t                 A = %g                                                              \n", A);
-            printf("\t\t                 p = %g                                                              \n", P);
-            printf("\t\t                 e = 2.718                                                              \n");
-            printf("\t\t                 r = %g                                                              \n", r);
-            printf("\t\t                 t = ?                                                                  \n");
-            printf("\t\t             Answer :                                                                   \n");
-            printf("\t\t                 t = %.0f therefore, in the %.1f Years the size of Population was %g \n", ans, ans, A);
-            printf("\t\t                                                                                        \n");
-            printf("\t\t =======================================================================================\n");
-            printf("\t\t                                 © Group #2   2022-2022                                 \n");
-            printf("\t\t                                  Colegio De Montalban                              \n\n\n");
-        }
-    }
-
-    //if the user input a Wrong Character
-    if(opt > 4 || opt < 0)
-    {
-        system("clear");
-
-        printf("\n\n\t\t =======================================================================================\n");
-        printf("\t\t                                       !! WARNING !!                                    \n");
-        printf("\t\t =======================================================================================\n");
-        printf("\t\t                                                                                        \n");
-        printf("\t\t                                                                                        \n");
-        printf("\t\t                         Sorry! this variable number was not EXIST.                     \n");
-        printf("\t\t                                        Please try Again.                               \n");
-        printf("\t\t                                                                                        \n");
-        printf("\t\t                                                                                        \n");
-        printf("\t\t =======================================================================================\n");
-        printf("\t\t                                 © Group #2   2022-2022                                 \n");
-        printf("\t\t                                  Colegio De Montalban                             \n\n\n");
-
-    }
-
-    printf("\t\t                 BACK press [0]                           EXIT press [1] : ");
-    select = getch();
-
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
-            simpleCal();
+            growthRate();
             break;
 
         case '1':
@@ -1069,6 +999,159 @@ void growthRate(void)
     }
 }
 
+void numPeople(void)
+{
+  
+    printf("\t\t Size of the Population after in grows : ");
+    scanf("%f", &A);
+
+    printf("\t\t Enter the Rate of Growth : ");
+    scanf("%f", &r);
+
+    printf("\t\t Enter the Time in Month : ");
+    scanf("%f", &t);
+    
+    system("clear");
+    
+    ans = A / pow(e,(r * t));
+    
+    printf("\n\n\t\t =======================================================================================\n");
+    printf("\t\t                                 Initial Number of People                               \n");
+    printf("\t\t =======================================================================================\n");
+    printf("\t\t             Given :                                                                    \n");
+    printf("\t\t                 A = %g                                                              \n", A);
+    printf("\t\t                e = 2.718                                                              \n");
+    printf("\t\t                r = %g                                                              \n", r);
+    printf("\t\t                t = %g                                                              \n", t);
+    printf("\t\t                P = ?                                                                  \n");
+    printf("\t\t            Answer :                                                                   \n");
+    printf("\t\t                P = %.0f therefore, the initial number of Population would be     \n", ans);
+    printf("\t\t                                   %.0f in %.1f Years.                         \n", ans, t);
+    printf("\t\t=======================================================================================\n");
+    
+    printf("\n\t\t                    BACK press [0]               EXIT press [1] : ");
+    slt = getch();
+    
+    switch(slt)
+    {
+        case '0':
+            system("clear");
+            growthRate();
+            break;
+
+        case '1':
+            system("clear");
+            greet();
+            break;
+
+        default:
+            system("clear");
+            printf("Invalid");
+            break;
+    }
+}
+
+void rateOfGrowth(void)
+{
+    printf("\t\t Size of the Population after in grows : ");
+    scanf("%f", &A);
+
+    printf("\t\t Initial Number of People : ");
+    scanf("%f", &P);
+
+    printf("\t\t Enter the Time in Month : ");
+    scanf("%f", &t);
+    
+    system("clear");
+    
+    ans = log10(A / P) / ( t * log10(e));
+    
+    printf("\n\n\t\t =======================================================================================\n");
+    printf("\t\t                                     Rate of Growth                                     \n");
+    printf("\t\t =======================================================================================\n");
+    printf("\t\t             Given :                                                                    \n");
+    printf("\t\t                 A = %g                                                              \n", A);
+    printf("\t\t                 P = %g                                                              \n", P);
+    printf("\t\t                 e = 2.718                                                              \n");
+    printf("\t\t                 t = %g                                                              \n", t);
+    printf("\t\t                 r = ?                                                                  \n");
+    printf("\t\t             Answer :                                                                   \n");
+    printf("\t\t                 r = %.3f therefore, the rate of growth of the Population would be \n", ans);
+    printf("\t\t                                        %.3f in the %.1f Years.                 \n", ans, t);
+    printf("\t\t =======================================================================================\n");
+    
+    printf("\n\t\t                    BACK press [0]               EXIT press [1] : ");
+    slt = getch();
+    
+    switch(slt)
+    {
+        case '0':
+            system("clear");
+            growthRate();
+            break;
+
+        case '1':
+            system("clear");
+            greet();
+            break;
+
+        default:
+            system("clear");
+            printf("Invalid");
+            break;
+    }
+ }
+
+void timeRate(void)
+{    
+    printf("\t\t Size of the Population after in grows : ");
+    scanf("%f", &A);
+
+    printf("\t\t Initial Number of People : ");
+    scanf("%f", &P);
+
+    printf("\t\t Enter the Rate of Growth : ");
+    scanf("%f", &r);
+    
+    system("clear");
+
+    ans = log10(A / P) / (r * log10(e));
+    
+    printf("\n\n\t\t =======================================================================================\n");
+    printf("\t\t                                        Time                                            \n");
+    printf("\t\t =======================================================================================\n");
+    printf("\t\t             Given :                                                                    \n");
+    printf("\t\t                 A = %g                                                              \n", A);
+    printf("\t\t                 p = %g                                                              \n", P);
+    printf("\t\t                 e = 2.718                                                              \n");
+    printf("\t\t                 r = %g                                                              \n", r);
+    printf("\t\t                 t = ?                                                                  \n");
+    printf("\t\t             Answer :                                                                   \n");
+    printf("\t\t                 t = %.0f therefore, in the %.1f Years the size of Population was %g \n", ans, ans, A);
+    printf("\t\t                                                                                        \n");
+    printf("\t\t =======================================================================================\n");
+    
+    printf("\n\t\t                    BACK press [0]               EXIT press [1] : ");
+    slt = getch();
+    
+    switch(slt)
+    {
+        case '0':
+            system("clear");
+            growthRate();
+            break;
+
+        case '1':
+            system("clear");
+            greet();
+            break;
+
+        default:
+            system("clear");
+            printf("Invalid");
+            break;
+    }
+ }
 
 //Midterm Exercises BITWISE            This code is from MAXELL JANE CALPO
 void bitwise(void)
@@ -1093,9 +1176,9 @@ void bitwise(void)
     }
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -1164,9 +1247,9 @@ void celCon(void)
     printf("\n\t\t %.1f celsius = %.1f fahrenheit\n\n", celsius, fahrenheit);
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
@@ -1200,9 +1283,9 @@ void fahCon(void)
     printf("\n\t\t %.1f fahrenheit = %.1f celsius\n\n", fahrenheit, celsius);
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
-    select = getch();
+    slt = getch();
 
-    switch(select)
+    switch(slt)
     {
         case '0':
             system("clear");
