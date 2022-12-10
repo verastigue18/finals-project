@@ -50,6 +50,7 @@ char slt;
 int opt;
 float ans, A, P, r, t, e = 2.718;
 
+
 int main()
 {
     system("Color A");
@@ -219,81 +220,85 @@ void regisForm(void)
     char name[50], birthday[50], add[50], contactNum[50], emailAdd[50], citizen[50], fatherName[50], motherName[50];
     char educPri[50], educSec[50], educTer[50], firstChoice[50], secondChoice[50], thirdChoice[50];
     int age;
+    
+    printf("/n/n/n/t/t/t ==============================+============================== \n");
+    printf("\t\t\t                         PERSONAL BACKGROUND                         \n");
+    printf("\t\t\t ==============================+==============================       \n");
 
-    printf("What is your Name? ");
+    printf("\t\t\t\t What is your Name? ");
     scanf(" %50[^\n]", &name);
 
-    printf("How old Are you? ");
+    printf("\t\t\t\t How old Are you? ");
     scanf("%i", &age);
 
-    printf("What is your Birthday? ");
+    printf("\t\t\t\t What is your Birthday? ");
     scanf(" %50[^\n]", &birthday);
 
-    printf("Where are you from? ");
+    printf("\t\t\t\t Where are you from? ");
     scanf(" %50[^\n]", &add);
 
-    printf("What is your Contact Number? ");
+    printf("\t\t\t\t What is your Contact Number? ");
     scanf("%s", &contactNum);
 
-    printf("What is your Email Address? ");
+    printf("\t\t\t\t What is your Email Address? ");
     scanf("%s", &emailAdd);
 
-    printf("What is your Citizenship? ");
+    printf("\t\t\t\t What is your Citizenship? ");
     scanf("%s", &citizen);
 
-    printf("Name of your Father? ");
+    printf("\t\t\t\t Name of your Father? ");
     scanf(" %50[^\n]", &fatherName);
 
-    printf("Name of your Mother? ");
+    printf("\t\t\t\t Name of your Mother? ");
     scanf(" %50[^\n]", &motherName);
 
-    printf("Primary Education: ");
+    printf("\t\t\t\t Primary Education: ");
     scanf(" %50[^\n]", &educPri);
 
-    printf("Secondary Education: ");
+    printf("\t\t\t\t Secondary Education: ");
     scanf(" %50[^\n]", &educSec);
 
-    printf("Teriary Education: ");
+    printf("\t\t\t\t Teriary Education: ");
     scanf(" %50[^\n]", &educTer);
 
-    printf("What is your First Choice? ");
+    printf("\t\t\t\t What is your First Choice? ");
     scanf(" %50[^\n]", &firstChoice);
 
-    printf("What is your Second Choice? ");
+    printf("\t\t\t\t What is your Second Choice? ");
     scanf(" %50[^\n]", &secondChoice);
 
-    printf("What is your Third Choice? ");
+    printf("\t\t\t\t What is your Third Choice? ");
     scanf(" %50[^\n]", &thirdChoice);
 
     system("clear");
 
-    printf("\n\n\t\t =========================================  \n");
-    printf("\t\t            REGISTRATION FORM               \n");
-    printf("\t\t =========================================\n\n");
+    printf("\n\n\t\t\t ==============================+============================== \n");
+    printf("\t\t\t                         REGISTRATION FORM                         \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t NAME           : %s\n", name);
-    printf("\t\t AGE            : %i\n", age);
-    printf("\t\t BIRTHDAY       : %s\n", birthday);
-    printf("\t\t ADDRESS        : %s\n", add);
-    printf("\t\t CONTACT NO.    : %s\n", contactNum);
-    printf("\t\t EMAIL ADD.     : %s\n", emailAdd);
-    printf("\t\t CITIZENSHIP    : %s\n", citizen);
-    printf("\t\t FATHER'S NAME  : %s\n", fatherName);
-    printf("\t\t MOTHER'S NAME  : %s\n", motherName);
+    printf("\t\t\t NAME           : %s\n", name);
+    printf("\t\t\t AGE            : %i\n", age);
+    printf("\t\t\t BIRTHDAY       : %s\n", birthday);
+    printf("\t\t\t ADDRESS        : %s\n", add);
+    printf("\t\t\t CONTACT NO.    : %s\n", contactNum);
+    printf("\t\t\t EMAIL ADD.     : %s\n", emailAdd);
+    printf("\t\t\t CITIZENSHIP    : %s\n", citizen);
+    printf("\t\t\t FATHER'S NAME  : %s\n", fatherName);
+    printf("\t\t\t MOTHER'S NAME  : %s\n", motherName);
 
-    printf("\t\t ========================================   \n");
-    printf("\t\t           EDUCATIONAL ATTAINTMENT          \n");
-    printf("\t\t =========================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                     EDUCATIONAL ATTAINTMENT                    \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t PRIMARY        : %s\n", educPri);
-    printf("\t\t SECONDARY      : %s\n", educSec);
-    printf("\t\t TERTIARY       : %s\n\n", educTer);
+    printf("\t\t\t\t PRIMARY        : %s\n", educPri);
+    printf("\t\t\t\t SECONDARY      : %s\n", educSec);
+    printf("\t\t\t\t TERTIARY       : %s\n\n", educTer);
 
-    printf("\t\t 1ST CHOICE     : %s\n", firstChoice);
-    printf("\t\t 2ND CHOICE     : %s\n", secondChoice);
-    printf("\t\t 3RD CHOICE     : %s\n\n", thirdChoice);
+    printf("\t\t\t\t 1ST CHOICE     : %s\n", firstChoice);
+    printf("\t\t\t\t 2ND CHOICE     : %s\n", secondChoice);
+    printf("\t\t\t\t 3RD CHOICE     : %s\n\n", thirdChoice);
 
-    printf("\t\t BACK press [0]           EXIT press [1] : ");
+    printf("\t\t\t\t BACK press [0]           EXIT press [1] : ");
     slt = getch();
 
     switch(slt)
@@ -318,149 +323,149 @@ void regisForm(void)
 //Prelim Act1
 void listRegistered(void)
 {
-    printf("\n\n\t\t            List of Registered People        \n\n");
+    printf("\n\n\t\t\t                List of Registered People                 \n\n");
 
-    printf("\t\t ==============================================  \n");
-    printf("\t\t               REGISTRATION FORM                 \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                        REGISTRATION FORM                       \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t NAME           : ARCE, JHON BRIAN V.            \n");
-    printf("\t\t AGE            : 19 YEARS OLD                   \n");
-    printf("\t\t BIRTHDAY       : APRIL 02, 2003                 \n");
-    printf("\t\t ADDRESS        : SAN ISIDRO                     \n");
-    printf("\t\t CONTACT NO.    : 09951779567                    \n");
-    printf("\t\t EMAIL ADD.     : arce.jhonbrian@gmail.com       \n");
-    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
-    printf("\t\t FATHER'S NAME  : ARCE, REGAN                    \n");
-    printf("\t\t MOTHER'S NAME  : ARCE, LIEZEL                 \n\n");
+    printf("\t\t\t\t NAME           : ARCE, JHON BRIAN V.            \n");
+    printf("\t\t\t\t AGE            : 19 YEARS OLD                   \n");
+    printf("\t\t\t\t BIRTHDAY       : APRIL 02, 2003                 \n");
+    printf("\t\t\t\t ADDRESS        : SAN ISIDRO                     \n");
+    printf("\t\t\t\t CONTACT NO.    : 09951779567                    \n");
+    printf("\t\t\t\t EMAIL ADD.     : arce.jhonbrian@gmail.com       \n");
+    printf("\t\t\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t\t\t FATHER'S NAME  : ARCE, REGAN                    \n");
+    printf("\t\t\t\t MOTHER'S NAME  : ARCE, LIEZEL                 \n\n");
 
-    printf("\t\t =============================================   \n");
-    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                     EDUCATIONAL ATTAINTMENT                    \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t PRIMARY        : SNES                           \n");
-    printf("\t\t SECONDARY      : OMNHS                          \n");
-    printf("\t\t TERTIARY       : CDM                          \n\n");
+    printf("\t\t\t\t PRIMARY        : SNES                           \n");
+    printf("\t\t\t\t SECONDARY      : OMNHS                          \n");
+    printf("\t\t\t\t TERTIARY       : CDM                          \n\n");
 
-    printf("\t\t 1ST CHOICE     : BSED                           \n");
-    printf("\t\t 2ND CHOICE     : BSCS                           \n");
-    printf("\t\t 3RD CHOICE     : BSIT                         \n\n");
+    printf("\t\t\t\t 1ST CHOICE     : BSED                           \n");
+    printf("\t\t\t\t 2ND CHOICE     : BSCS                           \n");
+    printf("\t\t\t\t 3RD CHOICE     : BSIT                         \n\n");
 
-    printf("\t\t ----------------------------------------------\n\n");
+    printf("\t\t\t -------------------------------------------------------------\n\n");
 
-    printf("\t\t ==============================================  \n");
-    printf("\t\t            REGISTRATION FORM                    \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                        REGISTRATION FORM                       \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t NAME           : BETINOL, ARON JAMES L.         \n");
-    printf("\t\t AGE            : 18 YEARS OLD                   \n");
-    printf("\t\t BIRTHDAY       : MARCH 03, 2004                 \n");
-    printf("\t\t ADDRESS        : SAN JOSE                       \n");
-    printf("\t\t CONTACT NO.    : 09652635576                    \n");
-    printf("\t\t EMAIL ADD.     : betinolaronjames529@gmail.com  \n");
-    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
-    printf("\t\t FATHER'S NAME  : BETINOL, PATERNO               \n");
-    printf("\t\t MOTHER'S NAME  : BETINOL, CIRILIA              \n\n");
+    printf("\t\t\t\t NAME           : BETINOL, ARON JAMES L.         \n");
+    printf("\t\t\t\t AGE            : 18 YEARS OLD                   \n");
+    printf("\t\t\t\t BIRTHDAY       : MARCH 03, 2004                 \n");
+    printf("\t\t\t\t ADDRESS        : SAN JOSE                       \n");
+    printf("\t\t\t\t CONTACT NO.    : 09652635576                    \n");
+    printf("\t\t\t\t EMAIL ADD.     : betinolaronjames529@gmail.com  \n");
+    printf("\t\t\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t\t\t FATHER'S NAME  : BETINOL, PATERNO               \n");
+    printf("\t\t\t\t MOTHER'S NAME  : BETINOL, CIRILIA              \n\n");
 
-    printf("\t\t =============================================   \n");
-    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                     EDUCATIONAL ATTAINTMENT                    \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t PRIMARY        : KVES                           \n");
-    printf("\t\t SECONDARY      : KVNHS                          \n");
-    printf("\t\t TERTIARY       : AICS                         \n\n");
+    printf("\t\t\t\t PRIMARY        : KVES                           \n");
+    printf("\t\t\t\t SECONDARY      : KVNHS                          \n");
+    printf("\t\t\t\t TERTIARY       : AICS                         \n\n");
 
-    printf("\t\t 1ST CHOICE     : BSIT                           \n");
-    printf("\t\t 2ND CHOICE     : BSCS                           \n");
-    printf("\t\t 3RD CHOICE     : BScPE                        \n\n");
+    printf("\t\t\t\t 1ST CHOICE     : BSIT                           \n");
+    printf("\t\t\t\t 2ND CHOICE     : BSCS                           \n");
+    printf("\t\t\t\t 3RD CHOICE     : BScPE                        \n\n");
 
-    printf("\t\t ----------------------------------------------\n\n");
+    printf("\t\t\t -------------------------------------------------------------\n\n");
 
-    printf("\t\t ==============================================  \n");
-    printf("\t\t            REGISTRATION FORM                    \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                        REGISTRATION FORM                       \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t NAME           : MEREDORES, JOSHUA U.           \n");
-    printf("\t\t AGE            : 18 YEARS OLD                   \n");
-    printf("\t\t BIRTHDAY       : MARCH 03, 2004                 \n");
-    printf("\t\t ADDRESS        : SOUTHVILLE 8B ROD              \n");
-    printf("\t\t CONTACT NO.    : 09093575240                    \n");
-    printf("\t\t EMAIL ADD.     : joshuameredores@gmail.com      \n");
-    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
-    printf("\t\t FATHER'S NAME  : MEREDORES, BONIFACIO           \n");
-    printf("\t\t MOTHER'S NAME  : MEREDORES, MARIBETH          \n\n");
+    printf("\t\t\t\t NAME           : MEREDORES, JOSHUA U.           \n");
+    printf("\t\t\t\t AGE            : 18 YEARS OLD                   \n");
+    printf("\t\t\t\t BIRTHDAY       : MARCH 03, 2004                 \n");
+    printf("\t\t\t\t ADDRESS        : SOUTHVILLE 8B ROD              \n");
+    printf("\t\t\t\t CONTACT NO.    : 09093575240                    \n");
+    printf("\t\t\t\t EMAIL ADD.     : joshuameredores@gmail.com      \n");
+    printf("\t\t\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t\t\t FATHER'S NAME  : MEREDORES, BONIFACIO           \n");
+    printf("\t\t\t\t MOTHER'S NAME  : MEREDORES, MARIBETH          \n\n");
 
-    printf("\t\t =============================================   \n");
-    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                     EDUCATIONAL ATTAINTMENT                    \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t PRIMARY        : SILES                          \n");
-    printf("\t\t SECONDARY      : SNHS                           \n");
-    printf("\t\t TERTIARY       : AICS                         \n\n");
+    printf("\t\t\t\t PRIMARY        : SILES                          \n");
+    printf("\t\t\t\t SECONDARY      : SNHS                           \n");
+    printf("\t\t\t\t TERTIARY       : AICS                         \n\n");
 
-    printf("\t\t 1ST CHOICE     : BScPE                          \n");
-    printf("\t\t 2ND CHOICE     : BSHR                           \n");
-    printf("\t\t 3RD CHOICE     : BSIT                         \n\n");
+    printf("\t\t\t\t 1ST CHOICE     : BScPE                          \n");
+    printf("\t\t\t\t 2ND CHOICE     : BSHR                           \n");
+    printf("\t\t\t\t 3RD CHOICE     : BSIT                         \n\n");
 
-    printf("\t\t ----------------------------------------------\n\n");
+    printf("\t\t\t -------------------------------------------------------------\n\n");
 
-    printf("\t\t ==============================================  \n");
-    printf("\t\t            REGISTRATION FORM                    \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                        REGISTRATION FORM                       \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t NAME           : CALPO, MAXELL JANE             \n");
-    printf("\t\t AGE            : 34 YEARS OLD                   \n");
-    printf("\t\t BIRTHDAY       : DECEMBER 19, 1987              \n");
-    printf("\t\t ADDRESS        : QUEZON CITY                    \n");
-    printf("\t\t CONTACT NO.    : 09293023344                    \n");
-    printf("\t\t EMAIL ADD.     : calpomax@gmail.com             \n");
-    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
-    printf("\t\t FATHER'S NAME  : CALPO, PROCESS                 \n");
-    printf("\t\t MOTHER'S NAME  : ASIS, ROSEMARIE              \n\n");
+    printf("\t\t\t\t NAME           : CALPO, MAXELL JANE             \n");
+    printf("\t\t\t\t AGE            : 34 YEARS OLD                   \n");
+    printf("\t\t\t\t BIRTHDAY       : DECEMBER 19, 1987              \n");
+    printf("\t\t\t\t ADDRESS        : QUEZON CITY                    \n");
+    printf("\t\t\t\t CONTACT NO.    : 09293023344                    \n");
+    printf("\t\t\t\t EMAIL ADD.     : calpomax@gmail.com             \n");
+    printf("\t\t\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t\t\t FATHER'S NAME  : CALPO, PROCESS                 \n");
+    printf("\t\t\t\t MOTHER'S NAME  : ASIS, ROSEMARIE              \n\n");
 
-    printf("\t\t =============================================   \n");
-    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                     EDUCATIONAL ATTAINTMENT                    \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t PRIMARY        : SVES                           \n");
-    printf("\t\t SECONDARY      : CHS                            \n");
-    printf("\t\t TERTIARY       : PNM                          \n\n");
+    printf("\t\t\t\t PRIMARY        : SVES                           \n");
+    printf("\t\t\t\t SECONDARY      : CHS                            \n");
+    printf("\t\t\t\t TERTIARY       : PNM                          \n\n");
 
-    printf("\t\t 1ST CHOICE     : BSIT                           \n");
-    printf("\t\t 2ND CHOICE     : BSIT                           \n");
-    printf("\t\t 3RD CHOICE     : BSIT                         \n\n");
+    printf("\t\t\t\t 1ST CHOICE     : BSIT                           \n");
+    printf("\t\t\t\t 2ND CHOICE     : BSIT                           \n");
+    printf("\t\t\t\t 3RD CHOICE     : BSIT                         \n\n");
 
-    printf("\t\t ----------------------------------------------\n\n");
+    printf("\t\t\t -------------------------------------------------------------\n\n");
 
-    printf("\t\t ==============================================  \n");
-    printf("\t\t            REGISTRATION FORM                    \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                        REGISTRATION FORM                       \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t NAME           : SANTELICES, ALBERT             \n");
-    printf("\t\t AGE            : 21 YEARS OLD                   \n");
-    printf("\t\t BIRTHDAY       : APRIL 03, 2001                 \n");
-    printf("\t\t ADDRESS        : SAN JOSE                       \n");
-    printf("\t\t CONTACT NO.    : 09485618348                    \n");
-    printf("\t\t EMAIL ADD.     : santelicesalbert03@gmail.com   \n");
-    printf("\t\t CITIZENSHIP    : FILIPINO                       \n");
-    printf("\t\t FATHER'S NAME  : SANTELICES, ARNOLD             \n");
-    printf("\t\t MOTHER'S NAME  : SANTELICES, MA. LILIBETH     \n\n");
+    printf("\t\t\t\t NAME           : SANTELICES, ALBERT             \n");
+    printf("\t\t\t\t AGE            : 21 YEARS OLD                   \n");
+    printf("\t\t\t\t BIRTHDAY       : APRIL 03, 2001                 \n");
+    printf("\t\t\t\t ADDRESS        : SAN JOSE                       \n");
+    printf("\t\t\t\t CONTACT NO.    : 09485618348                    \n");
+    printf("\t\t\t\t EMAIL ADD.     : santelicesalbert03@gmail.com   \n");
+    printf("\t\t\t\t CITIZENSHIP    : FILIPINO                       \n");
+    printf("\t\t\t\t FATHER'S NAME  : SANTELICES, ARNOLD             \n");
+    printf("\t\t\t\t MOTHER'S NAME  : SANTELICES, MA. LILIBETH     \n\n");
 
-    printf("\t\t =============================================   \n");
-    printf("\t\t             EDUCATIONAL ATTAINTMENT             \n");
-    printf("\t\t ==============================================\n\n");
+    printf("\t\t\t ==============================+==============================  \n");
+    printf("\t\t\t                     EDUCATIONAL ATTAINTMENT                    \n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t PRIMARY        : KVES                           \n");
-    printf("\t\t SECONDARY      : KVNHS                          \n");
-    printf("\t\t TERTIARY       : KVSHS                        \n\n");
+    printf("\t\t\t\t PRIMARY        : KVES                           \n");
+    printf("\t\t\t\t SECONDARY      : KVNHS                          \n");
+    printf("\t\t\t\t TERTIARY       : KVSHS                        \n\n");
 
-    printf("\t\t 1ST CHOICE     : BSIT                           \n");
-    printf("\t\t 2ND CHOICE     : BS CRIM                        \n");
-    printf("\t\t 3RD CHOICE     : HRM                          \n\n");
+    printf("\t\t\t\t 1ST CHOICE     : BSIT                           \n");
+    printf("\t\t\t\t 2ND CHOICE     : BS CRIM                        \n");
+    printf("\t\t\t\t 3RD CHOICE     : HRM                          \n\n");
 
-    printf("\t\t ----------------------------------------------\n\n");
+    printf("\t\t\t --------------------------------------------------------------\n\n");
 
-    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    printf("\t\t\t BACK press [0]               EXIT press [1] : ");
     slt = getch();
 
     switch(slt)
@@ -544,14 +549,16 @@ void basicComp(void)
 
     float add, sub, product, quote, num1, num2, num3, expo;
 
-    printf("First number : ");
+    printf("\t\t\t First number : ");
     scanf("%f", &num1);
 
-    printf("Second number : ");
+    printf("\t\t\t Second number : ");
     scanf("%f", &num2);
 
-    printf("Third number : ");
+    printf("\t\t\t Third number : ");
     scanf("%f", &num3);
+    
+    system("clear");
 
     add = num1 + num2 + num3;
     sub = num3 - num2;
@@ -559,33 +566,31 @@ void basicComp(void)
     quote = num1 / num3;
     expo = pow(num3, num2);
 
-    printf("\n%g + %g + %g = %g\n", num1, num2, num3, add);
-    printf("%g - %g = %g\n", num3, num2, sub);
-    printf("%g * %g = %g\n", num1, num3, product);
-    printf("%g / %g = %g\n", num1, num2, quote);
-    printf("%g ^ %g = %.2Lf\n\n", num3, num2, expo);
-
-    printf("Do you want to try again? [Y/N] : ");
+    printf("\n\n\t\t\t %g + %g + %g = %g\n", num1, num2, num3, add);
+    printf("\t\t\t %g - %g = %g\n", num3, num2, sub);
+    printf("\t\t\t %g * %g = %g\n", num1, num3, product);
+    printf("\t\t\t %g / %g = %g\n", num1, num2, quote);
+    printf("\t\t\t %g ^ %g = %.2Lf\n\n", num3, num2, expo);
+    
+    printf("\t\t\t BACK press [0]               EXIT press [1] : ");
     slt = getch();
-  
+
     switch(slt)
     {
-        case 'y': case 'Y':
-            system("clear");
-            basicComp();
-            break;
-
-        case 'n': case 'N':
+        case '0':
             system("clear");
             simpleCal();
             break;
 
-        default:
+        case '1':
             system("clear");
-            printf("Invalid Value! \n");
+            greet();
             break;
 
-
+        default:
+            system("clear");
+            printf("Invalid");
+            break;
     }
 }
 
@@ -642,27 +647,39 @@ void areaOFShape(void)
 //Prelim Exercise Area of Triangle.    This line of Code came from ARON JAMES BETINOL
 void areaTri(void)
 {
-
     float b, h, area;
-
-    printf("\t\t \" Area of Triangle\" \n\n");
-
-    // For Base
-    printf("\t\t Base = ");
+          
+// For Base
+    printf("\n\n\t\t\t Enter the Base of Triangle : ");
     scanf("%f", &b);
 
     //For Height
-    printf("\t\t Height = ");
+    printf("\t\t\t Enter the Height of Triangle : ");
     scanf("%f", &h);
 
     system("clear");
 
     area = (b*h)/2;
 
-    // Answer/Equal/Total
-    printf("\n\n\t\t Total Area = %.2f\n\n", area);
+    // Answer/Equal/Total 
+    printf("\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                          AREA OF TRIANGLE                        \n");
+    printf("\t\t\t ==============================+==============================  \n\n");
+    printf("\t\t\t\t\t\t              ---          \n");
+    printf("\t\t\t\t\t\t       ^       |           \n");
+    printf("\t\t\t\t\t\t      / \\      |          \n");
+    printf("\t\t\t\t\t\t     /   \\     | h = %g\n", h);
+    printf("\t\t\t\t\t\t    /     \\    |          \n");
+    printf("\t\t\t\t\t\t   /_______\\   |          \n");
+    printf("\t\t\t\t\t\t              ---          \n");
+    printf("\t\t\t\t\t\t  |----------|             \n");
+    printf("\t\t\t\t\t\t       b = %g           \n", b);
+    printf("\t\t\t\t Therefore the Total Area of a Triangle is %g. \n", area);
+    printf("\t\t\t ==============================+==============================  \n\n");
+
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
+    //scanf("%c", &slt);
     slt = getch();
 
     switch(slt)
@@ -688,16 +705,29 @@ void areaTri(void)
 //Code came From  JOSHUA MEREDORES
 void areaSqr(void)
 {
-    int area,side;
+    float area,side;
 
     printf("\n\n\t\t Enter sides of square: ");
-    scanf("%d", &side);
+    scanf("%f", &side);
 
     area = side * side;
-
-    printf("\n\t\t Area of square = %d\n\n",area);
-
-    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    
+    printf("\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                           AREA OF SQUARE                         \n");
+    printf("\t\t\t ==============================+==============================  \n\n");
+    printf("\t\t\t\t\t\t    __________  ---             \n");
+    printf("\t\t\t\t\t\t   |          |  |             \n");
+    printf("\t\t\t\t\t\t   |          |  |             \n");
+    printf("\t\t\t\t\t\t   |          |  | s = %g   \n", side);
+    printf("\t\t\t\t\t\t   |          |  |             \n");
+    printf("\t\t\t\t\t\t   |__________|  |             \n");
+    printf("\t\t\t\t\t\t                ---            \n");
+    printf("\t\t\t\t\t\t  |------------|               \n");
+    printf("\t\t\t\t\t\t       s = %g            \n", side);
+    printf("\t\t\t\t Therefore the Total Area of a Square is %g. \n", area);
+    printf("\t\t\t ==============================+==============================  \n\n");
+    
+    printf("\t\t\t\t BACK press [0]               EXIT press [1] : ");
     slt = getch();
 
     switch(slt)
@@ -731,6 +761,22 @@ void areaCirle(void)
     area = pi * radius * radius;
 
     printf("\n\t\t Area of circle= 1%f\n\n",area);
+    
+        printf("\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                        AREA OF PARALLELOGRAM                     \n");
+    printf("\t\t\t ==============================+==============================  \n\n");
+    printf("\t\t\t\t\t        ___________      ---        \n");
+    printf("\t\t\t\t\t       /           \\      |         \n");
+    printf("\t\t\t\t\t      /             \\     |         \n");
+    printf("\t\t\t\t\t     /               \\    |h = %g\n", radius);
+    printf("\t\t\t\t\t    /                 \\   |         \n");
+    printf("\t\t\t\t\t   /___________________\\  |         \n");
+    printf("\t\t\t\t\t                         ---        \n");
+    printf("\t\t\t\t\t  |---------------------|                \n");
+    printf("\t\t\t\t\t           b = %g                \n", radius);
+    printf("\t\t\t\t Therefore the Total Area of a Parallelogram is %g. \n", area);
+    printf("\t\t\t ==============================+==============================  \n\n");
+
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
     slt = getch();
@@ -760,15 +806,30 @@ void areaPar(void)
 {
     float b, h, area;
 
-    printf("\n\n\t\t Enter the Base: ");
+    printf("\n\n\t\t Enter the Base of Parallelogram : ");
     scanf("%f",&b);
 
-    printf("\n\t\t Enter the Vertical height: ");
+    printf("\n\t\t Enter the Height of Parallelogram : ");
     scanf("%f",&h);
 
     area = b * h;
+    
+    system("clear");
 
-    printf("\n\t\t Area of Parallelogram = %f\n\n", area);
+    printf("\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                        AREA OF PARALLELOGRAM                     \n");
+    printf("\t\t\t ==============================+==============================  \n\n");
+    printf("\t\t\t\t\t        ________________ ---        \n");
+    printf("\t\t\t\t\t       /               /  |         \n");
+    printf("\t\t\t\t\t      /               /   |         \n");
+    printf("\t\t\t\t\t     /               /    |h = %g\n", h);
+    printf("\t\t\t\t\t    /               /     |         \n");
+    printf("\t\t\t\t\t   /_______________/      |         \n");
+    printf("\t\t\t\t\t                         ---        \n");
+    printf("\t\t\t\t\t  |----------------|                \n");
+    printf("\t\t\t\t\t           b = %g                \n", b);
+    printf("\t\t\t\t Therefore the Total Area of a Parallelogram is %g. \n", area);
+    printf("\t\t\t ==============================+==============================  \n\n");
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
     slt = getch();
@@ -846,34 +907,40 @@ void gradeCal(void)
 void gradeRange(void)
 {
     float grade;
-
+    
     printf("\n\n\t\t Enter Your Grade : ");
     scanf("%f", &grade);
+    
+    printf("\n\n\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                           GRADE RANGE                          \n");
+    printf("\t\t\t ==============================+==============================\n\n");
+
 
     if(grade >= 90 && grade <= 100)
     {
-        printf("\n\t\t Grade : A\n\n");
+        printf("\t\t\t\t\t\t Grade : A\n\n");
     }
     else if(grade >= 80 && grade < 90)
     {
-        printf("\n\t\t Grade : B\n\n");
+        printf("\t\t\t\t\t\t Grade : B\n\n");
     }
     else if(grade >= 70 && grade < 80)
     {
-        printf("\n\t\t Grade : C\n\n");
+        printf("\t\t\t\t\t\t Grade : C\n\n");
     }
     else if(grade >=60 && grade < 70)
     {
-        printf("\n\t\t Grade : D\n\n");
+        printf("\t\t\t\t\t\t Grade : D\n\n");
     }
     else if(grade >= 0 && grade < 60)
     {
-        printf("\n\t\t Grade : E\n\n");
+        printf("\t\t\t\t\t\t Grade : E\n\n");
     }
     else
     {
-        printf("\n\t\t OUT OF RANGE!\n\n");
+        printf("\t\t\t\t\t\t OUT OF RANGE!\n\n");
     }
+    printf("\t\t\t ==============================+==============================\n\n");
 
     printf("\t\t BACK press [0]               EXIT press [1] : ");
     slt = getch();
@@ -911,7 +978,7 @@ void growthRate(void)
     printf("\t\t\t ==============================+==============================\n\n");
     
     printf("\t\t\t What did you Want to find? pick a No. : ");
-    scanf("%i", opt);
+    scanf("%i", &opt);
     
     switch(opt)
     {
@@ -949,8 +1016,9 @@ void growthRate(void)
 
 void sizePopulation(void)
 {
+   
     printf("\t\t Initial Number of People : ");
-    scanf("%f", &P);
+    scanf("% f", &P);
 
     printf("\t\t Enter the Rate of Growth : ");
     scanf("%f", &r);
@@ -1001,7 +1069,7 @@ void sizePopulation(void)
 
 void numPeople(void)
 {
-  
+      
     printf("\t\t Size of the Population after in grows : ");
     scanf("%f", &A);
 
@@ -1052,7 +1120,7 @@ void numPeople(void)
 }
 
 void rateOfGrowth(void)
-{
+{    
     printf("\t\t Size of the Population after in grows : ");
     scanf("%f", &A);
 
@@ -1103,7 +1171,7 @@ void rateOfGrowth(void)
  }
 
 void timeRate(void)
-{    
+{        
     printf("\t\t Size of the Population after in grows : ");
     scanf("%f", &A);
 
@@ -1200,12 +1268,15 @@ void bitwise(void)
 //MENU for Temperature Converter
 void tempConvert(void)
 {
-    printf("\n\n\t\t ========== Temperature Converter ==========\n\n");
-    printf("\t\t [1] - Celsius to Fahrenheit                      \n");
-    printf("\t\t [2] - Fahrenheit to Celsius                      \n");
-    printf("\t\t [3] - Back                                     \n\n");
+    printf("\n\n\n\n\t\t\t ==============================+==============================\n");
+    printf("\t\t\t                     TEMPERATURE CONVERTER                      \n");
+    printf("\t\t\t ==============================+==============================\n\n");
+    printf("\t\t\t\t [1] - Celsius to Fahrenheit                                \n\n");
+    printf("\t\t\t\t [2] - Fahrenheit to Celsius                                \n\n");
+    printf("\t\t\t\t [3] - Back                                                 \n\n");
+    printf("\t\t\t ==============================+==============================\n\n");
 
-    printf("\t\t Pick a Number : ");
+    printf("\t\t\t Pick a Number : ");
     scanf("%i", &opt);
 
     switch(opt)
@@ -1240,9 +1311,7 @@ void celCon(void)
     printf("\n\n\t\t Enter the celsius: ");
     scanf("%f", &celsius);
 
-
     fahrenheit = (celsius*9/5)+32;
-
 
     printf("\n\t\t %.1f celsius = %.1f fahrenheit\n\n", celsius, fahrenheit);
 
@@ -1276,9 +1345,7 @@ void fahCon(void)
     printf("\n\n\t\t Enter the fahrenheit: ");
     scanf("%f", &fahrenheit);
 
-
     celsius = (fahrenheit - 32) * 5 / 9;
-
 
     printf("\n\t\t %.1f fahrenheit = %.1f celsius\n\n", fahrenheit, celsius);
 
@@ -1303,8 +1370,6 @@ void fahCon(void)
             break;
     }
 }
-
-
 
 void greet(void)
 {
