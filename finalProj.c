@@ -15,12 +15,12 @@ void banner(void);
 
 void mainMenu(void);
 
-//This is for Registration
+// This is for Registration
 void registList(void);
 void regisForm(void);
 void listRegistered(void);
 
-//This is for Simple Calculator
+// This is for Simple Calculator
 void simpleCal(void);
 void basicComp(void);
 void areaOFShape(void);
@@ -38,30 +38,30 @@ void rateOfGrowth(void);
 void timeRate(void);
 void bitwise(void);
 
-//This is For Temperature Converter
+// This is For Temperature Converter
 void tempConvert(void);
 void celCon(void);
 void fahCon(void);
 
-//This is For Integers Identifier
+// This is For Integers Identifier
 void intId(void);
 void posNeg(void);
 void intCom(void);
 
-//This is For the last frame in our program either GREET or if it INVALID
+// This is For the last frame in our program either GREET or if it INVALID
 void greet(void);
 void invalid(void);
 
-//global Variable
+// global Variable
 char slt;
 int opt, x, y;
 float ans, A, P, r, t, a, b, h, area, side, grade, e = 2.718;
 float add, sub, product, quote, num1, num2, num3, expo;
 
-
 int main()
 {
     system("Color A");
+    system("clear");
     banner();
     return 0;
 }
@@ -86,10 +86,10 @@ void banner(void)
     printf("\t\t Do You Want to Use this Program? press [Y/N] : ");
     scanf("%c", &slt);
 
-    switch(slt)
+    switch (slt)
     {
     case 'Y':
-    case 'y' :
+    case 'y':
         system("clear");
         mainMenu();
         break;
@@ -107,7 +107,7 @@ void banner(void)
     }
 }
 
-//Main Menu
+// Main Menu
 void mainMenu(void)
 {
     printf("\n\n\n\t\t =================================================================================\n");
@@ -127,7 +127,7 @@ void mainMenu(void)
     printf("\t\t  Pick a number that you Want to Use [1-9] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 1:
         system("clear");
@@ -152,25 +152,25 @@ void mainMenu(void)
     case 5:
         system("clear");
         printf("UNDER PROCESS! \n");
-        //qualiVote();
+        // qualiVote();
         break;
 
     case 6:
         system("clear");
         printf("UNDER PROCESS! \n");
-        //colorSelec();
+        // colorSelec();
         break;
 
     case 7:
         system("clear");
         printf("UNDER PROCESS! \n");
-        //gradeRange();
+        // gradeRange();
         break;
 
     case 8:
         system("clear");
         printf("UNDER PROCESS! \n");
-        //integer();
+        // integer();
         break;
 
     case 9:
@@ -182,11 +182,10 @@ void mainMenu(void)
         system("clear");
         invalid();
         break;
-
     }
 }
 
-//This is for Registration or case 1
+// This is for Registration or case 1
 void registList(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -200,7 +199,7 @@ void registList(void)
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 1:
         system("clear");
@@ -224,7 +223,7 @@ void registList(void)
     }
 }
 
-//Prelim Act2
+// Prelim Act2
 void regisForm(void)
 {
 
@@ -313,7 +312,7 @@ void regisForm(void)
     printf("\t\t          BACK press [0]           EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -332,7 +331,7 @@ void regisForm(void)
     }
 }
 
-//Prelim Act1
+// Prelim Act1
 void listRegistered(void)
 {
     printf("\n\n\n\t\t                List of Registered People                 \n\n");
@@ -480,7 +479,7 @@ void listRegistered(void)
     printf("\t\t          BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -499,7 +498,7 @@ void listRegistered(void)
     }
 }
 
-//MENU for Simple Calculator
+// MENU for Simple Calculator
 void simpleCal(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -516,7 +515,7 @@ void simpleCal(void)
     printf("\t\t  Pick a Number : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 1:
         system("clear");
@@ -555,7 +554,7 @@ void simpleCal(void)
     }
 }
 
-//Prelim Examination.    This code is from MAXELL JANE CALPO
+// Prelim Examination.    This code is from MAXELL JANE CALPO
 void basicComp(void)
 {
     printf("\n\n\n\t\t +-------------------+ \n");
@@ -590,7 +589,7 @@ void basicComp(void)
     printf("\t\t BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -609,7 +608,7 @@ void basicComp(void)
     }
 }
 
-//MENU for Area of Shape
+// MENU for Area of Shape
 void areaOFShape(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -625,7 +624,7 @@ void areaOFShape(void)
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 1:
         system("clear");
@@ -659,7 +658,7 @@ void areaOFShape(void)
     }
 }
 
-//Prelim Exercise Area of Triangle.    This line of Code came from ARON JAMES BETINOL
+// Prelim Exercise Area of Triangle.    This line of Code came from ARON JAMES BETINOL
 void areaTri(void)
 {
     printf("\n\n\n\t\t Given Value of Triangle\n\n");
@@ -668,13 +667,13 @@ void areaTri(void)
     printf("\t\t Enter the Base of Triangle : ");
     scanf("%f", &b);
 
-    //For Height
+    // For Height
     printf("\t\t Enter the Height of Triangle : ");
     scanf("%f", &h);
 
     system("clear");
 
-    area = (b*h)/2;
+    area = (b * h) / 2;
 
     // Answer/Equal/Total
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -694,7 +693,7 @@ void areaTri(void)
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -711,10 +710,9 @@ void areaTri(void)
         invalid();
         break;
     }
-
 }
 
-//Code came From  JOSHUA MEREDORES
+// Code came From  JOSHUA MEREDORES
 void areaSqr(void)
 {
     printf("\n\n\n\t\t Given Value of Square\n\n");
@@ -743,7 +741,7 @@ void areaSqr(void)
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -762,7 +760,7 @@ void areaSqr(void)
     }
 }
 
-//Code came From  JOSHUA MEREDORES
+// Code came From  JOSHUA MEREDORES
 void areaTrape(void)
 {
     printf("\n\n\n\t\t Given Value of Trapezoid\n\n");
@@ -799,7 +797,7 @@ void areaTrape(void)
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -818,16 +816,16 @@ void areaTrape(void)
     }
 }
 
-//Code came From  JOSHUA MEREDORES
+// Code came From  JOSHUA MEREDORES
 void areaPar(void)
 {
     printf("\n\n\n\t\t Given Value of Parallelogram\n\n");
 
     printf("\t\t Enter the Base of Parallelogram : ");
-    scanf("%f",&b);
+    scanf("%f", &b);
 
     printf("\t\t Enter the Height of Parallelogram : ");
-    scanf("%f",&h);
+    scanf("%f", &h);
 
     area = b * h;
 
@@ -850,7 +848,7 @@ void areaPar(void)
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -869,7 +867,7 @@ void areaPar(void)
     }
 }
 
-//MENU for Grade Calculation
+// MENU for Grade Calculation
 void gradeCal(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -885,7 +883,7 @@ void gradeCal(void)
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 1:
         system("clear");
@@ -899,12 +897,12 @@ void gradeCal(void)
 
     case 3:
         system("clear");
-        //gradeComp1(); midterm activity 1
+        // gradeComp1(); midterm activity 1
         break;
 
     case 4:
         system("clear");
-        //gradeComp2(); midterm exam
+        // gradeComp2(); midterm exam
         break;
 
     case 5:
@@ -919,7 +917,7 @@ void gradeCal(void)
     }
 }
 
-//Midterm Exercises : Grade Range   This Line of code is came from  JHON BRIAN ARCE
+// Midterm Exercises : Grade Range   This Line of code is came from  JHON BRIAN ARCE
 void gradeRange(void)
 {
     printf("\n\n\n\t\t Enter Your Grade : ");
@@ -929,24 +927,23 @@ void gradeRange(void)
     printf("\t\t                           GRADE RANGE                          \n");
     printf("\t\t ==============================+==============================\n\n");
 
-
-    if(grade >= 90 && grade <= 100)
+    if (grade >= 90 && grade <= 100)
     {
         printf("\t\t\t\t\t Grade : A\n\n");
     }
-    else if(grade >= 80 && grade < 90)
+    else if (grade >= 80 && grade < 90)
     {
         printf("\t\t\t\t\t Grade : B\n\n");
     }
-    else if(grade >= 70 && grade < 80)
+    else if (grade >= 70 && grade < 80)
     {
         printf("\t\t\t\t\t Grade : C\n\n");
     }
-    else if(grade >=60 && grade < 70)
+    else if (grade >= 60 && grade < 70)
     {
         printf("\t\t\t\t\t Grade : D\n\n");
     }
-    else if(grade >= 0 && grade < 60)
+    else if (grade >= 0 && grade < 60)
     {
         printf("\t\t\t\t\t Grade : E\n\n");
     }
@@ -959,7 +956,7 @@ void gradeRange(void)
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -978,7 +975,7 @@ void gradeRange(void)
     }
 }
 
-//Prelim Group Activity #1
+// Prelim Group Activity #1
 void passIdent(void)
 {
     // Initialization or Assigning Value
@@ -1023,12 +1020,12 @@ void passIdent(void)
     printf("\t\t         Tota Grade     .......................... : %g\n\n", grade);
 
     // The Condition
-    if(grade >= 75)
+    if (grade >= 75)
     {
         printf("\t\t                          You Passed!\n");
     }
 
-    if(grade < 75)
+    if (grade < 75)
     {
         printf("\t\t                          You Failed!\n");
     }
@@ -1038,7 +1035,7 @@ void passIdent(void)
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1057,7 +1054,7 @@ void passIdent(void)
     }
 }
 
-//This code is Group Midter Project
+// This code is Group Midter Project
 void growthRate(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -1073,7 +1070,7 @@ void growthRate(void)
     printf("\t\t What did you Want to find? pick a No. : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 1:
         system("clear");
@@ -1121,8 +1118,7 @@ void sizePopulation(void)
 
     system("clear");
 
-    ans = P * pow(e,(r * t));
-
+    ans = P * pow(e, (r * t));
 
     printf("\n\n\n\t\t =======================================================================================\n");
     printf("\t\t                                 Population after in grows                              \n");
@@ -1140,7 +1136,7 @@ void sizePopulation(void)
     printf("\t\t                     BACK press [0]               EXIT press [1] :                      ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1173,7 +1169,7 @@ void numPeople(void)
 
     system("clear");
 
-    ans = A / pow(e,(r * t));
+    ans = A / pow(e, (r * t));
 
     printf("\n\n\n\t\t =======================================================================================\n");
     printf("\t\t                                 Initial Number of People                               \n");
@@ -1191,7 +1187,7 @@ void numPeople(void)
     printf("\t\t                     BACK press [0]               EXIT press [1] :                     ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1223,7 +1219,7 @@ void rateOfGrowth(void)
 
     system("clear");
 
-    ans = log10(A / P) / ( t * log10(e));
+    ans = log10(A / P) / (t * log10(e));
 
     printf("\n\n\n\t\t =======================================================================================\n");
     printf("\t\t                                     Rate of Growth                                     \n");
@@ -1241,7 +1237,7 @@ void rateOfGrowth(void)
     printf("\t\t                     BACK press [0]               EXIT press [1] :                      ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1291,7 +1287,7 @@ void timeRate(void)
     printf("\t\t                     BACK press [0]               EXIT press [1] :                      ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1310,19 +1306,19 @@ void timeRate(void)
     }
 }
 
-//Midterm Exercises BITWISE            This code is from MAXELL JANE CALPO
+// Midterm Exercises BITWISE            This code is from MAXELL JANE CALPO
 void bitwise(void)
 {
     printf("\n\n\n\t\t * BITWISE * \n\n");
     printf("\t\t First Number  : ");
-    scanf("%d",&x);
+    scanf("%d", &x);
 
     printf("\t\t Second Number : ");
-    scanf("%d",&y);
+    scanf("%d", &y);
 
     printf("\n\t\t ============================== \n");
 
-    if((x <= 255 && x > 0) && (y <= 255 && y > 0))
+    if ((x <= 255 && x > 0) && (y <= 255 && y > 0))
     {
         printf("\n\t\t Bitwise AND = %d\n", x & y);
         printf("\t\t Bitwise OR  = %d\n", x | y);
@@ -1336,7 +1332,7 @@ void bitwise(void)
     printf("\t\t BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1355,7 +1351,7 @@ void bitwise(void)
     }
 }
 
-//MENU for Temperature Converter
+// MENU for Temperature Converter
 void tempConvert(void)
 {
     printf("\n\n\n\n\t\t\t ==============================+==============================\n");
@@ -1369,7 +1365,7 @@ void tempConvert(void)
     printf("\t\t\t Pick a Number : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 1:
         system("clear");
@@ -1393,7 +1389,7 @@ void tempConvert(void)
     }
 }
 
-//Prelim Activity 3    This code came from ALBERT SANTELICES
+// Prelim Activity 3    This code came from ALBERT SANTELICES
 void celCon(void)
 {
     float fahrenheit, celsius;
@@ -1401,7 +1397,7 @@ void celCon(void)
     printf("\n\n\t\t Enter the celsius: ");
     scanf("%f", &celsius);
 
-    fahrenheit = (celsius*9/5)+32;
+    fahrenheit = (celsius * 9 / 5) + 32;
 
     printf("\n\t\t %.1f celsius = %.1f fahrenheit\n\n", celsius, fahrenheit);
     printf("     _______________________                         \n");
@@ -1429,7 +1425,7 @@ void celCon(void)
     printf("\t\t BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1448,7 +1444,7 @@ void celCon(void)
     }
 }
 
-//Prelim Activity 3    This code came from ALBERT SANTELICES
+// Prelim Activity 3    This code came from ALBERT SANTELICES
 void fahCon(void)
 {
     float celsius, fahrenheit;
@@ -1484,7 +1480,7 @@ void fahCon(void)
     printf("\t\t BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1516,7 +1512,7 @@ void intId(void)
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 1:
         system("clear");
@@ -1540,7 +1536,7 @@ void intId(void)
     }
 }
 
-//Mideterm Exercises Positive and Negative ARON JAMES BETINOL.
+// Mideterm Exercises Positive and Negative ARON JAMES BETINOL.
 void posNeg(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -1549,13 +1545,13 @@ void posNeg(void)
     printf("\t\t Enter Integers Number : ");
     scanf("%i", &x);
 
-    if(x == 0)
+    if (x == 0)
     {
         printf("\n\t\t               <---------------|--------------->\n");
         printf("\t\t                               %i", x);
         printf("\n\n\t\t     Therefore, the Integer Number %i is a Positive Number.   \n", x);
     }
-    else if(x >= 1)
+    else if (x >= 1)
     {
         printf("\n\t\t               |---------------|--------------->\n");
         printf("\t\t               0               %i", x);
@@ -1571,7 +1567,7 @@ void posNeg(void)
     printf("\t\t ==============================+==============================\n\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1590,7 +1586,7 @@ void posNeg(void)
     }
 }
 
-//Midterm SeatWork Integers Comaprison  ARON JAMES BETINOL.
+// Midterm SeatWork Integers Comaprison  ARON JAMES BETINOL.
 void intCom(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -1601,15 +1597,16 @@ void intCom(void)
     printf("\t\t     Enter the Value of B : ");
     scanf("%i", &y);
 
-    if(x > y)
+    if (x > y)
     {
         printf("\n\n\t\t\t     The Highest Value is A with value of %i \n", x);
     }
-    else if(x < y)
+    else if (x < y)
     {
         printf("\n\n\t\t\t     The Highest Value is B with value of %i \n", y);
     }
-    else if(x == y){
+    else if (x == y)
+    {
         printf("\n\n\t\t  The Value of A and B is the same, and the value of it is %i \n", x);
     }
 
@@ -1617,7 +1614,7 @@ void intCom(void)
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
-    switch(opt)
+    switch (opt)
     {
     case 0:
         system("clear");
@@ -1635,7 +1632,6 @@ void intCom(void)
         break;
     }
 }
-
 
 void greet(void)
 {
@@ -1667,4 +1663,5 @@ void invalid(void)
     printf("\t\t\t            |#||#####|    |#|  |                          \n");
     printf("\t\t\t                               |                        \n\n");
     printf("\t\t\t ==============================+==============================\n\n");
+    
 }
