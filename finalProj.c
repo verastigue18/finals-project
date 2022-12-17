@@ -48,6 +48,13 @@ void intId(void);
 void posNeg(void);
 void intCom(void);
 
+//This is For Increment and Decrement
+void incrDecre(void);
+void preIncre(void);
+void postIncre(void);
+void preDecre(void);
+int opt, x, y;
+
 // This is For the last frame in our program either GREET or if it INVALID
 void greet(void);
 void invalid(void);
@@ -163,8 +170,8 @@ void mainMenu(void)
 
     case 7:
         system("clear");
-        printf("UNDER PROCESS! \n");
-        // gradeRange();
+        incrDecre();
+
         break;
 
     case 8:
@@ -1354,15 +1361,15 @@ void bitwise(void)
 // MENU for Temperature Converter
 void tempConvert(void)
 {
-    printf("\n\n\n\n\t\t\t ==============================+==============================\n");
-    printf("\t\t\t                     TEMPERATURE CONVERTER                      \n");
-    printf("\t\t\t ==============================+==============================\n\n");
-    printf("\t\t\t\t [1] - Celsius to Fahrenheit                                \n\n");
-    printf("\t\t\t\t [2] - Fahrenheit to Celsius                                \n\n");
-    printf("\t\t\t\t [3] - Back                                                 \n\n");
-    printf("\t\t\t ==============================+==============================\n\n");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                     TEMPERATURE CONVERTER                      \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t\t [1] - Celsius to Fahrenheit                                \n\n");
+    printf("\t\t\t [2] - Fahrenheit to Celsius                                \n\n");
+    printf("\t\t\t [3] - Back                                                 \n\n");
+    printf("\t\t ==============================+==============================\n\n");
 
-    printf("\t\t\t Pick a Number : ");
+    printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
     switch (opt)
@@ -1393,36 +1400,42 @@ void tempConvert(void)
 void celCon(void)
 {
     float fahrenheit, celsius;
-
-    printf("\n\n\t\t Enter the celsius: ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                     CELSIUS TO FAHRENHEIT                    \n");
+    printf("\t\t ==============================+==============================\n");
+    printf("\n\t\t Enter the Value of Celsius : ");
     scanf("%f", &celsius);
 
     fahrenheit = (celsius * 9 / 5) + 32;
 
-    printf("\n\t\t %.1f celsius = %.1f fahrenheit\n\n", celsius, fahrenheit);
-    printf("     _______________________                         \n");
-    printf("    |         _____         |                        \n");
-    printf("    |        /     \\        |                       \n");
-    printf("    |       /       \\       |                       \n");
-    printf("    |       |___ 5°F|       |                        \n");
-    printf("    |       |--     |       |                        \n");
-    printf("    |       |--     |       |                        \n");
-    printf("    |       |___ 4°F|       |                        \n");
-    printf("    |       |--     |       |                        \n");
-    printf("    |       |--     |       |                        \n");
-    printf("    |       |___ 3°F|       |                        \n");
-    printf("    |       |=======|       |                        \n");
-    printf("    |       |--WWWWW|       |                        \n");
-    printf("    |       |___w2°F|       |                        \n");
-    printf("    |      /--WWWWWWW\\      |                       \n");
-    printf("    |    /--WWWWWWWWWWW\\    |                       \n");
-    printf("    |   |___w1°FwWWWWWWW|   |                        \n");
-    printf("    |   |--WWWWWWWWWWWWW|   |                        \n");
-    printf("    |    \\ --WWWWWWWWWW/    |                       \n");
-    printf("    |      \\________ /      |                       \n");
-    printf("    |_______________________|                        \n");
+    system("clear");
 
-    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                     CELSIUS TO FAHRENHEIT                    \n");
+    printf("\t\t ==============================+==============================\n");
+    printf("\t\t        _______________________                         \n");
+    printf("\t\t       |         _____         |                        \n");
+    printf("\t\t       |        /     \\        |                       \n");
+    printf("\t\t       |       /       \\       |                       \n");
+    printf("\t\t       |       |___ 5°F|       |                        \n");
+    printf("\t\t       |       |--     |       |                        \n");
+    printf("\t\t       |       |--     |       |                        \n");
+    printf("\t\t       |       |___ 4°F|       |                        \n");
+    printf("\t\t       |       |--     |       |         %.1f°C         \n", celsius);
+    printf("\t\t       |       |--     |       |                        \n");
+    printf("\t\t       |       |___ 3°F|       |   is equivalent to     \n");
+    printf("\t\t       |       |=======|       |                        \n");
+    printf("\t\t       |       |--WWWWW|       |         %.1f°C         \n", fahrenheit);
+    printf("\t\t       |       |___w2°F|       |                        \n");
+    printf("\t\t       |      /--WWWWWWW\\      |                       \n");
+    printf("\t\t       |    /--WWWWWWWWWWW\\    |                       \n");
+    printf("\t\t       |   |___w1°FwWWWWWWW|   |                        \n");
+    printf("\t\t       |   |--WWWWWWWWWWWWW|   |                        \n");
+    printf("\t\t       |    \\ --WWWWWWWWWW/    |                       \n");
+    printf("\t\t       |      \\________ /      |                       \n");
+    printf("\t\t       |_______________________|                        \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
     switch (opt)
@@ -1449,35 +1462,42 @@ void fahCon(void)
 {
     float celsius, fahrenheit;
 
-    printf("\n\n\t\t Enter the fahrenheit: ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                     FAHRENHEIT TO CELSIUS                   \n");
+    printf("\t\t ==============================+==============================\n");
+    printf("\n\t\t Enter the Value of Fahrenheit : ");
     scanf("%f", &fahrenheit);
 
     celsius = (fahrenheit - 32) * 5 / 9;
 
-    printf("\n\t\t %.1f fahrenheit = %.1f celsius\n\n", fahrenheit, celsius);
-    printf("     _______________________                         \n");
-    printf("    |         _____         |                        \n");
-    printf("    |        /     \\        |                       \n");
-    printf("    |       /       \\       |                       \n");
-    printf("    |       |___ 5°C|       |                        \n");
-    printf("    |       |--     |       |                        \n");
-    printf("    |       |--     |       |                        \n");
-    printf("    |       |___ 4°C|       |                        \n");
-    printf("    |       |--     |       |                        \n");
-    printf("    |       |--     |       |                        \n");
-    printf("    |       |___ 3°C|       |                        \n");
-    printf("    |       |=======|       |                        \n");
-    printf("    |       |--WWWWW|       |                        \n");
-    printf("    |       |___w2°C|       |                        \n");
-    printf("    |      /--WWWWWWW\\      |                       \n");
-    printf("    |    /--WWWWWWWWWWW\\    |                       \n");
-    printf("    |   |___w1°CwWWWWWWW|   |                        \n");
-    printf("    |   |--WWWWWWWWWWWWW|   |                        \n");
-    printf("    |    \\ --WWWWWWWWWW/    |                       \n");
-    printf("    |      \\________ /      |                       \n");
-    printf("    |_______________________|                        \n");
+    system("clear");
 
-    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                     FAHRENHEIT TO CELSIUS                   \n");
+    printf("\t\t ==============================+==============================\n");
+    printf("\t\t        _______________________                         \n");
+    printf("\t\t       |         _____         |                        \n");
+    printf("\t\t       |        /     \\        |                       \n");
+    printf("\t\t       |       /       \\       |                       \n");
+    printf("\t\t       |       |___ 5°C|       |                        \n");
+    printf("\t\t       |       |--     |       |                        \n");
+    printf("\t\t       |       |--     |       |                        \n");
+    printf("\t\t       |       |___ 4°C|       |                        \n");
+    printf("\t\t       |       |--     |       |         %.1f°F         \n", fahrenheit);
+    printf("\t\t       |       |--     |       |                        \n");
+    printf("\t\t       |       |___ 3°C|       |   is equivalent to     \n");
+    printf("\t\t       |       |=======|       |                        \n");
+    printf("\t\t       |       |--WWWWW|       |         %.1f°C         \n", celsius);
+    printf("\t\t       |       |___w2°C|       |                        \n");
+    printf("\t\t       |      /--WWWWWWW\\      |                       \n");
+    printf("\t\t       |    /--WWWWWWWWWWW\\    |                       \n");
+    printf("\t\t       |   |___w1°CwWWWWWWW|   |                        \n");
+    printf("\t\t       |   |--WWWWWWWWWWWWW|   |                        \n");
+    printf("\t\t       |    \\ --WWWWWWWWWW/    |                       \n");
+    printf("\t\t       |      \\________ /      |                       \n");
+    printf("\t\t       |_______________________|                        \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
     switch (opt)
@@ -1632,6 +1652,86 @@ void intCom(void)
         break;
     }
 }
+void incrDecre(void){
+    printf("\n\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("\t||\t  Increment & Decrement       ||\n");
+    printf("\t||====================================||\n");
+    printf("\t||\t   Pre-Increment   [1]        ||\n");
+    printf("\t||\t   Post-Increment  [2]        ||\n");
+    printf("\t||\t   Pre-Decrement   [3]        ||\n");
+    printf("\t||\t   Post-Decrement  [4]        ||\n");
+    printf("\t||====================================||\n\n");
+
+    printf("\tEnter a number:  ");
+    scanf("%i",&opt);
+
+    switch(opt){
+        case 1:
+        system("cls");
+        preIncre();
+        break;
+
+        case 2:
+        system("cls");
+        postIncre();
+        break;
+
+        case 3:
+        system("cls");
+        preDecre();
+        break;
+
+        case 4:
+        system("cls");
+        postDecre();
+        break;
+
+        default :
+        system("cls");
+        printf("INVALID");
+    }
+}
+void preIncre(void){
+      printf("\t\tPre-Increment\n\n");
+      printf("\t\tEnter a number : ");
+      scanf("%i", &x);
+
+      ++x;
+      system("cls");
+      printf("\t\tThe updated value of X: %i ", x);
+
+
+}
+void postIncre(void){
+      printf("\t\tEnter a number : ");
+      scanf("%i", &x);
+      y = x++;
+      system("cls");
+      printf("\t\tPost-Increment\n\n");
+      printf("\t\tThe original value of X : %i \n ", y);
+      printf("\t\tThe updated value of Y : %i \n", x);
+
+}
+void preDecre(void){
+      printf("\t\tEnter a number : ");
+      scanf("%i", &x);
+      --x;
+      system("cls");
+      printf("\t\tPre-Decrement\n\n");
+      printf("\t\tThe updated value of Y : %i \n", x);
+
+}
+void postDecre(void){
+      printf("\t\tEnter a number : ");
+      scanf("%i", &x);
+      y =x--;
+      system("cls");
+      printf("\t\tPost-Decrement\n\n");
+      printf("\t\tThe updated value of Y : %i \n", x);
+}
+
+
+
 
 void greet(void)
 {
@@ -1663,5 +1763,4 @@ void invalid(void)
     printf("\t\t\t            |#||#####|    |#|  |                          \n");
     printf("\t\t\t                               |                        \n\n");
     printf("\t\t\t ==============================+==============================\n\n");
-    
 }
