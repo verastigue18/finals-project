@@ -53,11 +53,14 @@ void incrDecre(void);
 void preIncre(void);
 void postIncre(void);
 void preDecre(void);
-int opt, x, y;
+void postDecre(void);
+
+
 
 // This is For the last frame in our program either GREET or if it INVALID
 void greet(void);
 void invalid(void);
+
 
 // global Variable
 char slt;
@@ -75,20 +78,20 @@ int main()
 
 void banner(void)
 {
-    printf("\n\n\n\t\t ========================================+========================================\n");
-    printf("\t\t                                    WELCOME TO                                     \n");
-    printf("\t\t ========================================+======================================== \n");
-    printf("\t\t                #########   ######    ######  ##        ##  ######                 \n");
-    printf("\t\t                ##      ## ##    ##       ##  ####    #### ##    ##                \n");
-    printf("\t\t                ##      ## ##    ##       ##  ## ##  ## ## ##    ##                \n");
-    printf("\t\t                #########  ########       ##  ##   ##   ## ########                \n");
-    printf("\t\t                ##      ## ##    ##       ##  ##        ## ##    ##                \n");
-    printf("\t\t                ##      ## ##    ## ##    ##  ##        ## ##    ##                \n");
-    printf("\t\t                #########  ##    ##  ######   ##        ## ##    ##                \n");
-    printf("\t\t                +--------------------------------------------------+               \n");
-    printf("\t\t                | Brian      Aron    Joshua     Maxwell     Albert |               \n");
-    printf("\t\t                +--------------------------------------------------+               \n");
-    printf("\t\t ========================================+========================================\n\n");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                           WELCOME TO                           \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t      #########   ######    ######  ##        ##  ######\n");
+    printf("\t\t      ##      ## ##    ##       ##  ####    #### ##    ##\n");
+    printf("\t\t      ##      ## ##    ##       ##  ## ##  ## ## ##    ##\n");
+    printf("\t\t      #########  ########       ##  ##   ##   ## ########\n");
+    printf("\t\t      ##      ## ##    ##       ##  ##        ## ##    ##\n");
+    printf("\t\t      ##      ## ##    ## ##    ##  ##        ## ##    ##\n");
+    printf("\t\t      #########  ##    ##  ######   ##        ## ##    ##\n");
+    printf("\t\t      +--------------------------------------------------+\n");
+    printf("\t\t      | Brian      Aron    Joshua     Maxwell     Albert |\n");
+    printf("\t\t      +--------------------------------------------------+\n");
+    printf("\t\t ==============================+==============================\n\n");
 
     printf("\t\t Do You Want to Use this Program? press [Y/N] : ");
     scanf("%c", &slt);
@@ -1011,7 +1014,7 @@ void passIdent(void)
     // The Process or Computation
     grade = (CS * .10) + (quiz * .15) + (assign * .15) + (proj * .20) + (ME * .40);
 
-    // To Clear
+    // To clear
     system("clear");
 
     // To print a Value of Grade
@@ -1612,9 +1615,9 @@ void intCom(void)
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                        INTEGER COMPARISON                      \n");
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t     Enter the Value of A : ");
+    printf("\t\t     Enter the Value of X : ");
     scanf("%i", &x);
-    printf("\t\t     Enter the Value of B : ");
+    printf("\t\t     Enter the Value of Y : ");
     scanf("%i", &y);
 
     if (x > y)
@@ -1652,115 +1655,214 @@ void intCom(void)
         break;
     }
 }
-void incrDecre(void){
-    printf("\n\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-    printf("\t||\t  Increment & Decrement       ||\n");
-    printf("\t||====================================||\n");
-    printf("\t||\t   Pre-Increment   [1]        ||\n");
-    printf("\t||\t   Post-Increment  [2]        ||\n");
-    printf("\t||\t   Pre-Decrement   [3]        ||\n");
-    printf("\t||\t   Post-Decrement  [4]        ||\n");
-    printf("\t||====================================||\n\n");
 
-    printf("\tEnter a number:  ");
+//Final Group Activity # 1 This line of code is made by Joshua Meredores
+void incrDecre(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                      INCREMENT AND DECREMENT                   \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t\t [1] - Pre-Increment                                        \n");
+    printf("\t\t\t [2] - Post-Increment                                       \n");
+    printf("\t\t\t [3] - Pre-Decrement                                        \n");
+    printf("\t\t\t [4] - Post-Decrement                                       \n");
+    printf("\t\t\t [5] - Back                                                 \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter a number: ");
     scanf("%i",&opt);
 
-    switch(opt){
+    switch(opt)
+    {
         case 1:
-        system("cls");
-        preIncre();
-        break;
+            system("clear");
+            preIncre();
+            break;
 
         case 2:
-        system("cls");
-        postIncre();
-        break;
+            system("clear");
+            postIncre();
+            break;
 
         case 3:
-        system("cls");
-        preDecre();
-        break;
+            system("clear");
+            preDecre();
+            break;
 
         case 4:
-        system("cls");
-        postDecre();
-        break;
+            system("clear");
+            postDecre();
+            break;
 
         default :
-        system("cls");
-        printf("INVALID");
+            system("clear");
+            invalid();
+            break;
     }
 }
-void preIncre(void){
-      printf("\t\tPre-Increment\n\n");
-      printf("\t\tEnter a number : ");
-      scanf("%i", &x);
+
+void preIncre(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                          PRE - INCREMENT                       \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter the value of X : ");
+    scanf("%i", &x);
 
       ++x;
-      system("cls");
-      printf("\t\tThe updated value of X: %i ", x);
 
+    printf("\n\n\t\t                  The updated value : %i \n\n", x);
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        incrDecre();
+        break;
 
-}
-void postIncre(void){
-      printf("\t\tEnter a number : ");
-      scanf("%i", &x);
-      y = x++;
-      system("cls");
-      printf("\t\tPost-Increment\n\n");
-      printf("\t\tThe original value of X : %i \n ", y);
-      printf("\t\tThe updated value of Y : %i \n", x);
+    case 1:
+        system("clear");
+        greet();
+        break;
 
-}
-void preDecre(void){
-      printf("\t\tEnter a number : ");
-      scanf("%i", &x);
-      --x;
-      system("cls");
-      printf("\t\tPre-Decrement\n\n");
-      printf("\t\tThe updated value of Y : %i \n", x);
-
-}
-void postDecre(void){
-      printf("\t\tEnter a number : ");
-      scanf("%i", &x);
-      y =x--;
-      system("cls");
-      printf("\t\tPost-Decrement\n\n");
-      printf("\t\tThe updated value of Y : %i \n", x);
+    default:
+        system("clear");
+        invalid();
+        break;
+    }
 }
 
+void postIncre(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                         POST - INCREMENT                       \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter the value of X : ");
+    scanf("%i", &x);
 
+    y = x++;
 
+    printf("\t\t                        The original value : %i \n ", y);
+    printf("\t\t                        The updated value  : %i \n\n", x);
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        incrDecre();
+        break;
+
+    case 1:
+        system("clear");
+        greet();
+        break;
+
+    default:
+        system("clear");
+        invalid();
+        break;
+    }
+}
+
+void preDecre(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                         PRE - DECREMENT                        \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter the value of X : ");
+    scanf("%i", &x);
+
+    --x;
+
+    printf("\n\n\t\t                  The updated value of Y : %i \n\n", x);
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        intId();
+        break;
+
+    case 1:
+        system("clear");
+        greet();
+        break;
+
+    default:
+        system("clear");
+        invalid();
+        break;
+    }
+}
+void postDecre(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                        POST - DECREMENT                        \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter the value of X : ");
+    scanf("%i", &x);
+
+    y =x--;
+
+    printf("\t\t                        The original value : %i \n ", y);
+    printf("\t\t                        The updated value  : %i \n\n", x);
+    printf("\t\t ==============================+==============================\n\n");
+     printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        incrDecre();
+        break;
+
+    case 1:
+        system("clear");
+        greet();
+        break;
+
+    default:
+        system("clear");
+        invalid();
+        break;
+    }
+}
 
 void greet(void)
 {
-    printf("\n\n\t\t================================================================================ \n");
-    printf("\t\t        _________                               _    _                               \n");
-    printf("\t\t        ___   ___ _   _  _____  _   _  _   _   | |  | | _____  _   _                 \n");
-    printf("\t\t           | |   | | | ||     || | | || | | |  | |  | ||  _  || | | |                \n");
-    printf("\t\t           | |   | |_| || |_| ||  \\| || |/ /   |  \\/  || | | || | | |              \n");
-    printf("\t\t           | |   |     ||  _  || |\\  ||   |     \\    / | | | || | | |              \n");
-    printf("\t\t           | |   | | | || | | || | | || |\\ \\     |  |  | | | || | | |              \n");
-    printf("\t\t           | |   | | | || | | || | | || | | |    |  |  | |_| || |_| |                \n");
-    printf("\t\t           |_|   |_| |_||_| |_||_| |_||_| |_|    |__|  |_____||_____|                \n");
-    printf("\t\t        +-----------------------------------------------------------+                \n");
-    printf("\t\t        |                    For Using Our Program                  |                \n");
-    printf("\t\t        +-----------------------------------------------------------+                \n");
-    printf("\t\t================================================================================     \n");
+    printf("\n\n\t\t ==============================+==============================\n");
+    printf("\t\t _________                              _    _                               \n");
+    printf("\t\t ___   ___ _   _  _____  _   _  _   _  | |  | | _____  _   _                 \n");
+    printf("\t\t    | |   | | | ||     || | | || | | | | |  | ||  _  || | | |                \n");
+    printf("\t\t    | |   | |_| || |_| ||  \\| || |/ /  |  \\/  || | | || | | |              \n");
+    printf("\t\t    | |   |     ||  _  || |\\  ||   |    \\    / | | | || | | |              \n");
+    printf("\t\t    | |   | | | || | | || | | || |\\ \\    |  |  | | | || | | |              \n");
+    printf("\t\t    | |   | | | || | | || | | || | | |   |  |  | |_| || |_| |                \n");
+    printf("\t\t    |_|   |_| |_||_| |_||_| |_||_| |_|   |__|  |_____||_____|                \n");
+    printf("\t\t +-----------------------------------------------------------+                \n");
+    printf("\t\t |                  For Using Our Program                    |                 \n");
+    printf("\t\t +-----------------------------------------------------------+                \n");
+    printf("\t\t ==============================+==============================\n");
 }
+
 
 void invalid(void)
 {
-    printf("\n\n\t\t\t ==============================+==============================\n");
-    printf("\t\t\t                             ERROR                              \n");
-    printf("\t\t\t ==============================+==============================\n\n");
-    printf("\t\t\t         _   _  _____  _   _   |                          \n");
-    printf("\t\t\t        |#| |#||#####||#| |#|  |                          \n");
-    printf("\t\t\t        |#|_|#||#| |#||#|_|#|  | Page could not be found. \n");
-    printf("\t\t\t        |#####||#| |#||#####|  |                          \n");
-    printf("\t\t\t            |#||#|_|#|    |#|  | Invalid User input.      \n");
-    printf("\t\t\t            |#||#####|    |#|  |                          \n");
-    printf("\t\t\t                               |                        \n\n");
-    printf("\t\t\t ==============================+==============================\n\n");
+
+    printf("\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                             ERROR                              \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         _   _  _____  _   _   |                          \n");
+    printf("\t\t        |#| |#||#####||#| |#|  |                          \n");
+    printf("\t\t        |#|_|#||#| |#||#|_|#|  | Page could not be found. \n");
+    printf("\t\t        |#####||#| |#||#####|  |                          \n");
+    printf("\t\t            |#||#|_|#|    |#|  | Invalid User input.      \n");
+    printf("\t\t            |#||#####|    |#|  |                          \n");
+    printf("\t\t                               |                        \n\n");
+    printf("\t\t ==============================+==============================\n\n");
 }
