@@ -36,6 +36,7 @@ void sizePopulation(void);
 void numPeople(void);
 void rateOfGrowth(void);
 void timeRate(void);
+int indicateTime();
 void bitwise(void);
 
 // This is For Temperature Converter
@@ -54,7 +55,11 @@ void preIncre(void);
 void postIncre(void);
 void preDecre(void);
 void postDecre(void);
-
+void forLoop(void);
+void loopIncre(void);
+void loopDecre(void);
+void forLoopTri(void);
+void invertedTri(void);
 
 
 // This is For the last frame in our program either GREET or if it INVALID
@@ -64,9 +69,10 @@ void invalid(void);
 
 // global Variable
 char slt;
-int opt, x, y;
+int opt, x, y, i, j, n;
 float ans, A, P, r, t, a, b, h, area, side, grade, e = 2.718;
 float add, sub, product, quote, num1, num2, num3, expo;
+float time, year, month, day;
 
 int main()
 {
@@ -1076,7 +1082,6 @@ void growthRate(void)
     printf("\t\t\t [4] - Time                                                 \n\n");
     printf("\t\t\t [5] - Back                                                 \n\n");
     printf("\t\t ==============================+==============================\n\n");
-
     printf("\t\t What did you Want to find? pick a No. : ");
     scanf("%i", &opt);
 
@@ -1099,6 +1104,7 @@ void growthRate(void)
 
     case 4:
         system("clear");
+        indicateTime();
         timeRate();
         break;
 
@@ -1130,20 +1136,20 @@ void sizePopulation(void)
 
     ans = P * pow(e, (r * t));
 
-    printf("\n\n\n\t\t =======================================================================================\n");
-    printf("\t\t                                 Population after in grows                              \n");
-    printf("\t\t =======================================================================================\n");
-    printf("\t\t             Given :                                                                    \n");
-    printf("\t\t                 P = %g                                                              \n", P);
-    printf("\t\t                 e = 2.718                                                              \n");
-    printf("\t\t                 r = %g                                                              \n", r);
-    printf("\t\t                 t = %g                                                              \n", t);
-    printf("\t\t                 A = ?                                                                  \n");
-    printf("\t\t             Answer :                                                                   \n");
-    printf("\t\t                 A = %.0f therefore, the City population would be about            \n", ans);
-    printf("\t\t                                 %.0f after %.1f Years.                           \n", ans, t);
-    printf("\t\t =======================================================================================\n");
-    printf("\t\t                     BACK press [0]               EXIT press [1] :                      ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                    POPULATION AFTER IN GROWS                   \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t    Given :                                             \n");
+    printf("\t\t        P = %g                                          \n", P);
+    printf("\t\t        e = 2.718                                       \n");
+    printf("\t\t        r = %g                                          \n", r);
+    printf("\t\t        t = %g                                          \n", t);
+    printf("\t\t        A = ?                                           \n");
+    printf("\t\t    Answer :                                            \n");
+    printf("\t\t        A = %.0f therefore, the City population would be\n", ans);
+    printf("\t\t                      about %.0f after %.1f Years.      \n", ans, t);
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
     switch (opt)
@@ -1181,20 +1187,20 @@ void numPeople(void)
 
     ans = A / pow(e, (r * t));
 
-    printf("\n\n\n\t\t =======================================================================================\n");
-    printf("\t\t                                 Initial Number of People                               \n");
-    printf("\t\t =======================================================================================\n");
-    printf("\t\t             Given :                                                                    \n");
-    printf("\t\t                A = %g                                                              \n", A);
-    printf("\t\t                e = 2.718                                                              \n");
-    printf("\t\t                r = %g                                                              \n", r);
-    printf("\t\t                t = %g                                                              \n", t);
-    printf("\t\t                P = ?                                                                  \n");
-    printf("\t\t            Answer :                                                                   \n");
-    printf("\t\t                P = %.0f therefore, the initial number of Population would be     \n", ans);
-    printf("\t\t                                   %.0f in %.1f Years.                         \n", ans, t);
-    printf("\t\t=======================================================================================\n");
-    printf("\t\t                     BACK press [0]               EXIT press [1] :                     ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                     INITIAL NUMBER OF PEOPLE                   \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t    Given :                                                   \n");
+    printf("\t\t        A = %g                                                \n", A);
+    printf("\t\t        e = 2.718                                             \n");
+    printf("\t\t        r = %g                                                \n", r);
+    printf("\t\t        t = %g                                                \n", t);
+    printf("\t\t        P = ?                                                 \n");
+    printf("\t\t    Answer :                                                  \n");
+    printf("\t\t        P = %.0f therefore, the initial number of Population  \n", ans);
+    printf("\t\t                   would be %.0f in %.1f Years.               \n", ans, t);
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] :            ");
     scanf("%i", &opt);
 
     switch (opt)
@@ -1224,27 +1230,26 @@ void rateOfGrowth(void)
     printf("\t\t Initial Number of People : ");
     scanf("%f", &P);
 
-    printf("\t\t Enter the Time in Month : ");
-    scanf("%f", &t);
+    indicateTime();
 
     system("clear");
 
-    ans = log10(A / P) / (t * log10(e));
+    ans = log10(A / P) / (time * log10(e));
 
-    printf("\n\n\n\t\t =======================================================================================\n");
-    printf("\t\t                                     Rate of Growth                                     \n");
-    printf("\t\t =======================================================================================\n");
-    printf("\t\t             Given :                                                                    \n");
-    printf("\t\t                 A = %g                                                              \n", A);
-    printf("\t\t                 P = %g                                                              \n", P);
-    printf("\t\t                 e = 2.718                                                              \n");
-    printf("\t\t                 t = %g                                                              \n", t);
-    printf("\t\t                 r = ?                                                                  \n");
-    printf("\t\t             Answer :                                                                   \n");
-    printf("\t\t                 r = %.3f therefore, the rate of growth of the Population would be \n", ans);
-    printf("\t\t                                        %.3f in the %.1f Years.                 \n", ans, t);
-    printf("\t\t =======================================================================================\n");
-    printf("\t\t                     BACK press [0]               EXIT press [1] :                      ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                          RATE OF GROWTH                        \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t    Given :                                                  \n");
+    printf("\t\t        A = %g                                               \n", A);
+    printf("\t\t        P = %g                                               \n", P);
+    printf("\t\t        e = 2.718                                            \n");
+    printf("\t\t        t = %g                                               \n", time);
+    printf("\t\t        r = ?                                                \n");
+    printf("\t\t    Answer :                                                 \n");
+    printf("\t\t        r = %.3f therefore, the rate of growth of the        \n", ans);
+    printf("\t\t           Population would be %.3f in the %.1f Years.       \n", ans, time);
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t           BACK press [0]               EXIT press [1] :          ");
     scanf("%i", &opt);
 
     switch (opt)
@@ -1266,6 +1271,46 @@ void rateOfGrowth(void)
     }
 }
 
+int indicateTime()
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                          INDICATE TIME                         \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t\t [1] - Year                                      \n\n");
+    printf("\t\t\t [2] - Month                                     \n\n");
+    printf("\t\t\t [3] - Day                                       \n\n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Indicate the Time. Pick the No. : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+        case 1:
+            printf("\t\t Enter the Year : ");
+            scanf("%f", &year);
+            return time = year;
+            break;
+
+        case 2:
+            printf("\t\t Enter the Month : ");
+            scanf("%f", &month);
+            return time = month;
+            break;
+
+        case 3:
+            printf("\t\t Enter the Day : ");
+            scanf("%f", &day);
+            return time = day;
+            break;
+
+        default:
+            system("clear");
+            invalid();
+            break;
+    }
+    return time;
+}
+
 void timeRate(void)
 {
     printf("\n\n\n\t\t Size of the Population after in grows : ");
@@ -1281,27 +1326,27 @@ void timeRate(void)
 
     ans = log10(A / P) / (r * log10(e));
 
-    printf("\n\n\n\t\t =======================================================================================\n");
-    printf("\t\t                                        Time                                            \n");
-    printf("\t\t =======================================================================================\n");
-    printf("\t\t             Given :                                                                    \n");
-    printf("\t\t                 A = %g                                                              \n", A);
-    printf("\t\t                 p = %g                                                              \n", P);
-    printf("\t\t                 e = 2.718                                                              \n");
-    printf("\t\t                 r = %g                                                              \n", r);
-    printf("\t\t                 t = ?                                                                  \n");
-    printf("\t\t             Answer :                                                                   \n");
-    printf("\t\t                 t = %.1f therefore, in the %.1f Years the size of Population was %g \n", ans, ans, A);
-    printf("\t\t                                                                                        \n");
-    printf("\t\t =======================================================================================\n");
-    printf("\t\t                     BACK press [0]               EXIT press [1] :                      ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                              TIME                              \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t    Given :                                                     \n");
+    printf("\t\t        A = %g                                                  \n", A);
+    printf("\t\t        P = %g                                                  \n", P);
+    printf("\t\t        e = 2.718                                               \n");
+    printf("\t\t        r = %g                                                  \n", r);
+    printf("\t\t        t = ?                                                   \n");
+    printf("\t\t    Answer :                                                    \n");
+    printf("\t\t        t = %g therefore, in the %g Years the size of       \n", ans, ans);
+    printf("\t\t                       Population was %g                        \n", A);
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t           BACK press [0]               EXIT press [1] :                      ");
     scanf("%i", &opt);
 
     switch (opt)
     {
     case 0:
         system("clear");
-
+        growthRate();
         break;
 
     case 1:
@@ -1666,7 +1711,8 @@ void incrDecre(void)
     printf("\t\t\t [2] - Post-Increment                                       \n");
     printf("\t\t\t [3] - Pre-Decrement                                        \n");
     printf("\t\t\t [4] - Post-Decrement                                       \n");
-    printf("\t\t\t [5] - Back                                                 \n");
+    printf("\t\t\t [5] - For Loop                                             \n");
+    printf("\t\t\t [6] - Back                                                 \n");
     printf("\t\t ==============================+==============================\n\n");
     printf("\t\t Enter a number: ");
     scanf("%i",&opt);
@@ -1691,6 +1737,16 @@ void incrDecre(void)
         case 4:
             system("clear");
             postDecre();
+            break;
+
+        case 5:
+            system("clear");
+            forLoop();
+            break;
+
+        case 6:
+            system("clear");
+            mainMenu();
             break;
 
         default :
@@ -1812,7 +1868,7 @@ void postDecre(void)
     printf("\t\t                        The original value : %i \n ", y);
     printf("\t\t                        The updated value  : %i \n\n", x);
     printf("\t\t ==============================+==============================\n\n");
-     printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
     switch (opt)
     {
@@ -1832,21 +1888,246 @@ void postDecre(void)
         break;
     }
 }
+void forLoop(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                            FOR LOOP                            \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t\t [1] - For Loop Increment                                     \n");
+    printf("\t\t\t [2] - For Loop Decrement                                     \n");
+    printf("\t\t\t [3] - For Loop Triangle                                      \n");
+    printf("\t\t\t [4] - Inverted Triangle                                      \n");
+    printf("\t\t\t [5] - Back                                                   \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter a number: ");
+    scanf("%i", &opt);
+
+    switch(opt)
+    {
+        case 1:
+            system("clear");
+            loopIncre();
+            break;
+
+        case 2:
+            system("clear");
+            loopDecre();
+            break;
+
+        case 3:
+            system("clear");
+            forLoopTri();
+            break;
+
+        case 4:
+            system("clear");
+            invertedTri();
+            break;
+
+        case 5:
+            system("clear");
+            incrDecre();
+            break;
+
+        default :
+            system("clear");
+            invalid();
+            break;
+    }
+}
+
+//Final seatwork for loop Increment Jhon Brian Arce
+void loopIncre(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                       FOR LOOP INCREMENT                       \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter the Initial Value : ");
+    scanf("%i", &i);
+
+    printf("\t\t Enter the Ending Value : ");
+    scanf("%i", &n);
+
+    printf("\n\t\t                         Increment by 1\n\n");
+    for(x = i; x <= n; x++)
+    {
+        printf("\t\t                               |- %i\n", x);
+        printf("\t\t                               |\n");
+    }
+
+    printf("\n\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        forLoop();
+        break;
+
+    case 1:
+        system("clear");
+        greet();
+        break;
+
+    default:
+        system("clear");
+        invalid();
+        break;
+    }
+}
+
+//Final Group Activity for loop Decrement Joshua Meredores
+void loopDecre(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                       FOR LOOP DECREMENT                       \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter The Initial value : ");
+    scanf("%i", &i);
+
+    printf("\t\t Enter The Ending value : ");
+    scanf("%i", &n);
+
+    printf("\n\t\t                         Decrement by 1\n\n");
+    for(x = i; x >= n; x--)
+    {
+        printf("\t\t                               |- %i\n", x);
+        printf("\t\t                               |\n");
+    }
+
+    printf("\n\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        forLoop();
+        break;
+
+    case 1:
+        system("clear");
+        greet();
+        break;
+
+    default:
+        system("clear");
+        invalid();
+        break;
+    }
+}
+
+//Final SeatWork Loop Triangle  Arce, Jhon Brian
+void forLoopTri(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                        FOR LOOP TRIANGLE                       \n");
+    printf("\t\t ==============================+==============================\n\n");
+
+    printf("\t\t Enter the Number of Row : ");
+    scanf("%i", &n);
+
+    printf("\n");
+
+    for(i = 1; i <= n; i++)
+    {
+        printf("\t\t                           ");
+
+        for(j = 1; j <= n - i; j++)
+        {
+            printf(" ");
+        }
+        for(j = 1; j <= i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        forLoop();
+        break;
+
+    case 1:
+        system("clear");
+        greet();
+        break;
+
+    default:
+        system("clear");
+        invalid();
+        break;
+    }
+}
+void invertedTri(void){
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                      FOR LOOP INVERTED TRIANGLE                \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter the Number of Row: ");
+    scanf("%i", &n);
+
+    printf("\n");
+
+    for(i = n; i >= 0; --i)
+    {
+        printf("\t\t                           ");
+        for(j = 1; j <= n - i; ++j)
+        {
+            printf(" ");
+        }
+        for(j = 1; j <= i; ++j)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        forLoop();
+        break;
+
+    case 1:
+        system("clear");
+        greet();
+        break;
+
+    default:
+        system("clear");
+        invalid();
+        break;
+    }
+}
 
 void greet(void)
 {
-    printf("\n\n\t\t ==============================+==============================\n");
-    printf("\t\t _________                              _    _                               \n");
-    printf("\t\t ___   ___ _   _  _____  _   _  _   _  | |  | | _____  _   _                 \n");
-    printf("\t\t    | |   | | | ||     || | | || | | | | |  | ||  _  || | | |                \n");
-    printf("\t\t    | |   | |_| || |_| ||  \\| || |/ /  |  \\/  || | | || | | |              \n");
-    printf("\t\t    | |   |     ||  _  || |\\  ||   |    \\    / | | | || | | |              \n");
-    printf("\t\t    | |   | | | || | | || | | || |\\ \\    |  |  | | | || | | |              \n");
-    printf("\t\t    | |   | | | || | | || | | || | | |   |  |  | |_| || |_| |                \n");
-    printf("\t\t    |_|   |_| |_||_| |_||_| |_||_| |_|   |__|  |_____||_____|                \n");
-    printf("\t\t +-----------------------------------------------------------+                \n");
-    printf("\t\t |                  For Using Our Program                    |                 \n");
-    printf("\t\t +-----------------------------------------------------------+                \n");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t _________                              _    _                 \n");
+    printf("\t\t ___   ___ _   _  _____  _   _  _   _  | |  | | _____  _   _   \n");
+    printf("\t\t    | |   | | | ||     || | | || | | | | |  | ||  _  || | | |  \n");
+    printf("\t\t    | |   | |_| || |_| ||  \\| || |/ /  |  \\/  || | | || | | |\n");
+    printf("\t\t    | |   |     ||  _  || |\\  ||   |    \\    / | | | || | | |\n");
+    printf("\t\t    | |   | | | || | | || | | || |\\ \\    |  |  | | | || | | |\n");
+    printf("\t\t    | |   | | | || | | || | | || | | |   |  |  | |_| || |_| |  \n");
+    printf("\t\t    |_|   |_| |_||_| |_||_| |_||_| |_|   |__|  |_____||_____|  \n");
+    printf("\t\t +-----------------------------------------------------------+ \n");
+    printf("\t\t |                  For Using Our Program                    | \n");
+    printf("\t\t +-----------------------------------------------------------+ \n");
     printf("\t\t ==============================+==============================\n");
 }
 
@@ -1865,4 +2146,5 @@ void invalid(void)
     printf("\t\t            |#||#####|    |#|  |                          \n");
     printf("\t\t                               |                        \n\n");
     printf("\t\t ==============================+==============================\n\n");
+
 }
