@@ -15,64 +15,67 @@ void banner(void);
 
 void mainMenu(void);
 
-// This is for Registration
-void registList(void);
-void regisForm(void);
-void listRegistered(void);
+    // This is for Registration
+    void registList(void);
+        void regisForm(void);
+        void listRegistered(void);
 
-// This is for Simple Calculator
-void simpleCal(void);
-void basicComp(void);
-void areaOFShape(void);
-void areaTri(void);
-void areaTrape(void);
-void areaSqr(void);
-void areaPar(void);
-void gradeCal(void);
-void gradeRange(void);
-void passIdent(void);
-void growthRate(void);
-void sizePopulation(void);
-void numPeople(void);
-void rateOfGrowth(void);
-void timeRate(void);
-int indicateTime();
-void bitwise(void);
+    // This is for Simple Calculator
+    void simpleCal(void);
+        void basicComp(void);
+        void areaOFShape(void);
+            void areaTri(void);
+            void areaTrape(void);
+            void areaSqr(void);
+            void areaPar(void);
+        void gradeCal(void);
+            void gradeRange(void);
+            void passIdent(void);
+        void growthRate(void);
+            void sizePopulation(void);
+            void numPeople(void);
+            void rateOfGrowth(void);
+            void timeRate(void);
+            int indicateTime();
+        void bitwise(void);
 
-// This is For Temperature Converter
-void tempConvert(void);
-void celCon(void);
-void fahCon(void);
+    // This is For Temperature Converter
+    void tempConvert(void);
+        void celCon(void);
+        void fahCon(void);
 
-// This is For Integers Identifier
-void intId(void);
-void posNeg(void);
-void intCom(void);
+    // This is For Integers Identifier
+    void intId(void);
+        void posNeg(void);
+        void intCom(void);
+        
+    // This is for Qualification to Vote
+    void qualiVote(void);
 
-//This is For Increment and Decrement
-void incrDecre(void);
-void preIncre(void);
-void postIncre(void);
-void preDecre(void);
-void postDecre(void);
-void forLoop(void);
-void loopIncre(void);
-void loopDecre(void);
-void forLoopTri(void);
-void invertedTri(void);
-
+    //This is For Increment and Decrement
+    void incrDecre(void);
+        void preIncre(void);
+        void postIncre(void);
+        void preDecre(void);
+        void postDecre(void);
+        void forLoop(void);
+            void loopIncre(void);
+            void loopDecre(void);
+            void forLoopTri(void);
+            void invertedTri(void);
 
 // This is For the last frame in our program either GREET or if it INVALID
 void greet(void);
 void invalid(void);
 
-
 // global Variable
 char slt;
 int opt, x, y, i, j, n;
-float ans, A, P, r, t, a, b, h, area, side, grade, e = 2.718;
+float ans, A, P, r, t, a, b, h, area, side, grade;
 float add, sub, product, quote, num1, num2, num3, expo;
 float time, year, month, day;
+float fahrenheit, celsius;
+const float e = 2.718;
 
 int main()
 {
@@ -167,8 +170,7 @@ void mainMenu(void)
 
     case 5:
         system("clear");
-        printf("UNDER PROCESS! \n");
-        // qualiVote();
+        qualiVote();
         break;
 
     case 6:
@@ -1451,7 +1453,6 @@ void tempConvert(void)
 // Prelim Activity 3    This code came from ALBERT SANTELICES
 void celCon(void)
 {
-    float fahrenheit, celsius;
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     CELSIUS TO FAHRENHEIT                    \n");
     printf("\t\t ==============================+==============================\n");
@@ -1465,27 +1466,24 @@ void celCon(void)
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     CELSIUS TO FAHRENHEIT                    \n");
     printf("\t\t ==============================+==============================\n");
-    printf("\t\t        _______________________                         \n");
-    printf("\t\t       |         _____         |                        \n");
-    printf("\t\t       |        /     \\        |                       \n");
-    printf("\t\t       |       /       \\       |                       \n");
-    printf("\t\t       |       |___ 5°F|       |                        \n");
-    printf("\t\t       |       |--     |       |                        \n");
-    printf("\t\t       |       |--     |       |                        \n");
-    printf("\t\t       |       |___ 4°F|       |                        \n");
-    printf("\t\t       |       |--     |       |         %.1f°C         \n", celsius);
-    printf("\t\t       |       |--     |       |                        \n");
-    printf("\t\t       |       |___ 3°F|       |   is equivalent to     \n");
-    printf("\t\t       |       |=======|       |                        \n");
-    printf("\t\t       |       |--WWWWW|       |         %.1f°C         \n", fahrenheit);
-    printf("\t\t       |       |___w2°F|       |                        \n");
-    printf("\t\t       |      /--WWWWWWW\\      |                       \n");
-    printf("\t\t       |    /--WWWWWWWWWWW\\    |                       \n");
-    printf("\t\t       |   |___w1°FwWWWWWWW|   |                        \n");
-    printf("\t\t       |   |--WWWWWWWWWWWWW|   |                        \n");
-    printf("\t\t       |    \\ --WWWWWWWWWW/    |                       \n");
-    printf("\t\t       |      \\________ /      |                       \n");
-    printf("\t\t       |_______________________|                        \n");
+    printf("\t\t\t         ___________ \n");
+    printf("\t\t\t        /           \\\n");
+    printf("\t\t\t       |             | \n");
+    printf("\t\t\t       | °F      °C  | \n");
+    printf("\t\t\t       |      |      | \n");
+    printf("\t\t\t       | 160__|__60  | \n");
+    printf("\t\t\t       | 140__|__50  | \n");
+    printf("\t\t\t       | 120__|__40  |       %.1f°C\n", celsius);
+    printf("\t\t\t       | 100__|__30  | \n");
+    printf("\t\t\t       |  80__|__20  |  is equivalent to  \n");
+    printf("\t\t\t       |  60__|__10  | \n");
+    printf("\t\t\t       |  40__|__0   |       %.1f°F\n", fahrenheit);
+    printf("\t\t\t       |  20__|__-10 | \n");
+    printf("\t\t\t       |   0__|__-20 | \n");
+    printf("\t\t\t       | -20__|__-30 | \n");
+    printf("\t\t\t       |      |      | \n");
+    printf("\t\t\t       |      O      | \n");
+    printf("\t\t\t       |_____________| \n");
     printf("\t\t ==============================+==============================\n\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
@@ -1512,8 +1510,6 @@ void celCon(void)
 // Prelim Activity 3    This code came from ALBERT SANTELICES
 void fahCon(void)
 {
-    float celsius, fahrenheit;
-
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     FAHRENHEIT TO CELSIUS                   \n");
     printf("\t\t ==============================+==============================\n");
@@ -1527,27 +1523,24 @@ void fahCon(void)
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     FAHRENHEIT TO CELSIUS                   \n");
     printf("\t\t ==============================+==============================\n");
-    printf("\t\t        _______________________                         \n");
-    printf("\t\t       |         _____         |                        \n");
-    printf("\t\t       |        /     \\        |                       \n");
-    printf("\t\t       |       /       \\       |                       \n");
-    printf("\t\t       |       |___ 5°C|       |                        \n");
-    printf("\t\t       |       |--     |       |                        \n");
-    printf("\t\t       |       |--     |       |                        \n");
-    printf("\t\t       |       |___ 4°C|       |                        \n");
-    printf("\t\t       |       |--     |       |         %.1f°F         \n", fahrenheit);
-    printf("\t\t       |       |--     |       |                        \n");
-    printf("\t\t       |       |___ 3°C|       |   is equivalent to     \n");
-    printf("\t\t       |       |=======|       |                        \n");
-    printf("\t\t       |       |--WWWWW|       |         %.1f°C         \n", celsius);
-    printf("\t\t       |       |___w2°C|       |                        \n");
-    printf("\t\t       |      /--WWWWWWW\\      |                       \n");
-    printf("\t\t       |    /--WWWWWWWWWWW\\    |                       \n");
-    printf("\t\t       |   |___w1°CwWWWWWWW|   |                        \n");
-    printf("\t\t       |   |--WWWWWWWWWWWWW|   |                        \n");
-    printf("\t\t       |    \\ --WWWWWWWWWW/    |                       \n");
-    printf("\t\t       |      \\________ /      |                       \n");
-    printf("\t\t       |_______________________|                        \n");
+    printf("\t\t\t         ___________ \n");
+    printf("\t\t\t        /           \\\n");
+    printf("\t\t\t       |             | \n");
+    printf("\t\t\t       | °F      °C  | \n");
+    printf("\t\t\t       |      |      | \n");
+    printf("\t\t\t       | 160__|__60  | \n");
+    printf("\t\t\t       | 140__|__50  | \n");
+    printf("\t\t\t       | 120__|__40  |       %.1f°F\n", fahrenheit);
+    printf("\t\t\t       | 100__|__30  | \n");
+    printf("\t\t\t       |  80__|__20  |  is equivalent to  \n");
+    printf("\t\t\t       |  60__|__10  | \n");
+    printf("\t\t\t       |  40__|__0   |       %.1f°C\n", celsius);
+    printf("\t\t\t       |  20__|__-10 | \n");
+    printf("\t\t\t       |   0__|__-20 | \n");
+    printf("\t\t\t       | -20__|__-30 | \n");
+    printf("\t\t\t       |      |      | \n");
+    printf("\t\t\t       |      O      | \n");
+    printf("\t\t\t       |_____________| \n");
     printf("\t\t ==============================+==============================\n\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
@@ -1702,6 +1695,25 @@ void intCom(void)
         system("clear");
         invalid();
         break;
+    }
+}
+
+//Midterm SeatWork Qualification to vote CALPO, MAXELL
+void qualiVote(void)
+{
+
+    int age;
+
+    printf("Enter Age: ");
+    scanf("%i", &age);
+
+    if(age>=18)
+    {
+    printf("You are eligible for voting");
+    }
+    else
+    {
+    printf("You are not eligible for voting");
     }
 }
 
@@ -2137,10 +2149,9 @@ void greet(void)
     printf("\t\t ==============================+==============================\n");
 }
 
-
+//this is for Invalid Input
 void invalid(void)
 {
-
     printf("\n\n\t\t ==============================+==============================\n");
     printf("\t\t                             ERROR                              \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -2152,5 +2163,4 @@ void invalid(void)
     printf("\t\t            |#||#####|    |#|  |                          \n");
     printf("\t\t                               |                        \n\n");
     printf("\t\t ==============================+==============================\n\n");
-
 }
