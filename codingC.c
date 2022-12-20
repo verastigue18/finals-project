@@ -77,7 +77,7 @@ float time, year, month, day;
 int main()
 {
     system("Color A");
-    system("cls");
+    system("clear");
     banner();
     return 0;
 }
@@ -106,18 +106,18 @@ void banner(void)
     {
     case 'Y':
     case 'y':
-        system("cls");
+        system("clear");
         mainMenu();
         break;
 
     case 'N':
     case 'n':
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -146,56 +146,56 @@ void mainMenu(void)
     switch (opt)
     {
     case 1:
-        system("cls");
+        system("clear");
         registList();
         break;
 
     case 2:
-        system("cls");
+        system("clear");
         simpleCal();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         tempConvert();
         break;
 
     case 4:
-        system("cls");
+        system("clear");
         intId();
         break;
 
     case 5:
-        system("cls");
+        system("clear");
         printf("UNDER PROCESS! \n");
         // qualiVote();
         break;
 
     case 6:
-        system("cls");
+        system("clear");
         printf("UNDER PROCESS! \n");
         // colorSelec();
         break;
 
     case 7:
-        system("cls");
+        system("clear");
         incrDecre();
 
         break;
 
     case 8:
-        system("cls");
+        system("clear");
         printf("UNDER PROCESS! \n");
         // integer();
         break;
 
     case 9:
-        system("cls");
+        system("clear");
         banner();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -218,22 +218,22 @@ void registList(void)
     switch (opt)
     {
     case 1:
-        system("cls");
+        system("clear");
         regisForm();
         break;
 
     case 2:
-        system("cls");
+        system("clear");
         listRegistered();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         mainMenu();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -296,7 +296,7 @@ void regisForm(void)
     printf("\t\t\t What is your Third Choice? ");
     scanf(" %[^\n]s", thirdChoice);
 
-    system("cls");
+    system("clear");
 
     printf("\n\n\n\t\t ==============================+============================== \n");
     printf("\t\t                        REGISTRATION FORM                       \n");
@@ -331,17 +331,17 @@ void regisForm(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         registList();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -498,17 +498,17 @@ void listRegistered(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         registList();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -534,37 +534,37 @@ void simpleCal(void)
     switch (opt)
     {
     case 1:
-        system("cls");
+        system("clear");
         basicComp();
         break;
 
     case 2:
-        system("cls");
+        system("clear");
         areaOFShape();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         gradeCal();
         break;
 
     case 4:
-        system("cls");
+        system("clear");
         growthRate();
         break;
 
     case 5:
-        system("cls");
+        system("clear");
         bitwise();
         break;
 
     case 6:
-        system("cls");
+        system("clear");
         mainMenu();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -585,7 +585,7 @@ void basicComp(void)
     printf("\t\t Third number  : ");
     scanf("%f", &num3);
 
-    system("cls");
+    system("clear");
 
     add = num1 + num2 + num3;
     sub = num3 - num2;
@@ -608,17 +608,17 @@ void basicComp(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         simpleCal();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -643,32 +643,32 @@ void areaOFShape(void)
     switch (opt)
     {
     case 1:
-        system("cls");
+        system("clear");
         areaTri();
         break;
 
     case 2:
-        system("cls");
+        system("clear");
         areaTrape();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         areaSqr();
         break;
 
     case 4:
-        system("cls");
+        system("clear");
         areaPar();
         break;
 
     case 5:
-        system("cls");
+        system("clear");
         simpleCal();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -687,7 +687,7 @@ void areaTri(void)
     printf("\t\t Enter the Height of Triangle : ");
     scanf("%f", &h);
 
-    system("cls");
+    system("clear");
 
     area = (b * h) / 2;
 
@@ -712,17 +712,17 @@ void areaTri(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         areaOFShape();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -736,7 +736,7 @@ void areaSqr(void)
     printf("\t\t Enter sides of square: ");
     scanf("%f", &side);
 
-    system("cls");
+    system("clear");
 
     area = side * side;
 
@@ -760,17 +760,17 @@ void areaSqr(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         areaOFShape();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -790,7 +790,7 @@ void areaTrape(void)
     printf("\t\t Enter the height of Trapezoid : ");
     scanf("%f", &h);
 
-    system("cls");
+    system("clear");
 
     area = 0.5 * (a + b) * h;
 
@@ -816,17 +816,17 @@ void areaTrape(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         areaOFShape();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -845,7 +845,7 @@ void areaPar(void)
 
     area = b * h;
 
-    system("cls");
+    system("clear");
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                        AREA OF PARALLELOGRAM                     \n");
@@ -867,17 +867,17 @@ void areaPar(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         areaOFShape();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -902,32 +902,32 @@ void gradeCal(void)
     switch (opt)
     {
     case 1:
-        system("cls");
+        system("clear");
         gradeRange();
         break;
 
     case 2:
-        system("cls");
+        system("clear");
         passIdent();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         // gradeComp1(); midterm activity 1
         break;
 
     case 4:
-        system("cls");
+        system("clear");
         // gradeComp2(); midterm exam
         break;
 
     case 5:
-        system("cls");
+        system("clear");
         simpleCal();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -975,17 +975,17 @@ void gradeRange(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         gradeCal();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1020,8 +1020,8 @@ void passIdent(void)
     // The Process or Computation
     grade = (CS * .10) + (quiz * .15) + (assign * .15) + (proj * .20) + (ME * .40);
 
-    // To cls
-    system("cls");
+    // To clear
+    system("clear");
 
     // To print a Value of Grade
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -1054,17 +1054,17 @@ void passIdent(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         gradeCal();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1088,33 +1088,32 @@ void growthRate(void)
     switch (opt)
     {
     case 1:
-        system("cls");
+        system("clear");
         sizePopulation();
         break;
 
     case 2:
-        system("cls");
+        system("clear");
         numPeople();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         rateOfGrowth();
         break;
 
     case 4:
-        system("cls");
-        indicateTime();
+        system("clear");
         timeRate();
         break;
 
     case 5:
-        system("cls");
+        system("clear");
         mainMenu();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1122,19 +1121,20 @@ void growthRate(void)
 
 void sizePopulation(void)
 {
-
-    printf("\n\n\n\t\t Initial Number of People : ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                    POPULATION AFTER IN GROWS                   \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Initial Number of People : ");
     scanf("%f", &P);
 
     printf("\t\t Enter the Rate of Growth : ");
     scanf("%f", &r);
 
-    printf("\t\t Enter the Time in Month : ");
-    scanf("%f", &t);
+    indicateTime();
 
-    system("cls");
+    system("clear");
 
-    ans = P * pow(e, (r * t));
+    ans = P * pow(e, ((r / 100) * time));
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                    POPULATION AFTER IN GROWS                   \n");
@@ -1143,11 +1143,11 @@ void sizePopulation(void)
     printf("\t\t        P = %g                                          \n", P);
     printf("\t\t        e = 2.718                                       \n");
     printf("\t\t        r = %g                                          \n", r);
-    printf("\t\t        t = %g                                          \n", t);
+    printf("\t\t        t = %g                                          \n", time);
     printf("\t\t        A = ?                                           \n");
     printf("\t\t    Answer :                                            \n");
     printf("\t\t        A = %.0f therefore, the City population would be\n", ans);
-    printf("\t\t                      about %.0f after %.1f Years.      \n", ans, t);
+    printf("\t\t                   about %.0f after %g Years.      \n", ans, time);
     printf("\t\t ==============================+==============================\n\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
@@ -1155,17 +1155,17 @@ void sizePopulation(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         growthRate();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1173,19 +1173,20 @@ void sizePopulation(void)
 
 void numPeople(void)
 {
-
-    printf("\n\n\n\t\t Size of the Population after in grows : ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                     INITIAL NUMBER OF PEOPLE                   \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Size of the Population after in grows : ");
     scanf("%f", &A);
 
     printf("\t\t Enter the Rate of Growth : ");
     scanf("%f", &r);
 
-    printf("\t\t Enter the Time in Month : ");
-    scanf("%f", &t);
+    indicateTime();
 
-    system("cls");
+    system("clear");
 
-    ans = A / pow(e, (r * t));
+    ans = A / pow(e, ((r / 100) * time));
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     INITIAL NUMBER OF PEOPLE                   \n");
@@ -1194,29 +1195,29 @@ void numPeople(void)
     printf("\t\t        A = %g                                                \n", A);
     printf("\t\t        e = 2.718                                             \n");
     printf("\t\t        r = %g                                                \n", r);
-    printf("\t\t        t = %g                                                \n", t);
+    printf("\t\t        t = %g                                                \n", time);
     printf("\t\t        P = ?                                                 \n");
     printf("\t\t    Answer :                                                  \n");
     printf("\t\t        P = %.0f therefore, the initial number of Population  \n", ans);
-    printf("\t\t                   would be %.0f in %.1f Years.               \n", ans, t);
+    printf("\t\t                   would be %.0f in %g Years.               \n", ans, time);
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t         BACK press [0]               EXIT press [1] :            ");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         growthRate();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1224,7 +1225,10 @@ void numPeople(void)
 
 void rateOfGrowth(void)
 {
-    printf("\n\n\n\t\t Size of the Population after in grows : ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                          RATE OF GROWTH                        \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Size of the Population after in grows : ");
     scanf("%f", &A);
 
     printf("\t\t Initial Number of People : ");
@@ -1232,9 +1236,9 @@ void rateOfGrowth(void)
 
     indicateTime();
 
-    system("cls");
+    system("clear");
 
-    ans = log10(A / P) / (time * log10(e));
+    ans = (log10(A / P) / (time * log10(e))) * 100;
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                          RATE OF GROWTH                        \n");
@@ -1246,26 +1250,26 @@ void rateOfGrowth(void)
     printf("\t\t        t = %g                                               \n", time);
     printf("\t\t        r = ?                                                \n");
     printf("\t\t    Answer :                                                 \n");
-    printf("\t\t        r = %.3f therefore, the rate of growth of the        \n", ans);
-    printf("\t\t           Population would be %.3f in the %.1f Years.       \n", ans, time);
+    printf("\t\t        r = %.2f therefore, the rate of growth of the        \n", ans);
+    printf("\t\t           Population would be %.2f in the %.1f Years.       \n", ans, time);
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t           BACK press [0]               EXIT press [1] :          ");
+    printf("\t\t           BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         growthRate();
         break;
 
     case 1:
-        system("clsr");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1273,13 +1277,10 @@ void rateOfGrowth(void)
 
 int indicateTime()
 {
-    printf("\n\n\n\t\t ==============================+==============================\n");
-    printf("\t\t                          INDICATE TIME                         \n");
-    printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t\t [1] - Year                                      \n\n");
-    printf("\t\t\t [2] - Month                                     \n\n");
-    printf("\t\t\t [3] - Day                                       \n\n");
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter the Number of Time \n");
+    printf("\t\t     [1] - Year           \n");
+    printf("\t\t     [2] - Month          \n");
+    printf("\t\t     [3] - Day            \n");
     printf("\t\t Indicate the Time. Pick the No. : ");
     scanf("%i", &opt);
 
@@ -1294,17 +1295,17 @@ int indicateTime()
         case 2:
             printf("\t\t Enter the Month : ");
             scanf("%f", &month);
-            return time = month;
+            return time = month /= 12;
             break;
 
         case 3:
             printf("\t\t Enter the Day : ");
             scanf("%f", &day);
-            return time = day;
+            return time = day /= 365;
             break;
 
         default:
-            system("cls");
+            system("clear");
             invalid();
             break;
     }
@@ -1313,7 +1314,10 @@ int indicateTime()
 
 void timeRate(void)
 {
-    printf("\n\n\n\t\t Size of the Population after in grows : ");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                              TIME                              \n");
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Size of the Population after in grows : ");
     scanf("%f", &A);
 
     printf("\t\t Initial Number of People : ");
@@ -1322,9 +1326,9 @@ void timeRate(void)
     printf("\t\t Enter the Rate of Growth : ");
     scanf("%f", &r);
 
-    system("cls");
+    system("clear");
 
-    ans = log10(A / P) / (r * log10(e));
+    ans = log10(A / P) / ((r / 100) * log10(e));
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                              TIME                              \n");
@@ -1339,23 +1343,23 @@ void timeRate(void)
     printf("\t\t        t = %g therefore, in the %g Years the size of       \n", ans, ans);
     printf("\t\t                       Population was %g                        \n", A);
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t           BACK press [0]               EXIT press [1] :                      ");
+    printf("\t\t           BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         growthRate();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1390,17 +1394,17 @@ void bitwise(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         bitwise();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1423,22 +1427,22 @@ void tempConvert(void)
     switch (opt)
     {
     case 1:
-        system("cls");
+        system("clear");
         celCon();
         break;
 
     case 2:
-        system("cls");
+        system("clear");
         fahCon();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         mainMenu();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1456,7 +1460,7 @@ void celCon(void)
 
     fahrenheit = (celsius * 9 / 5) + 32;
 
-    system("cls");
+    system("clear");
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     CELSIUS TO FAHRENHEIT                    \n");
@@ -1489,17 +1493,17 @@ void celCon(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         tempConvert();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1518,7 +1522,7 @@ void fahCon(void)
 
     celsius = (fahrenheit - 32) * 5 / 9;
 
-    system("cls");
+    system("clear");
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     FAHRENHEIT TO CELSIUS                   \n");
@@ -1551,17 +1555,17 @@ void fahCon(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         tempConvert();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1583,22 +1587,22 @@ void intId(void)
     switch (opt)
     {
     case 1:
-        system("cls");
+        system("clear");
         posNeg();
         break;
 
     case 2:
-        system("cls");
+        system("clear");
         intCom();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         mainMenu();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1638,17 +1642,17 @@ void posNeg(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         intId();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1685,17 +1689,17 @@ void intCom(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         intId();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1720,37 +1724,37 @@ void incrDecre(void)
     switch(opt)
     {
         case 1:
-            system("cls");
+            system("clear");
             preIncre();
             break;
 
         case 2:
-            system("cls");
+            system("clear");
             postIncre();
             break;
 
         case 3:
-            system("cls");
+            system("clear");
             preDecre();
             break;
 
         case 4:
-            system("cls");
+            system("clear");
             postDecre();
             break;
 
         case 5:
-            system("cls");
+            system("clear");
             forLoop();
             break;
 
         case 6:
-            system("cls");
+            system("clear");
             mainMenu();
             break;
 
         default :
-            system("cls");
+            system("clear");
             invalid();
             break;
     }
@@ -1773,17 +1777,17 @@ void preIncre(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         incrDecre();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1807,17 +1811,17 @@ void postIncre(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         incrDecre();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1840,17 +1844,17 @@ void preDecre(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         intId();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1873,17 +1877,17 @@ void postDecre(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         incrDecre();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -1905,32 +1909,32 @@ void forLoop(void)
     switch(opt)
     {
         case 1:
-            system("cls");
+            system("clear");
             loopIncre();
             break;
 
         case 2:
-            system("cls");
+            system("clear");
             loopDecre();
             break;
 
         case 3:
-            system("cls");
+            system("clear");
             forLoopTri();
             break;
 
         case 4:
-            system("cls");
+            system("clear");
             invertedTri();
             break;
 
         case 5:
-            system("cls");
+            system("clear");
             incrDecre();
             break;
 
         default :
-            system("cls");
+            system("clear");
             invalid();
             break;
     }
@@ -1961,17 +1965,17 @@ void loopIncre(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         forLoop();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -2003,17 +2007,17 @@ void loopDecre(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         forLoop();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
@@ -2053,21 +2057,23 @@ void forLoopTri(void)
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         forLoop();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
 }
+
+//Final GroupActivity Aron James Betinol
 void invertedTri(void){
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                      FOR LOOP INVERTED TRIANGLE                \n");
@@ -2098,17 +2104,17 @@ void invertedTri(void){
     switch (opt)
     {
     case 0:
-        system("cls");
+        system("clear");
         forLoop();
         break;
 
     case 1:
-        system("cls");
+        system("clear");
         greet();
         break;
 
     default:
-        system("cls");
+        system("clear");
         invalid();
         break;
     }
