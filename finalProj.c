@@ -6,9 +6,9 @@
         Calpo, Maxell
         Santelices, Albert
 */
-
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 #include <math.h>
 
 void banner(void);
