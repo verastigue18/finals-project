@@ -6,10 +6,12 @@
         Calpo, Maxell
         Santelices, Albert
 */
-
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 #include <math.h>
+
+void loadingScre(void);
 
 void banner(void);
 
@@ -48,7 +50,7 @@ void mainMenu(void);
     void intId(void);
         void posNeg(void);
         void intCom(void);
-        
+
     // This is for Qualification to Vote
     void qualiVote(void);
 
@@ -80,9 +82,20 @@ const float e = 2.718;
 int main()
 {
     system("Color A");
+    loadingScre();
     system("clear");
     banner();
     return 0;
+}
+
+void loadingScre(void)
+{
+    printf("\n\n\n\n\t\t                            Loading ");
+    for(i = 1; i <= 3; i++)
+    {
+        sleep(1);
+        printf(".");
+    }
 }
 
 void banner(void)
@@ -100,8 +113,7 @@ void banner(void)
     printf("\t\t      +--------------------------------------------------+\n");
     printf("\t\t      | Brian      Aron    Joshua     Maxwell     Albert |\n");
     printf("\t\t      +--------------------------------------------------+\n");
-    printf("\t\t ==============================+==============================\n\n");
-
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Do You Want to Use this Program? press [Y/N] : ");
     scanf("%c", &slt);
 
@@ -110,16 +122,22 @@ void banner(void)
     case 'Y':
     case 'y':
         system("clear");
+        loadingScre();
+        system("clear");
         mainMenu();
         break;
 
     case 'N':
     case 'n':
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -141,8 +159,7 @@ void mainMenu(void)
     printf("\t\t        | [4] Integers Identifier    | |   | [9] Back                   | |         \n");
     printf("\t\t        | [5] Qualification to Vote  | |   |                            | |         \n");
     printf("\t\t        |____________________________|/    |____________________________|/        \n\n");
-    printf("\t\t =================================================================================\n\n");
-
+    printf("\t\t =================================================================================\n");
     printf("\t\t  Pick a number that you Want to Use [1-9] : ");
     scanf("%i", &opt);
 
@@ -150,30 +167,42 @@ void mainMenu(void)
     {
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         registList();
         break;
 
     case 2:
+        system("clear");
+        loadingScre();
         system("clear");
         simpleCal();
         break;
 
     case 3:
         system("clear");
+        loadingScre();
+        system("clear");
         tempConvert();
         break;
 
     case 4:
+        system("clear");
+        loadingScre();
         system("clear");
         intId();
         break;
 
     case 5:
         system("clear");
+        loadingScre();
+        system("clear");
         qualiVote();
         break;
 
     case 6:
+        system("clear");
+        loadingScre();
         system("clear");
         printf("UNDER PROCESS! \n");
         // colorSelec();
@@ -181,11 +210,14 @@ void mainMenu(void)
 
     case 7:
         system("clear");
+        loadingScre();
+        system("clear");
         incrDecre();
-
         break;
 
     case 8:
+        system("clear");
+        loadingScre();
         system("clear");
         printf("UNDER PROCESS! \n");
         // integer();
@@ -193,10 +225,14 @@ void mainMenu(void)
 
     case 9:
         system("clear");
+        loadingScre();
+        system("clear");
         banner();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -212,8 +248,7 @@ void registList(void)
     printf("\t\t\t [1] - Registration Form                                    \n\n");
     printf("\t\t\t [2] - List of Registered                                   \n\n");
     printf("\t\t\t [3] - Back                                                 \n\n");
-    printf("\t\t ==============================+==============================\n\n");
-
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
@@ -221,20 +256,28 @@ void registList(void)
     {
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         regisForm();
         break;
 
     case 2:
+        system("clear");
+        loadingScre();
         system("clear");
         listRegistered();
         break;
 
     case 3:
         system("clear");
+        loadingScre();
+        system("clear");
         mainMenu();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -251,7 +294,7 @@ void regisForm(void)
 
     printf("\n\n\n\t\t ==============================+============================== \n");
     printf("\t\t                         PERSONAL BACKGROUND                         \n");
-    printf("\t\t ==============================+==============================       \n");
+    printf("\t\t ==============================+==============================\n");
 
     printf("\t\t\t What is your Name? ");
     scanf(" %[^\n]s", name);
@@ -326,7 +369,7 @@ void regisForm(void)
     printf("\t\t\t 2ND CHOICE.......: %s\n", secondChoice);
     printf("\t\t\t 3RD CHOICE.......: %s\n\n", thirdChoice);
 
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t          BACK press [0]           EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -334,15 +377,21 @@ void regisForm(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         registList();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -352,7 +401,7 @@ void regisForm(void)
 // Prelim Act1
 void listRegistered(void)
 {
-    printf("\n\n\n\t\t                List of Registered People                 \n\n");
+    printf("\n\n\n\t\t             List of Registered People                 \n\n");
 
     printf("\t\t ==============================+==============================  \n");
     printf("\t\t                        REGISTRATION FORM                       \n");
@@ -501,15 +550,21 @@ void listRegistered(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         registList();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -522,50 +577,63 @@ void simpleCal(void)
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                       SIMPLE CALCULATOR                        \n");
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t\t [1] - Basic  Computation                                    \n\n");
-    printf("\t\t\t [2] - Area of Shape                                        \n\n");
-    printf("\t\t\t [3] - Grade Calculation                                    \n\n");
-    printf("\t\t\t [4] - Population Growth Rate                               \n\n");
-    printf("\t\t\t [5] - Bitwise                                              \n\n");
+    printf("\t\t\t [1] - Basic  Computation                                   \n");
+    printf("\t\t\t [2] - Area of Shape                                        \n");
+    printf("\t\t\t [3] - Grade Calculation                                    \n");
+    printf("\t\t\t [4] - Population Growth Rate                               \n");
+    printf("\t\t\t [5] - Bitwise                                              \n");
     printf("\t\t\t [6] - Back                                                 \n\n");
-    printf("\t\t ==============================+==============================\n\n");
-
-    printf("\t\t  Pick a Number : ");
+    printf("\t\t ==============================+==============================\n");
+    printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
     switch (opt)
     {
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         basicComp();
         break;
 
     case 2:
+        system("clear");
+        loadingScre();
         system("clear");
         areaOFShape();
         break;
 
     case 3:
         system("clear");
+        loadingScre();
+        system("clear");
         gradeCal();
         break;
 
     case 4:
+        system("clear");
+        loadingScre();
         system("clear");
         growthRate();
         break;
 
     case 5:
         system("clear");
+        loadingScre();
+        system("clear");
         bitwise();
         break;
 
     case 6:
         system("clear");
+        loadingScre();
+        system("clear");
         mainMenu();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -611,15 +679,21 @@ void basicComp(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         simpleCal();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -632,13 +706,12 @@ void areaOFShape(void)
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                         AREA OF SHAPE                         \n");
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t\t [1] - Area of Triangle                                     \n\n");
-    printf("\t\t\t [2] - Area of Square                                       \n\n");
-    printf("\t\t\t [3] - Area of Trapezoid                                    \n\n");
-    printf("\t\t\t [4] - Area of Parallelogram                                \n\n");
+    printf("\t\t\t [1] - Area of Triangle                                     \n");
+    printf("\t\t\t [2] - Area of Square                                       \n");
+    printf("\t\t\t [3] - Area of Trapezoid                                    \n");
+    printf("\t\t\t [4] - Area of Parallelogram                                \n");
     printf("\t\t\t [5] - Back                                                 \n\n");
-    printf("\t\t ==============================+==============================\n\n");
-
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
@@ -646,30 +719,42 @@ void areaOFShape(void)
     {
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         areaTri();
         break;
 
     case 2:
+        system("clear");
+        loadingScre();
         system("clear");
         areaTrape();
         break;
 
     case 3:
         system("clear");
+        loadingScre();
+        system("clear");
         areaSqr();
         break;
 
     case 4:
+        system("clear");
+        loadingScre();
         system("clear");
         areaPar();
         break;
 
     case 5:
         system("clear");
+        loadingScre();
+        system("clear");
         simpleCal();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -707,7 +792,7 @@ void areaTri(void)
     printf("\t\t\t\t\t  |----------|             \n");
     printf("\t\t\t\t\t     b = %g           \n", b);
     printf("\t\t\t Therefore the Total Area of a Triangle is %g. \n", area);
-    printf("\t\t ==============================+==============================  \n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -715,15 +800,21 @@ void areaTri(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         areaOFShape();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -744,7 +835,7 @@ void areaSqr(void)
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                           AREA OF SQUARE                         \n");
-    printf("\t\t ==============================+==============================  \n\n");
+    printf("\t\t ==============================+==============================\n\n");
     printf("\t\t\t\t\t    __________  ---             \n");
     printf("\t\t\t\t\t   |          |  |             \n");
     printf("\t\t\t\t\t   |          |  |             \n");
@@ -755,7 +846,7 @@ void areaSqr(void)
     printf("\t\t\t\t\t  |------------|               \n");
     printf("\t\t\t\t\t      s = %g            \n", side);
     printf("\t\t\t Therefore the Total Area of a Square is %g. \n", area);
-    printf("\t\t ==============================+==============================  \n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -763,15 +854,21 @@ void areaSqr(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         areaOFShape();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -798,7 +895,7 @@ void areaTrape(void)
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                          AREA OF TRAPEZOID                       \n");
-    printf("\t\t ==============================+==============================  \n\n");
+    printf("\t\t ==============================+==============================\n\n");
     printf("\t\t\t\t           a = %g                 \n", a);
     printf("\t\t\t\t       |-----------|                 \n");
     printf("\t\t\t\t        ___________      ---         \n");
@@ -811,7 +908,7 @@ void areaTrape(void)
     printf("\t\t\t\t  |---------------------|                \n");
     printf("\t\t\t\t           b = %g                \n", b);
     printf("\t\t\t Therefore the Total Area of a Trapezoid is %g. \n", area);
-    printf("\t\t ==============================+==============================  \n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -819,15 +916,21 @@ void areaTrape(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         areaOFShape();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -851,7 +954,7 @@ void areaPar(void)
 
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                        AREA OF PARALLELOGRAM                     \n");
-    printf("\t\t ==============================+==============================  \n\n");
+    printf("\t\t ==============================+==============================\n\n");
     printf("\t\t\t\t        ________________ ---        \n");
     printf("\t\t\t\t       /               /  |         \n");
     printf("\t\t\t\t      /               /   |         \n");
@@ -862,7 +965,7 @@ void areaPar(void)
     printf("\t\t\t\t  |----------------|                \n");
     printf("\t\t\t\t        b = %g                \n", b);
     printf("\t\t\t Therefore the Total Area of a Parallelogram is %g. \n", area);
-    printf("\t\t ==============================+==============================  \n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -870,15 +973,21 @@ void areaPar(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         areaOFShape();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -891,13 +1000,12 @@ void gradeCal(void)
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                        GRADE CALCULATION                       \n");
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t\t [1] - Grade Range                                          \n\n");
-    printf("\t\t\t [2] - Passes/Failed Identifier                             \n\n");
-    printf("\t\t\t [3] - Grade Computation                                    \n\n");
-    printf("\t\t\t [4] - Grade Computation 1.1                                \n\n");
+    printf("\t\t\t [1] - Grade Range                                          \n");
+    printf("\t\t\t [2] - Passes/Failed Identifier                             \n");
+    printf("\t\t\t [3] - Grade Computation                                    \n");
+    printf("\t\t\t [4] - Grade Computation 1.1                                \n");
     printf("\t\t\t [5] - Back                                                 \n\n");
-    printf("\t\t ==============================+==============================\n\n");
-
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
@@ -905,30 +1013,42 @@ void gradeCal(void)
     {
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         gradeRange();
         break;
 
     case 2:
+        system("clear");
+        loadingScre();
         system("clear");
         passIdent();
         break;
 
     case 3:
         system("clear");
+        loadingScre();
+        system("clear");
         // gradeComp1(); midterm activity 1
         break;
 
     case 4:
+        system("clear");
+        loadingScre();
         system("clear");
         // gradeComp2(); midterm exam
         break;
 
     case 5:
         system("clear");
+        loadingScre();
+        system("clear");
         simpleCal();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -970,7 +1090,7 @@ void gradeRange(void)
         printf("\t\t\t\t\t OUT OF RANGE!\n\n");
     }
 
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -978,15 +1098,21 @@ void gradeRange(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         gradeCal();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1049,7 +1175,7 @@ void passIdent(void)
     }
 
     // Code After If
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -1057,15 +1183,21 @@ void passIdent(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         gradeCal();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1078,12 +1210,12 @@ void growthRate(void)
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     Population Growth Rate                     \n");
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t\t [1] - Size of Population                                   \n\n");
-    printf("\t\t\t [2] - Number of People                                     \n\n");
-    printf("\t\t\t [3] - Rate of Growth                                       \n\n");
-    printf("\t\t\t [4] - Time                                                 \n\n");
+    printf("\t\t\t [1] - Size of Population                                   \n");
+    printf("\t\t\t [2] - Number of People                                     \n");
+    printf("\t\t\t [3] - Rate of Growth                                       \n");
+    printf("\t\t\t [4] - Time                                                 \n");
     printf("\t\t\t [5] - Back                                                 \n\n");
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t What did you Want to find? pick a No. : ");
     scanf("%i", &opt);
 
@@ -1091,30 +1223,42 @@ void growthRate(void)
     {
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         sizePopulation();
         break;
 
     case 2:
+        system("clear");
+        loadingScre();
         system("clear");
         numPeople();
         break;
 
     case 3:
         system("clear");
+        loadingScre();
+        system("clear");
         rateOfGrowth();
         break;
 
     case 4:
+        system("clear");
+        loadingScre();
         system("clear");
         timeRate();
         break;
 
     case 5:
         system("clear");
+        loadingScre();
+        system("clear");
         mainMenu();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1150,7 +1294,7 @@ void sizePopulation(void)
     printf("\t\t    Answer :                                            \n");
     printf("\t\t        A = %.0f therefore, the City population would be\n", ans);
     printf("\t\t                   about %.0f after %g Years.      \n", ans, time);
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -1158,15 +1302,21 @@ void sizePopulation(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         growthRate();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1202,7 +1352,7 @@ void numPeople(void)
     printf("\t\t    Answer :                                                  \n");
     printf("\t\t        P = %.0f therefore, the initial number of Population  \n", ans);
     printf("\t\t                   would be %.0f in %g Years.               \n", ans, time);
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -1210,15 +1360,21 @@ void numPeople(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         growthRate();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1254,7 +1410,7 @@ void rateOfGrowth(void)
     printf("\t\t    Answer :                                                 \n");
     printf("\t\t        r = %.2f therefore, the rate of growth of the        \n", ans);
     printf("\t\t           Population would be %.2f in the %.1f Years.       \n", ans, time);
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t           BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -1262,15 +1418,21 @@ void rateOfGrowth(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         growthRate();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1344,7 +1506,7 @@ void timeRate(void)
     printf("\t\t    Answer :                                                    \n");
     printf("\t\t        t = %g therefore, in the %g Years the size of       \n", ans, ans);
     printf("\t\t                       Population was %g                        \n", A);
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t           BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -1352,15 +1514,21 @@ void timeRate(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         growthRate();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1397,15 +1565,21 @@ void bitwise(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         bitwise();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1421,8 +1595,7 @@ void tempConvert(void)
     printf("\t\t\t [1] - Celsius to Fahrenheit                                \n\n");
     printf("\t\t\t [2] - Fahrenheit to Celsius                                \n\n");
     printf("\t\t\t [3] - Back                                                 \n\n");
-    printf("\t\t ==============================+==============================\n\n");
-
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
@@ -1430,20 +1603,28 @@ void tempConvert(void)
     {
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         celCon();
         break;
 
     case 2:
+        system("clear");
+        loadingScre();
         system("clear");
         fahCon();
         break;
 
     case 3:
         system("clear");
+        loadingScre();
+        system("clear");
         mainMenu();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1484,7 +1665,7 @@ void celCon(void)
     printf("\t\t\t       |      |      | \n");
     printf("\t\t\t       |      O      | \n");
     printf("\t\t\t       |_____________| \n");
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -1492,15 +1673,21 @@ void celCon(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         tempConvert();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1541,7 +1728,7 @@ void fahCon(void)
     printf("\t\t\t       |      |      | \n");
     printf("\t\t\t       |      O      | \n");
     printf("\t\t\t       |_____________| \n");
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -1549,15 +1736,21 @@ void fahCon(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         tempConvert();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1572,8 +1765,7 @@ void intId(void)
     printf("\t\t\t [1] - Positive and Negative                                \n\n");
     printf("\t\t\t [2] - Integers Comparison                                  \n\n");
     printf("\t\t\t [3] - Back                                                 \n\n");
-    printf("\t\t ==============================+==============================\n\n");
-
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Pick a Number : ");
     scanf("%i", &opt);
 
@@ -1581,20 +1773,28 @@ void intId(void)
     {
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         posNeg();
         break;
 
     case 2:
+        system("clear");
+        loadingScre();
         system("clear");
         intCom();
         break;
 
     case 3:
         system("clear");
+        loadingScre();
+        system("clear");
         mainMenu();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1629,22 +1829,28 @@ void posNeg(void)
         printf("\n\n\t\t     Therefore, the Integer Number %i is a Negative Number. \n", x);
     }
 
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
     switch (opt)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         intId();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1675,7 +1881,7 @@ void intCom(void)
         printf("\n\n\t\t  The Value of A and B is the same, and the value of it is %i \n", x);
     }
 
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -1683,15 +1889,21 @@ void intCom(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         intId();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1715,6 +1927,34 @@ void qualiVote(void)
     {
     printf("You are not eligible for voting");
     }
+
+    printf("\t\t ==============================+==============================\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+    case 0:
+        system("clear");
+        loadingScre();
+        system("clear");
+        mainMenu();
+        break;
+
+    case 1:
+        system("clear");
+        loadingScre();
+        system("clear");
+        greet();
+        break;
+
+    default:
+        system("clear");
+        loadingScre();
+        system("clear");
+        invalid();
+        break;
+    }
 }
 
 //Final Group Activity # 1 This line of code is made by Joshua Meredores
@@ -1729,7 +1969,7 @@ void incrDecre(void)
     printf("\t\t\t [4] - Post-Decrement                                       \n");
     printf("\t\t\t [5] - For Loop                                             \n");
     printf("\t\t\t [6] - Back                                                 \n");
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Enter a number: ");
     scanf("%i",&opt);
 
@@ -1737,10 +1977,14 @@ void incrDecre(void)
     {
         case 1:
             system("clear");
+            loadingScre();
+            system("clear");
             preIncre();
             break;
 
         case 2:
+            system("clear");
+            loadingScre();
             system("clear");
             postIncre();
             break;
@@ -1752,20 +1996,28 @@ void incrDecre(void)
 
         case 4:
             system("clear");
+            loadingScre();
+            system("clear");
             postDecre();
             break;
 
         case 5:
+            system("clear");
+            loadingScre();
             system("clear");
             forLoop();
             break;
 
         case 6:
             system("clear");
+            loadingScre();
+            system("clear");
             mainMenu();
             break;
 
         default :
+            system("clear");
+            loadingScre();
             system("clear");
             invalid();
             break;
@@ -1783,22 +2035,28 @@ void preIncre(void)
       ++x;
 
     printf("\n\n\t\t                  The updated value : %i \n\n", x);
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
     switch (opt)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         incrDecre();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1817,22 +2075,28 @@ void postIncre(void)
 
     printf("\t\t                        The original value : %i \n ", y);
     printf("\t\t                        The updated value  : %i \n\n", x);
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
     switch (opt)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         incrDecre();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1850,22 +2114,28 @@ void preDecre(void)
     --x;
 
     printf("\n\n\t\t                  The updated value of Y : %i \n\n", x);
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
     switch (opt)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         intId();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1883,22 +2153,28 @@ void postDecre(void)
 
     printf("\t\t                        The original value : %i \n ", y);
     printf("\t\t                        The updated value  : %i \n\n", x);
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
     switch (opt)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         incrDecre();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1914,7 +2190,7 @@ void forLoop(void)
     printf("\t\t\t [3] - For Loop Triangle                                      \n");
     printf("\t\t\t [4] - Inverted Triangle                                      \n");
     printf("\t\t\t [5] - Back                                                   \n");
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Enter a number: ");
     scanf("%i", &opt);
 
@@ -1922,30 +2198,42 @@ void forLoop(void)
     {
         case 1:
             system("clear");
+            loadingScre();
+            system("clear");
             loopIncre();
             break;
 
         case 2:
+            system("clear");
+            loadingScre();
             system("clear");
             loopDecre();
             break;
 
         case 3:
             system("clear");
+            loadingScre();
+            system("clear");
             forLoopTri();
             break;
 
         case 4:
+            system("clear");
+            loadingScre();
             system("clear");
             invertedTri();
             break;
 
         case 5:
             system("clear");
+            loadingScre();
+            system("clear");
             incrDecre();
             break;
 
         default :
+            system("clear");
+            loadingScre();
             system("clear");
             invalid();
             break;
@@ -1971,22 +2259,28 @@ void loopIncre(void)
         printf("\t\t                               |\n");
     }
 
-    printf("\n\t\t ==============================+==============================\n\n");
+    printf("\n\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
     switch (opt)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         forLoop();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -1998,7 +2292,7 @@ void loopDecre(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                       FOR LOOP DECREMENT                       \n");
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t Enter The Initial value : ");
     scanf("%i", &i);
 
@@ -2012,7 +2306,7 @@ void loopDecre(void)
         printf("\t\t                               |\n");
     }
 
-    printf("\n\t\t ==============================+==============================\n\n");
+    printf("\n\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -2020,15 +2314,21 @@ void loopDecre(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         forLoop();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -2062,7 +2362,7 @@ void forLoopTri(void)
         printf("\n");
     }
 
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -2070,15 +2370,21 @@ void forLoopTri(void)
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         forLoop();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
@@ -2109,7 +2415,7 @@ void invertedTri(void){
         printf("\n");
     }
 
-    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t ==============================+==============================\n");
     printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
@@ -2117,15 +2423,21 @@ void invertedTri(void){
     {
     case 0:
         system("clear");
+        loadingScre();
+        system("clear");
         forLoop();
         break;
 
     case 1:
         system("clear");
+        loadingScre();
+        system("clear");
         greet();
         break;
 
     default:
+        system("clear");
+        loadingScre();
         system("clear");
         invalid();
         break;
