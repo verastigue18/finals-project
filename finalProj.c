@@ -11,6 +11,7 @@
 #include <string.h>
 #include <math.h>
 
+void loadingScreen(void);
 void banner(void);
 
 void mainMenu(void);
@@ -88,8 +89,22 @@ int main()
 {
     system("Color A");
     system("cls");
+    loadingScreen();
     banner();
     return 0;
+}
+
+void loadingScreen()
+{
+    printf("\n\n\n\n\n\n\n\t\t\t\t\tLoading");
+
+    for (i = 0; i < 3; i++)
+    {
+        printf(".");
+        fflush(stdout);
+        sleep(1);
+    }
+    system("cls");
 }
 
 void banner(void)
@@ -135,6 +150,7 @@ void banner(void)
 // Main Menu
 void mainMenu(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t =================================================================================\n");
     printf("\t\t                                        MENU                                       \n");
     printf("\t\t ================================================================================= \n");
@@ -144,7 +160,7 @@ void mainMenu(void)
     printf("\t\t        | [1] Registration Form      | |   | [6] Change Color           | |         \n");
     printf("\t\t        | [2] Simple Calculator      | |   | [7] Increment & Decrement  | |         \n");
     printf("\t\t        | [3] Temperature Converter  | |   | [8]                        | |         \n");
-    printf("\t\t        | [4] Integers Identifier    | |   | [9] Back                   | |         \n");
+    printf("\t\t        | [4] Integers Identifier    | |   | [9] EXIT                   | |         \n");
     printf("\t\t        | [5] Qualification to Vote  | |   |                            | |         \n");
     printf("\t\t        |____________________________|/    |____________________________|/        \n\n");
     printf("\t\t =================================================================================\n");
@@ -175,11 +191,13 @@ void mainMenu(void)
 
     case 5:
         system("cls");
+        loadingScreen();
         qualiVote();
         break;
 
     case 6:
         system("cls");
+        loadingScreen();
         changeColor();
         break;
 
@@ -197,7 +215,7 @@ void mainMenu(void)
 
     case 9:
         system("cls");
-        banner();
+        greet();
         break;
 
     default:
@@ -210,6 +228,7 @@ void mainMenu(void)
 // This is for Registration or case 1
 void registList(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                       REGISTRATION LIST                        \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -224,11 +243,13 @@ void registList(void)
     {
     case 1:
         system("cls");
+        loadingScreen();
         regisForm();
         break;
 
     case 2:
         system("cls");
+        loadingScreen();
         listRegistered();
         break;
 
@@ -526,6 +547,7 @@ void listRegistered(void)
 // MENU for Simple Calculator
 void simpleCal(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                       SIMPLE CALCULATOR                        \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -543,6 +565,7 @@ void simpleCal(void)
     {
     case 1:
         system("cls");
+        loadingScreen();
         basicComp();
         break;
 
@@ -563,6 +586,7 @@ void simpleCal(void)
 
     case 5:
         system("cls");
+        loadingScreen();
         bitwise();
         break;
 
@@ -631,6 +655,7 @@ void basicComp(void)
 // MENU for Area of Shape
 void areaOFShape(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                         AREA OF SHAPE                         \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -647,21 +672,25 @@ void areaOFShape(void)
     {
     case 1:
         system("cls");
+        loadingScreen();
         areaTri();
         break;
 
     case 2:
         system("cls");
+        loadingScreen();
         areaSqr();
         break;
 
     case 3:
         system("cls");
+        loadingScreen();
         areaTrape();
         break;
 
     case 4:
         system("cls");
+        loadingScreen();
         areaPar();
         break;
 
@@ -897,6 +926,7 @@ void areaPar(void)
 // MENU for Grade Calculation
 void gradeCal(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                        GRADE CALCULATION                       \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -913,21 +943,25 @@ void gradeCal(void)
     {
     case 1:
         system("cls");
+        loadingScreen();
         gradeRange();
         break;
 
     case 2:
         system("cls");
+        loadingScreen();
         passIdent();
         break;
 
     case 3:
         system("cls");
+        loadingScreen();
         gradeComp1();
         break;
 
     case 4:
         system("cls");
+        loadingScreen();
         gradeComp2();
         break;
 
@@ -1194,6 +1228,7 @@ void passIdent(void)
 // This code is Group Midter Project
 void growthRate(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     Population Growth Rate                     \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -1210,21 +1245,25 @@ void growthRate(void)
     {
     case 1:
         system("cls");
+        loadingScreen();
         sizePopulation();
         break;
 
     case 2:
         system("cls");
+        loadingScreen();
         numPeople();
         break;
 
     case 3:
         system("cls");
+        loadingScreen();
         rateOfGrowth();
         break;
 
     case 4:
         system("cls");
+        loadingScreen();
         timeRate();
         break;
 
@@ -1533,6 +1572,7 @@ void bitwise(void)
 // MENU for Temperature Converter
 void tempConvert(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                     TEMPERATURE CONVERTER                      \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -1547,11 +1587,13 @@ void tempConvert(void)
     {
     case 1:
         system("cls");
+        loadingScreen();
         celCon();
         break;
 
     case 2:
         system("cls");
+        loadingScreen();
         fahCon();
         break;
 
@@ -1575,7 +1617,7 @@ void celCon(void)
     printf("\t\t ==============================+==============================\n");
     printf("\n\t\t Enter the Value of Celsius : ");
     scanf("%f", &celsius);
-    
+
     fahrenheit = (celsius * 9 / 5) + 32;
 
     printf("\n\t\t\t         ___________ \n");
@@ -1627,7 +1669,7 @@ void fahCon(void)
     printf("\t\t ==============================+==============================\n");
     printf("\n\t\t Enter the Value of Fahrenheit : ");
     scanf("%f", &fahrenheit);
-    
+
     celsius = (fahrenheit - 32) * 5 / 9;
 
     printf("\n\t\t\t         ___________ \n");
@@ -1673,6 +1715,7 @@ void fahCon(void)
 
 void intId(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                       INTEGERS IDENTIFIER                      \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -1687,11 +1730,13 @@ void intId(void)
     {
     case 1:
         system("cls");
+        loadingScreen();
         posNeg();
         break;
 
     case 2:
         system("cls");
+        loadingScreen();
         intCom();
         break;
 
@@ -1770,15 +1815,15 @@ void intCom(void)
 
     if (x > y)
     {
-        printf("\n\n\t\t\t     The Highest Value is A with value of %i \n", x);
+        printf("\n\n\t\t\t     The Highest Value is X with value of %i \n", x);
     }
     else if (x < y)
     {
-        printf("\n\n\t\t\t     The Highest Value is B with value of %i \n", y);
+        printf("\n\n\t\t\t     The Highest Value is Y with value of %i \n", y);
     }
     else if (x == y)
     {
-        printf("\n\n\t\t  The Value of A and B is the same, and the value of it is %i \n", x);
+        printf("\n\n\t\t  The Value of X and Y is the same, and the value of it is %i \n", x);
     }
 
     printf("\t\t ==============================+==============================\n");
@@ -1848,6 +1893,7 @@ void qualiVote(void)
 //Final Group Activity # 1 This line of code is made by Joshua Meredores
 void incrDecre(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                      INCREMENT AND DECREMENT                   \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -1865,21 +1911,25 @@ void incrDecre(void)
     {
         case 1:
             system("cls");
+            loadingScreen();
             preIncre();
             break;
 
         case 2:
             system("cls");
+            loadingScreen();
             postIncre();
             break;
 
         case 3:
             system("cls");
+            loadingScreen();
             preDecre();
             break;
 
         case 4:
             system("cls");
+            loadingScreen();
             postDecre();
             break;
 
@@ -2036,6 +2086,7 @@ void postDecre(void)
 //For Loop Menu
 void forLoop(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                            FOR LOOP                            \n");
     printf("\t\t ==============================+==============================\n\n");
@@ -2052,16 +2103,19 @@ void forLoop(void)
     {
         case 1:
             system("cls");
+            loadingScreen();
             loopIncre();
             break;
 
         case 2:
             system("cls");
+            loadingScreen();
             loopDecre();
             break;
 
         case 3:
             system("cls");
+            loadingScreen();
             forLoopTri();
             break;
 
@@ -2338,6 +2392,7 @@ void changeColor(void)
 
 void greet(void)
 {
+    loadingScreen();
     printf("\n\n\n\t\t ==============================+==============================");
     printf("\n\t\t      _____ _                 _      __    __           _");
     printf("\n\t\t     |_   _| |               | |     \\ \\  / /          | |");
@@ -2354,6 +2409,7 @@ void greet(void)
 //this is for Invalid Input
 void invalid(void)
 {
+    loadingScreen();
     printf("\n\n\t\t ==============================+==============================\n");
     printf("\t\t                             ERROR                              \n");
     printf("\t\t ==============================+==============================\n\n");
