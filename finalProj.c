@@ -8,6 +8,7 @@
 */
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
 
 void banner(void);
@@ -28,14 +29,17 @@ void mainMenu(void);
             void areaSqr(void);
             void areaPar(void);
         void gradeCal(void);
+            void gradeComp1(void);
+            void gradeComp2(void);
             void gradeRange(void);
             void passIdent(void);
         void growthRate(void);
-            void sizePopulation(void);
+            int indicateTime();
+            void sizePopulation(time);
             void numPeople(void);
             void rateOfGrowth(void);
             void timeRate(void);
-            int indicateTime();
+
         void bitwise(void);
 
     // This is For Temperature Converter
@@ -50,6 +54,9 @@ void mainMenu(void);
 
     // This is for Qualification to Vote
     void qualiVote(void);
+
+    // This is For Color Selector
+    void changeColor(void);
 
     //This is For Increment and Decrement
     void incrDecre(void);
@@ -69,11 +76,12 @@ void invalid(void);
 
 // global Variable
 char slt;
-int opt, x, y, i, j, n;
+int opt, x, y, i, j, n, color;
 float ans, A, P, r, t, a, b, h, area, side, grade;
 float add, sub, product, quote, num1, num2, num3, expo;
 float time, year, month, day;
 float fahrenheit, celsius;
+float quiz, assign, proj, CS, ME;
 const float e = 2.718;
 
 int main()
@@ -133,7 +141,7 @@ void mainMenu(void)
     printf("\t\t          ___________________________        ___________________________            \n");
     printf("\t\t         /___________________________  |    /___________________________  |         \n");
     printf("\t\t        |                            | |   |                            | |         \n");
-    printf("\t\t        | [1] Registration Form      | |   | [6] Color Selector         | |         \n");
+    printf("\t\t        | [1] Registration Form      | |   | [6] Change Color           | |         \n");
     printf("\t\t        | [2] Simple Calculator      | |   | [7] Increment & Decrement  | |         \n");
     printf("\t\t        | [3] Temperature Converter  | |   | [8]                        | |         \n");
     printf("\t\t        | [4] Integers Identifier    | |   | [9] Back                   | |         \n");
@@ -172,8 +180,7 @@ void mainMenu(void)
 
     case 6:
         system("cls");
-        printf("UNDER PROCESS! \n");
-        // colorSelec();
+        changeColor();
         break;
 
     case 7:
@@ -275,6 +282,10 @@ void regisForm(void)
 
     printf("\t\t\t Name of your Mother? ");
     scanf(" %[^\n]s", motherName);
+
+    printf("\t\t ==============================+============================== \n");
+    printf("\t\t                         EDUCATIONAL BACKGROUND                      \n");
+    printf("\t\t ==============================+==============================\n");
 
     printf("\t\t\t Primary Education: ");
     scanf(" %[^\n]s", educPri);
@@ -570,9 +581,10 @@ void simpleCal(void)
 // Prelim Examination.    This code is from MAXELL JANE CALPO
 void basicComp(void)
 {
-    printf("\n\n\n\t\t +-------------------+ \n");
-    printf("\t\t | Basic Computation | \n");
-    printf("\t\t +-------------------+ \n\n");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                       BASIC COMPUTATION                        \n");
+    printf("\t\t ==============================+==============================\n\n");
+
     printf("\t\t First number  : ");
     scanf("%f", &num1);
 
@@ -582,24 +594,19 @@ void basicComp(void)
     printf("\t\t Third number  : ");
     scanf("%f", &num3);
 
-    system("cls");
-
     add = num1 + num2 + num3;
     sub = num3 - num2;
     product = num1 * num3;
     quote = num1 / num3;
     expo = pow(num3, num2);
 
-    printf("\n\n\n\t\t +-------------------+ \n");
-    printf("\t\t | Basic Computation | \n");
-    printf("\t\t +-------------------+ \n\n");
-    printf("\t\t # %g + %g + %g = %g\n", num1, num2, num3, add);
-    printf("\t\t # %g - %g = %g\n", num3, num2, sub);
-    printf("\t\t # %g * %g = %g\n", num1, num3, product);
-    printf("\t\t # %g / %g = %g\n", num1, num2, quote);
-    printf("\t\t # %g ^ %g = %g\n\n", num3, num2, expo);
-
-    printf("\t\t BACK press [0]               EXIT press [1] : ");
+    printf("\n\t\t\t  %g + %g + %g = %g\n", num1, num2, num3, add);
+    printf("\t\t\t  %g - %g = %g\n", num3, num2, sub);
+    printf("\t\t\t  %g * %g = %g\n", num1, num3, product);
+    printf("\t\t\t  %g / %g = %g\n", num1, num2, quote);
+    printf("\t\t\t  %g ^ %g = %g\n\n", num3, num2, expo);
+    printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
     scanf("%i", &opt);
 
     switch (opt)
@@ -645,12 +652,12 @@ void areaOFShape(void)
 
     case 2:
         system("cls");
-        areaTrape();
+        areaSqr();
         break;
 
     case 3:
         system("cls");
-        areaSqr();
+        areaTrape();
         break;
 
     case 4:
@@ -673,7 +680,9 @@ void areaOFShape(void)
 // Prelim Exercise Area of Triangle.    This line of Code came from ARON JAMES BETINOL
 void areaTri(void)
 {
-    printf("\n\n\n\t\t Given Value of Triangle\n\n");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                        AREA OF TRIANGLE                        \n");
+    printf("\t\t ==============================+==============================\n\n");
 
     // For Base
     printf("\t\t Enter the Base of Triangle : ");
@@ -727,7 +736,9 @@ void areaTri(void)
 // Code came From  JOSHUA MEREDORES
 void areaSqr(void)
 {
-    printf("\n\n\n\t\t Given Value of Square\n\n");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                          AREA OF SQUARE                        \n");
+    printf("\t\t ==============================+==============================\n\n");
 
     printf("\t\t Enter sides of square: ");
     scanf("%f", &side);
@@ -775,7 +786,9 @@ void areaSqr(void)
 // Code came From  JOSHUA MEREDORES
 void areaTrape(void)
 {
-    printf("\n\n\n\t\t Given Value of Trapezoid\n\n");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                          AREA OF TRAPEZOID                       \n");
+    printf("\t\t ==============================+==============================\n\n");
 
     printf("\t\t Enter the first value of the Base : ");
     scanf("%f", &a);
@@ -831,7 +844,9 @@ void areaTrape(void)
 // Code came From  JOSHUA MEREDORES
 void areaPar(void)
 {
-    printf("\n\n\n\t\t Given Value of Parallelogram\n\n");
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                        AREA OF PARALLELOGRAM                     \n");
+    printf("\t\t ==============================+==============================\n\n");
 
     printf("\t\t Enter the Base of Parallelogram : ");
     scanf("%f", &b);
@@ -908,12 +923,12 @@ void gradeCal(void)
 
     case 3:
         system("cls");
-        // gradeComp1(); midterm activity 1
+        gradeComp1();
         break;
 
     case 4:
         system("cls");
-        // gradeComp2(); midterm exam
+        gradeComp2();
         break;
 
     case 5:
@@ -928,15 +943,126 @@ void gradeCal(void)
     }
 }
 
+// Midterm Activity 1 : Grade Computation ARON JAMES BETINOL
+void gradeComp1(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                       GRADE COMPUTATION 1                      \n");
+    printf("\t\t ==============================+==============================\n\n");
+
+    printf("\t\t         Quiz .................................... : ");
+    scanf("%f", &quiz);
+
+    printf("\t\t         Assignment .............................. : ");
+    scanf("%f", &assign);
+
+    printf("\t\t         Project ................................. : ");
+    scanf("%f", &proj);
+
+    printf("\t\t         Class Standing........................... : ");
+    scanf("%f", &CS);
+
+    printf("\t\t         Major Exam............................... : ");
+    scanf("%f", &ME);
+
+    grade = (CS * .10) + (quiz * .15) + (assign * .15) + (proj * .20) + (ME * .40);
+
+    printf("\t\t         ______________________________________________\n");
+    printf("\t\t         Tota Grade............................... : %g\n\n", grade);
+     printf("\t\t ==============================+==============================\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+    case 0:
+        system("cls");
+        gradeCal();
+        break;
+
+    case 1:
+        system("cls");
+        greet();
+        break;
+
+    default:
+        system("cls");
+        invalid();
+        break;
+    }
+}
+
+//Midterm Exam : Grade Computation JHON BRIAN ARCE
+void gradeComp2(void)
+{
+    float ass1, ass2, sw1, sw2, sw3, quiz1, quiz2, quiz3;
+
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                       GRADE COMPUTATION 2                      \n");
+    printf("\t\t ==============================+==============================\n\n");
+
+    printf("\t\t         Assignment1 ............................. : ");
+    scanf("%f", &ass1);
+
+    printf("\t\t         Assignment2 ............................. : ");
+    scanf("%f", &ass2);
+
+    printf("\t\t         Seat Work 1 ............................. : ");
+    scanf("%f", &sw1);
+
+    printf("\t\t         Seat Work 2 ............................. : ");
+    scanf("%f", &sw2);
+
+    printf("\t\t         Seat Work 3 ............................. : ");
+    scanf("%f", &sw3);
+
+    printf("\t\t         Quiz 1 .................................. : ");
+    scanf("%f", &quiz1);
+
+    printf("\t\t         Quiz 2 .................................. : ");
+    scanf("%f", &quiz2);
+
+    printf("\t\t         Quiz 3 .................................. : ");
+    scanf("%f", &quiz3);
+
+    printf("\t\t         Major Exam............................... : ");
+    scanf("%f", &ME);
+
+    grade = ((ass1 + ass2) / 2 * .10) + ((sw1 + sw2 + sw3) / 3 * .20) + ((quiz1 + quiz2 + quiz3) / 3 * .30) + (ME * .40);
+
+    printf("\t\t         ______________________________________________\n");
+    printf("\t\t         Tota Grade............................... : %g\n\n", grade);
+    printf("\t\t ==============================+==============================\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+    case 0:
+        system("cls");
+        gradeCal();
+        break;
+
+    case 1:
+        system("cls");
+        greet();
+        break;
+
+    default:
+        system("cls");
+        invalid();
+        break;
+    }
+}
+
 // Midterm Exercises : Grade Range   This Line of code is came from  JHON BRIAN ARCE
 void gradeRange(void)
 {
-    printf("\n\n\n\t\t Enter Your Grade : ");
-    scanf("%f", &grade);
-
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                           GRADE RANGE                          \n");
     printf("\t\t ==============================+==============================\n\n");
+    printf("\t\t Enter Your Grade : ");
+    scanf("%f", &grade);
 
     if (grade >= 90 && grade <= 100)
     {
@@ -1025,10 +1151,10 @@ void passIdent(void)
     printf("\t\t         Quiz .................................... : %g\n", quiz);
     printf("\t\t         Assignment .............................. : %g\n", assign);
     printf("\t\t         Project ................................. : %g\n", proj);
-    printf("\t\t         Class Standing .......................... : %g\n", CS);
-    printf("\t\t         Major Exam     .......................... : %g\n", CS);
+    printf("\t\t         Class Standing........................... : %g\n", CS);
+    printf("\t\t         Major Exam............................... : %g\n", CS);
     printf("\t\t         ______________________________________________\n");
-    printf("\t\t         Tota Grade     .......................... : %g\n\n", grade);
+    printf("\t\t         Tota Grade............................... : %g\n\n", grade);
 
     // The Condition
     if (grade >= 75)
@@ -1104,7 +1230,7 @@ void growthRate(void)
 
     case 5:
         system("cls");
-        mainMenu();
+        simpleCal();
         break;
 
     default:
@@ -1114,7 +1240,44 @@ void growthRate(void)
     }
 }
 
-void sizePopulation(void)
+int indicateTime()
+{
+
+    printf("\t\t Enter the Number of Time \n");
+    printf("\t\t     [1] - Year           \n");
+    printf("\t\t     [2] - Month          \n");
+    printf("\t\t     [3] - Day            \n");
+    printf("\t\t Indicate the Time. Pick the No. : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+        case 1:
+            printf("\t\t Enter the Year : ");
+            scanf("%f", &year);
+            time = year;
+            break;
+
+        case 2:
+            printf("\t\t Enter the Month : ");
+            scanf("%f", &month);
+            time = month /= 12;
+            break;
+
+        case 3:
+            printf("\t\t Enter the Day : ");
+            scanf("%f", &day);
+            time = day /= 365;
+            break;
+
+        default:
+            //system("cls");
+            invalid();
+            break;
+    }
+}
+
+void sizePopulation()
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
     printf("\t\t                    POPULATION AFTER IN GROWS                   \n");
@@ -1126,8 +1289,7 @@ void sizePopulation(void)
     scanf("%f", &r);
 
     indicateTime();
-
-    system("cls");
+    //system("cls");
 
     ans = P * pow(e, ((r / 100) * time));
 
@@ -1177,7 +1339,7 @@ void numPeople(void)
     printf("\t\t Enter the Rate of Growth : ");
     scanf("%f", &r);
 
-    indicateTime();
+    indicateTime(time);
 
     system("cls");
 
@@ -1270,43 +1432,6 @@ void rateOfGrowth(void)
     }
 }
 
-int indicateTime()
-{
-    printf("\t\t Enter the Number of Time \n");
-    printf("\t\t     [1] - Year           \n");
-    printf("\t\t     [2] - Month          \n");
-    printf("\t\t     [3] - Day            \n");
-    printf("\t\t Indicate the Time. Pick the No. : ");
-    scanf("%i", &opt);
-
-    switch (opt)
-    {
-        case 1:
-            printf("\t\t Enter the Year : ");
-            scanf("%f", &year);
-            return time = year;
-            break;
-
-        case 2:
-            printf("\t\t Enter the Month : ");
-            scanf("%f", &month);
-            return time = month /= 12;
-            break;
-
-        case 3:
-            printf("\t\t Enter the Day : ");
-            scanf("%f", &day);
-            return time = day /= 365;
-            break;
-
-        default:
-            system("cls");
-            invalid();
-            break;
-    }
-    return time;
-}
-
 void timeRate(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -1390,7 +1515,7 @@ void bitwise(void)
     {
     case 0:
         system("cls");
-        bitwise();
+        simpleCal();
         break;
 
     case 1:
@@ -1450,15 +1575,10 @@ void celCon(void)
     printf("\t\t ==============================+==============================\n");
     printf("\n\t\t Enter the Value of Celsius : ");
     scanf("%f", &celsius);
-
+    
     fahrenheit = (celsius * 9 / 5) + 32;
 
-    system("cls");
-
-    printf("\n\n\n\t\t ==============================+==============================\n");
-    printf("\t\t                     CELSIUS TO FAHRENHEIT                    \n");
-    printf("\t\t ==============================+==============================\n");
-    printf("\t\t\t         ___________ \n");
+    printf("\n\t\t\t         ___________ \n");
     printf("\t\t\t        /           \\\n");
     printf("\t\t\t       |             | \n");
     printf("\t\t\t       | °F      °C  | \n");
@@ -1507,15 +1627,10 @@ void fahCon(void)
     printf("\t\t ==============================+==============================\n");
     printf("\n\t\t Enter the Value of Fahrenheit : ");
     scanf("%f", &fahrenheit);
-
+    
     celsius = (fahrenheit - 32) * 5 / 9;
 
-    system("cls");
-
-    printf("\n\n\n\t\t ==============================+==============================\n");
-    printf("\t\t                     FAHRENHEIT TO CELSIUS                   \n");
-    printf("\t\t ==============================+==============================\n");
-    printf("\t\t\t         ___________ \n");
+    printf("\n\t\t\t         ___________ \n");
     printf("\t\t\t        /           \\\n");
     printf("\t\t\t       |             | \n");
     printf("\t\t\t       | °F      °C  | \n");
@@ -1870,7 +1985,7 @@ void preDecre(void)
     {
     case 0:
         system("cls");
-        intId();
+        incrDecre();
         break;
 
     case 1:
@@ -1917,6 +2032,8 @@ void postDecre(void)
         break;
     }
 }
+
+//For Loop Menu
 void forLoop(void)
 {
     printf("\n\n\n\t\t ==============================+==============================\n");
@@ -2145,17 +2262,91 @@ void invertedTri(void){
     }
 }
 
+// Color Selector or Color Change UPDATED JAN. 6 2023 by Aron
+void changeColor(void)
+{
+    printf("\n\n\n\t\t ==============================+==============================\n");
+    printf("\t\t                         CHANGE COLOR                \n");
+    printf("\t\t ==============================+==============================");
+    printf("\n\n\t\t\t\t 0 = Black \t     4 = Red");
+    printf("\n\n\t\t\t\t 1 = Blue  \t     5 = Purple");
+    printf("\n\n\t\t\t\t 2 = Green \t     6 = Yellow");
+    printf("\n\n\t\t\t\t 3 = Aqua  \t     7 = White");
+    printf("\n\n\n\t\t ==============================+==============================");
+    printf("\n\n\t\t Enter Color: ");
+    scanf("%i", &color);
+
+    switch(color)
+    {
+    case 0: /* Black */
+        system("Color F0");
+        printf("\t\t\t\t \"Color has change into BLACK.\"");
+        break;
+    case 1: /* Blue */
+        system("Color 09");
+        printf("\t\t\t\t \"Color has change into BLUE.\"");
+        break;
+    case 2: /* Green */
+        system("Color 0A");
+        printf("\t\t\t\t \"Color has change into GREEN.\"");
+        break;
+    case 3: /* Aqua */
+        system("Color 0B");
+        printf("\t\t\t\t \"Color has change into AQUA.\"");
+        break;
+    case 4: /* Red */
+        system("Color 0C");
+        printf("\t\t\t\t \"Color has change into RED.\"");
+        break;
+    case 5: /* Purple */
+        system("Color 0D");
+        printf("\t\t\t\t \"Color has change into PURPLE.\"");
+        break;
+    case 6: /* Yellow */
+        system("Color 0E");
+        printf("\t\t\t\t \"Color has change into YELLOW.\"");
+        break;
+    case 7: /* White */
+        system("Color 0F");
+        printf("\t\t\t\t \"Color has change into WHITE.\"");
+        break;
+    }
+
+    printf("\n\n\t\t ==============================+==============================\n");
+    printf("\t\t         BACK press [0]               EXIT press [1] : ");
+    scanf("%i", &opt);
+
+    switch (opt)
+    {
+    case 0:
+        system("cls");
+        mainMenu();
+        break;
+
+    case 1:
+        system("cls");
+        greet();
+        break;
+
+    default:
+        system("cls");
+        invalid();
+        break;
+    }
+
+}
+
 void greet(void)
 {
     printf("\n\n\n\t\t ==============================+==============================");
-    printf("\n\t\t     \033[36m _____ _                 _      __    __           _\033[32m");
-    printf("\n\t\t     \033[36m|_   _| |               | |     \\ \\  / /          | |\033[32m");
-    printf("\n\t\t       \033[36m| | | |__   __ _ _ __ | | __   \\ \\/ /___ _   _  | |\033[32m");
-    printf("\n\t\t       \033[36m| | |  _ \\ / _` | '_ \\| |/  /   \\  /    | | | | |_|\033[32m");
-    printf("\n\t\t       \033[36m| | | | | | (_| | | | |    <     | | () | |_| |  _\033[32m");
-    printf("\n\t\t       \033[36m|_| |_| |_|\\__,_|_| |_|_|\\__\\    |_|____|_____| [_]  \033[32m");
+    printf("\n\t\t      _____ _                 _      __    __           _");
+    printf("\n\t\t     |_   _| |               | |     \\ \\  / /          | |");
+    printf("\n\t\t       | | | |__   __ _ _ __ | | __   \\ \\/ /___ _   _  | |");
+    printf("\n\t\t       | | |  _ \\ / _` | '_ \\| |/  /   \\  /    | | | | |_|");
+    printf("\n\t\t       | | | | | | (_| | | | |    <     | | () | |_| |  _");
+    printf("\n\t\t       |_| |_| |_|\\__,_|_| |_|_|\\__\\    |_|____|_____| [_]  ");
     printf("\n\t\t +-----------------------------------------------------------+ \n");
-    printf("\t\t |                   \033[36mFor Using Our Program\033[32m                   | \n");
+    printf("\t\t |                   For Using Our Program                   | \n");
     printf("\t\t +-----------------------------------------------------------+ \n");
     printf("\t\t ==============================+==============================\n");
 }
@@ -2164,14 +2355,14 @@ void greet(void)
 void invalid(void)
 {
     printf("\n\n\t\t ==============================+==============================\n");
-    printf("\t\t                             \033[31mERROR\033[32m                              \n");
+    printf("\t\t                             ERROR                              \n");
     printf("\t\t ==============================+==============================\n\n");
-    printf("\t\t         \033[31m_   _  _____  _   _\033[32m   |                          \n");
-    printf("\t\t        \033[31m|#| |#||#####||#| |#|\033[32m  |                          \n");
-    printf("\t\t        \033[31m|#|_|#||#| |#||#|_|#|\033[32m  | \033[31mPage could not be found.\033[32m \n");
-    printf("\t\t        \033[31m|#####||#| |#||#####|\033[32m  |                          \n");
-    printf("\t\t            \033[31m|#||#|_|#|    |#|\033[32m  | \033[31mInvalid User input.\033[32m      \n");
-    printf("\t\t            \033[31m|#||#####|    |#|\033[32m  |                          \n");
+    printf("\t\t         _   _  _____  _   _   |                          \n");
+    printf("\t\t        |#| |#||#####||#| |#|  |                          \n");
+    printf("\t\t        |#|_|#||#| |#||#|_|#|  | Page could not be found. \n");
+    printf("\t\t        |#####||#| |#||#####|  |                          \n");
+    printf("\t\t            |#||#|_|#|    |#|  | Invalid User input.      \n");
+    printf("\t\t            |#||#####|    |#|  |                          \n");
     printf("\t\t                               |                        \n\n");
     printf("\t\t ==============================+==============================\n\n");
 }
