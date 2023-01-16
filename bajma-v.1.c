@@ -1655,7 +1655,7 @@ void bitwise(void)
         system("cls");
 
         printf("\n\n\n\t\t =============================================================\n");
-        printf("\t\t                             BIWISE                             \n");
+        printf("\t\t                             BITWISE                             \n");
         printf("\t\t =============================================================\n\n");
 
         printf("\t\t First Number  : ");
@@ -1672,7 +1672,7 @@ void bitwise(void)
         }
         else
         {
-            printf("\n\t\t\t Out of range!\n");
+            printf("\n\t\t\t\t\t Out of range!\n");
         }
         printf("\n\t\t =============================================================\n");
         printf("\n\t\t Do you want to TRY AGAIN? [y/n] : "); scanf("%s", &slt);
@@ -2076,7 +2076,7 @@ void incrDecre(void)
     printf("\t\t\t [4] - Post-Decrement                                       \n");
     printf("\t\t\t [5] - For Loop                                             \n");
     printf("\t\t\t [6] - Back                                                 \n");
-    printf("\t\t =============================================================\n");
+    printf("\n\t\t =============================================================\n");
     printf("\t\t Enter a number: ");
     scanf("%i",&opt);
 
@@ -2133,7 +2133,7 @@ void preIncre(void)
 
         ++x;
 
-        printf("\n\n\t\t                  The updated value : %i \n\n", x);
+        printf("\n\n\t\t                  The updated value X : %i \n\n", x);
         printf("\t\t =============================================================\n");
         printf("\n\t\t Do you want to TRY AGAIN? [y/n] : "); scanf("%s", &slt);
 
@@ -2176,7 +2176,7 @@ void postIncre(void)
 
         y = x++;
 
-        printf("\t\t                        The original value : %i \n ", y);
+        printf("\n\t\t                        The original value : %i \n ", y);
         printf("\t\t                        The updated value  : %i \n\n", x);
         printf("\t\t =============================================================\n");
         printf("\n\t\t Do you want to TRY AGAIN? [y/n] : "); scanf("%s", &slt);
@@ -2219,7 +2219,7 @@ void preDecre(void)
 
         --x;
 
-        printf("\n\n\t\t                  The updated value of Y : %i \n\n", x);
+        printf("\n\t\t                  The updated value of X : %i \n\n", x);
         printf("\t\t =============================================================\n");
         printf("\n\t\t Do you want to TRY AGAIN? [y/n] : "); scanf("%s", &slt);
 
@@ -2260,7 +2260,7 @@ void postDecre(void)
 
         y =x--;
 
-        printf("\t\t                        The original value : %i \n ", y);
+        printf("\n\t\t                        The original value : %i \n ", y);
         printf("\t\t                        The updated value  : %i \n\n", x);
         printf("\t\t =============================================================\n");
         printf("\n\t\t Do you want to TRY AGAIN? [y/n] : "); scanf("%s", &slt);
@@ -2300,7 +2300,7 @@ void forLoop(void)
     printf("\t\t\t [3] - For Loop Triangle                                      \n");
     printf("\t\t\t [4] - Inverted Triangle                                      \n");
     printf("\t\t\t [5] - Back                                                   \n");
-    printf("\t\t =============================================================\n");
+    printf("\n\t\t =============================================================\n");
     printf("\t\t Enter a number: ");
     scanf("%i", &opt);
 
@@ -2570,7 +2570,7 @@ void changeColor(void)
         printf("\n\n\t\t\t\t 2 = Green \t     6 = Yellow");
         printf("\n\n\t\t\t\t 3 = Aqua  \t     7 = White");
         printf("\n\n\n\t\t =============================================================");
-        printf("\n\n\t\t Enter Color: ");
+        printf("\n\n\t\t Pick a Number : ");
         scanf("%i", &color);
 
         switch(color)
@@ -2673,4 +2673,13 @@ void invalid(void)
     printf("\t\t            |#||#####|    |#|  |                          \n");
     printf("\t\t                               |                        \n\n");
     printf("\t\t =============================================================\n\n");
+
+    printf("\t\t Do you want to return [y/n]: ");
+    scanf("%s", &slt);
+
+    if(slt == 'Y' || slt == 'y'){
+        system("cls");
+        mainMenu();
+    }
+
 }
